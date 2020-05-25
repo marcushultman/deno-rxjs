@@ -12,6 +12,7 @@ Reactive reactive library for JavaScript. This is a new version of [RxJS] (https
  
 ## Documentation | Documentação
 Em breve, no momento você pode utilizar [a documentação do RxJS](https://rxjs.dev/) 
+
 Coming soon, at moment your can use [the RxJS documentation](https://rxjs.dev/) 
 
 ## [Apache 2.0 License](LICENSE.txt)
