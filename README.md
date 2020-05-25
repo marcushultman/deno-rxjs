@@ -1,4 +1,5 @@
-!(RxJS)[https://github.com/ReactiveX/rxjs/raw/master/docs_app/assets/Rx_Logo_S.png]
+![RxJS](https://github.com/ReactiveX/rxjs/raw/master/docs_app/assets/Rx_Logo_S.png)
+
 RxJS: Extensões Reativas para Deno
 RxJS: Reactive Extensions for Deno
 
