@@ -1,7 +1,9 @@
 ![RxJS](https://github.com/ReactiveX/rxjs/raw/master/docs_app/assets/Rx_Logo_S.png)
 
-RxJS: Extensões Reativas para Deno
-RxJS: Reactive Extensions for Deno
+# RxJS for Deno | RxJS para Deno
+
+*Extensões Reativas para Deno
+*Reactive Extensions for Deno
 
 Biblioteca de extensões reativas para JavaScript. Esta é uma reescrita de [RxJS](https://github.com/ReactiveX/rxjs) e é a versão mais recente pronta para produção do RxJS no Deno. Essa reescrita deve ter melhor desempenho, melhor modularidade, melhores pilhas de chamadas depuráveis, mantendo-se principalmente compatível com versões anteriores, com algumas alterações que reduzem a superfície da API.
 
@@ -11,7 +13,7 @@ Reactive reactive library for JavaScript. This is a new version of [RxJS] (https
 Em breve, no momento você pode utilizar [a documentação do RxJS](https://rxjs.dev/) 
 Coming soon, at moment your can use [the RxJS documentation](https://rxjs.dev/) 
 
-[Apache 2.0 License](LICENSE.txt)
+## [Apache 2.0 License](LICENSE.txt)
 
 - [Code of Conduct](CODE_OF_CONDUCT.md)
 - [Contribution Guidelines](CONTRIBUTING.md)
