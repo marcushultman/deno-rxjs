@@ -1,4 +1,5 @@
-!(RxJS)[https://github.com/ReactiveX/rxjs/raw/master/docs_app/assets/Rx_Logo_S.png]
+![RxJS](https://github.com/ReactiveX/rxjs/raw/master/docs_app/assets/Rx_Logo_S.png)
+
 RxJS: Extensões Reativas para Deno
 RxJS: Reactive Extensions for Deno
 
@@ -8,12 +9,12 @@ Reactive reactive library for JavaScript. This is a new version of [RxJS] (https
 
 ## Funcionando | Working
 
-[x] Observables
-[ ] Pipe
-[ ] of
-[ ] merge
-[ ] from
-[ ] noop
+- [x] Observables
+- [ ] Pipe
+- [ ] of
+- [ ] merge
+- [ ] from
+- [ ] noop
 
 [Apache 2.0 License](LICENSE.txt)
 
