@@ -9,12 +9,12 @@ Reactive reactive library for JavaScript. This is a new version of [RxJS] (https
 
 ## Funcionando | Working
 
-[x] Observables
-[ ] Pipe
-[ ] of
-[ ] merge
-[ ] from
-[ ] noop
+- [x] Observables
+- [ ] Pipe
+- [ ] of
+- [ ] merge
+- [ ] from
+- [ ] noop
 
 [Apache 2.0 License](LICENSE.txt)
 
