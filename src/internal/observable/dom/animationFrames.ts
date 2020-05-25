@@ -1,10 +1,11 @@
 import { Observable } from '../../Observable.ts';
+import { RequestFrame } from '../../util/requestFrame.ts';
 
 // TODO: move to types.ts
 export interface TimestampProvider {
   now(): number;
 }
-
+const window = RequestFrame();
 /**
  * An observable of animation frames
  *
@@ -92,11 +93,11 @@ function animationFramesFactory(timestampProvider: TimestampProvider) {
     const run = () => {
       subscriber.next(timestampProvider.now() - start);
       if (!subscriber.closed) {
-        id = requestAnimationFrame(run);
+        id = window.requestAnimationFrame(run);
       }
     };
-    id = requestAnimationFrame(run);
-    return () => cancelAnimationFrame(id);
+    id = window.requestAnimationFrame(run);
+    return () => window.cancelAnimationFrame(id);
   });
 }
 

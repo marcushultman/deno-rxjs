@@ -231,13 +231,13 @@ function setupSubscription<T>(sourceObj: FromEventTarget<T>, eventName: string,
 }
 
 function isNodeStyleEventEmitter(sourceObj: any): sourceObj is NodeStyleEventEmitter {
-  return sourceObj && typeof sourceObj.addListener === 'function' && typeof sourceObj.removeListener === 'function.ts';
+  return sourceObj && typeof sourceObj.addListener === 'function' && typeof sourceObj.removeListener === 'function';
 }
 
 function isJQueryStyleEventEmitter(sourceObj: any): sourceObj is JQueryStyleEventEmitter {
-  return sourceObj && typeof sourceObj.on === 'function' && typeof sourceObj.off === 'function.ts';
+  return sourceObj && typeof sourceObj.on === 'function' && typeof sourceObj.off === 'function';
 }
 
 function isEventTarget(sourceObj: any): sourceObj is HasEventTargetAddRemove<any> {
-  return sourceObj && typeof sourceObj.addEventListener === 'function' && typeof sourceObj.removeEventListener === 'function.ts';
+  return sourceObj && typeof sourceObj.addEventListener === 'function' && typeof sourceObj.removeEventListener === 'function';
 }

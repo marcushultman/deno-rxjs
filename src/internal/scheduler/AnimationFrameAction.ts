@@ -1,7 +1,7 @@
 import { AsyncAction } from './AsyncAction.ts';
 import { AnimationFrameScheduler } from './AnimationFrameScheduler.ts';
 import { SchedulerAction } from '../types.ts';
-
+import { RequestFrame } from '../util/requestFrame.ts'
 /**
  * We need this JSDoc comment for affecting ESDoc.
  * @ignore
@@ -9,6 +9,7 @@ import { SchedulerAction } from '../types.ts';
  */
 export class AnimationFrameAction<T> extends AsyncAction<T> {
 
+  window = RequestFrame();
   constructor(protected scheduler: AnimationFrameScheduler,
               protected work: (this: SchedulerAction<T>, state?: T) => void) {
     super(scheduler, work);
@@ -24,12 +25,12 @@ export class AnimationFrameAction<T> extends AsyncAction<T> {
     // If an animation frame has already been requested, don't request another
     // one. If an animation frame hasn't been requested yet, request one. Return
     // the current animation frame request id.
-    return scheduler.scheduled || (scheduler.scheduled = requestAnimationFrame(
+    return scheduler.scheduled || (scheduler.scheduled = this.window.requestAnimationFrame(
       () => scheduler.flush(undefined)));
   }
   protected recycleAsyncId(scheduler: AnimationFrameScheduler, id?: any, delay: number = 0): any {
     // If delay exists and is greater than 0, or if the delay is null (the
-    // action wasn't rescheduled) but was originally scheduled as an async
+    // action wasn't rescheduled) but was originally sched'uled as an async
     // action, then recycle as an async action.
     if ((delay !== null && delay > 0) || (delay === null && this.delay > 0)) {
       return super.recycleAsyncId(scheduler, id, delay);
@@ -38,7 +39,7 @@ export class AnimationFrameAction<T> extends AsyncAction<T> {
     // set the scheduled flag to undefined so the next AnimationFrameAction will
     // request its own.
     if (scheduler.actions.length === 0) {
-      cancelAnimationFrame(id);
+      this.window.cancelAnimationFrame(id);
       scheduler.scheduled = undefined;
     }
     // Return undefined so the action knows to request a new async id if it's rescheduled.

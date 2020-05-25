@@ -35,7 +35,7 @@ export class Notification<T> {
   constructor(kind: 'E', value: undefined, error: any);
   constructor(kind: 'C');
   constructor(public kind: 'N' | 'E' | 'C', public value?: T, public error?: any) {
-    this.hasValue = kind === 'N.ts';
+    this.hasValue = kind === 'N';
   }
 
   /**
