@@ -1,4 +1,4 @@
-import { from, of, animationFrameScheduler } from 'rxjs';
+import { from, of, animationFrameScheduler } from 'rxjs.ts';
 
 it('should accept an array', () => {
   const o = from([1, 2, 3, 4]); // $ExpectType Observable<number>

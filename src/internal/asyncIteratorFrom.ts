@@ -1,5 +1,5 @@
-import { Observable } from './Observable';
-import { Deferred } from './util/deferred';
+import { Observable } from './Observable.ts';
+import { Deferred } from './util/deferred.ts';
 
 export function asyncIteratorFrom<T>(source: Observable<T>) {
   return coroutine(source);

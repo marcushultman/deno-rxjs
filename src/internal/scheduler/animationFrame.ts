@@ -1,5 +1,5 @@
-import { AnimationFrameAction } from './AnimationFrameAction';
-import { AnimationFrameScheduler } from './AnimationFrameScheduler';
+import { AnimationFrameAction } from './AnimationFrameAction.ts';
+import { AnimationFrameScheduler } from './AnimationFrameScheduler.ts';
 
 /**
  *
@@ -18,7 +18,7 @@ import { AnimationFrameScheduler } from './AnimationFrameScheduler';
  * Schedule div height animation
  * ```ts
  * // html: <div style="background: #0ff;"></div>
- * import { animationFrameScheduler } from 'rxjs';
+ * import { animationFrameScheduler } from 'rxjs.ts';
  *
  * const div = document.querySelector('div');
  *

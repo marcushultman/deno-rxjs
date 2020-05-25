@@ -1,4 +1,4 @@
-import { Subscriber } from '../Subscriber';
+import { Subscriber } from '../Subscriber.ts';
 
 /**
  * Subscribes to an ArrayLike with a subscriber

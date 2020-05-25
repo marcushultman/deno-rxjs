@@ -1,5 +1,5 @@
-import { of, Subject, GroupedObservable } from 'rxjs';
-import { groupBy, mergeMap } from 'rxjs/operators';
+import { of, Subject, GroupedObservable } from 'rxjs.ts';
+import { groupBy, mergeMap } from 'rxjs/operators.ts';
 
 it('should infer correctly', () => {
   const o = of(1, 2, 3).pipe(groupBy(value => value.toString())); // $ExpectType Observable<GroupedObservable<string, number>>
@@ -50,7 +50,7 @@ it('should enforce types of subject selector', () => {
 
 it('should support a user-defined type guard', () => {
   function isNumber(value: string | number): value is number {
-    return typeof value === 'number';
+    return typeof value === 'number.ts';
   }
   const o = of('a', 1, 'b', 2).pipe(
     groupBy(isNumber),

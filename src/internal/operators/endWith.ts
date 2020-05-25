@@ -1,7 +1,7 @@
-import { Observable } from '../Observable';
-import { concat } from '../observable/concat';
-import { of } from '../observable/of';
-import { MonoTypeOperatorFunction, SchedulerLike, OperatorFunction, ValueFromArray } from '../types';
+import { Observable } from '../Observable.ts';
+import { concat } from '../observable/concat.ts';
+import { of } from '../observable/of.ts';
+import { MonoTypeOperatorFunction, SchedulerLike, OperatorFunction, ValueFromArray } from '../types.ts';
 
 /* tslint:disable:max-line-length */
 /** @deprecated use {@link scheduled} and {@link concatAll} (e.g. `scheduled([source, [a, b, c]], scheduler).pipe(concatAll())`) */
@@ -41,8 +41,8 @@ export function endWith<T, A extends any[] = T[]>(...args: A): OperatorFunction<
  * stop when a user clicks anywhere on the document.
  *
  * ```ts
- * import { interval, fromEvent } from 'rxjs';
- * import { map, startWith, takeUntil, endWith } from 'rxjs/operators';
+ * import { interval, fromEvent } from 'rxjs.ts';
+ * import { map, startWith, takeUntil, endWith } from 'rxjs/operators.ts';
  *
  * const ticker$ = interval(5000).pipe(
  *   map(() => 'tick'),

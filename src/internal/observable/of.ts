@@ -1,8 +1,8 @@
-import { SchedulerLike, ValueFromArray } from '../types';
-import { isScheduler } from '../util/isScheduler';
-import { fromArray } from './fromArray';
-import { Observable } from '../Observable';
-import { scheduleArray } from '../scheduled/scheduleArray';
+import { SchedulerLike, ValueFromArray } from '../types.ts';
+import { isScheduler } from '../util/isScheduler.ts';
+import { fromArray } from './fromArray.ts';
+import { Observable } from '../Observable.ts';
+import { scheduleArray } from '../scheduled/scheduleArray.ts';
 
 /* tslint:disable:max-line-length */
 /** @deprecated remove in v8. Use {@link scheduled} instead `scheduled([], scheduler)` */
@@ -54,7 +54,7 @@ export function of<A extends Array<any>>(...args: A): Observable<ValueFromArray<
  * Emit the values `10, 20, 30`
  *
  * ```ts
- * import { of } from 'rxjs';
+ * import { of } from 'rxjs.ts';
  *
  * of(10, 20, 30)
  * .subscribe(
@@ -73,7 +73,7 @@ export function of<A extends Array<any>>(...args: A): Observable<ValueFromArray<
  * Emit the array `[1, 2, 3]`
  *
  * ```ts
- * import { of } from 'rxjs';
+ * import { of } from 'rxjs.ts';
  *
  * of([1, 2, 3])
  * .subscribe(

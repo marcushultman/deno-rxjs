@@ -1,5 +1,5 @@
-import { of } from 'rxjs';
-import { sample } from 'rxjs/operators';
+import { of } from 'rxjs.ts';
+import { sample } from 'rxjs/operators.ts';
 
 it('should enforce parameter', () => {
   const a = of(1, 2, 3).pipe(sample()); // $ExpectError

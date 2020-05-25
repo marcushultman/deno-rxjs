@@ -1,4 +1,4 @@
-import { BehaviorSubject } from 'rxjs';
+import { BehaviorSubject } from 'rxjs.ts';
 
 describe('BehaviorSubject', () => {
   it('should handle no generic appropriately', () => {
@@ -6,7 +6,7 @@ describe('BehaviorSubject', () => {
   });
 
   it('should handle an argument of string appropriately', () => {
-    const init = 'some string';
+    const init = 'some string.ts';
     const s1 = new BehaviorSubject(init); // $ExpectType BehaviorSubject<string>
     s1.next(); // $ExpectError
     s1.next('test'); // $ExpectType void

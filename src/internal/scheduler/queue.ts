@@ -1,5 +1,5 @@
-import { QueueAction } from './QueueAction';
-import { QueueScheduler } from './QueueScheduler';
+import { QueueAction } from './QueueAction.ts';
+import { QueueScheduler } from './QueueScheduler.ts';
 
 /**
  *
@@ -20,7 +20,7 @@ import { QueueScheduler } from './QueueScheduler';
  * ## Examples
  * Schedule recursively first, then do something
  * ```ts
- * import { queueScheduler } from 'rxjs';
+ * import { queueScheduler } from 'rxjs.ts';
  *
  * queueScheduler.schedule(() => {
  *   queueScheduler.schedule(() => console.log('second')); // will not happen now, but will be put on a queue
@@ -35,7 +35,7 @@ import { QueueScheduler } from './QueueScheduler';
  *
  * Reschedule itself recursively
  * ```ts
- * import { queueScheduler } from 'rxjs';
+ * import { queueScheduler } from 'rxjs.ts';
  *
  * queueScheduler.schedule(function(state) {
  *   if (state !== 0) {

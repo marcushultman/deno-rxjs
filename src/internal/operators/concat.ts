@@ -1,6 +1,6 @@
-import {  concat as concatStatic } from '../observable/concat';
-import { Observable } from '../Observable';
-import { ObservableInput, OperatorFunction, MonoTypeOperatorFunction, SchedulerLike } from '../types';
+import {  concat as concatStatic } from '../observable/concat.ts';
+import { Observable } from '../Observable.ts';
+import { ObservableInput, OperatorFunction, MonoTypeOperatorFunction, SchedulerLike } from '../types.ts';
 
 /* tslint:disable:max-line-length */
 /** @deprecated remove in v8. Use {@link concatWith} */

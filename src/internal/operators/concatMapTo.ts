@@ -1,5 +1,5 @@
-import { concatMap } from './concatMap';
-import { ObservableInput, OperatorFunction, ObservedValueOf } from '../types';
+import { concatMap } from './concatMap.ts';
+import { ObservableInput, OperatorFunction, ObservedValueOf } from '../types.ts';
 
 /* tslint:disable:max-line-length */
 export function concatMapTo<O extends ObservableInput<any>>(observable: O): OperatorFunction<any, ObservedValueOf<O>>;
@@ -35,8 +35,8 @@ export function concatMapTo<T, R, O extends ObservableInput<any>>(observable: O,
  * ## Example
  * For each click event, tick every second from 0 to 3, with no concurrency
  * ```ts
- * import { fromEvent, interval } from 'rxjs';
- * import { concatMapTo, take } from 'rxjs/operators';
+ * import { fromEvent, interval } from 'rxjs.ts';
+ * import { concatMapTo, take } from 'rxjs/operators.ts';
  *
  * const clicks = fromEvent(document, 'click');
  * const result = clicks.pipe(

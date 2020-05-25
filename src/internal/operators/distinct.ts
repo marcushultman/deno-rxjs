@@ -1,10 +1,10 @@
-import { Observable } from '../Observable';
-import { Operator } from '../Operator';
-import { Subscriber } from '../Subscriber';
-import { OuterSubscriber } from '../OuterSubscriber';
-import { InnerSubscriber } from '../InnerSubscriber';
-import { subscribeToResult } from '../util/subscribeToResult';
-import { MonoTypeOperatorFunction, TeardownLogic } from '../types';
+import { Observable } from '../Observable.ts';
+import { Operator } from '../Operator.ts';
+import { Subscriber } from '../Subscriber.ts';
+import { OuterSubscriber } from '../OuterSubscriber.ts';
+import { InnerSubscriber } from '../InnerSubscriber.ts';
+import { subscribeToResult } from '../util/subscribeToResult.ts';
+import { MonoTypeOperatorFunction, TeardownLogic } from '../types.ts';
 
 /**
  * Returns an Observable that emits all items emitted by the source Observable that are distinct by comparison from previous items.
@@ -25,8 +25,8 @@ import { MonoTypeOperatorFunction, TeardownLogic } from '../types';
  * A simple example with numbers
  *
  * ```ts
- * import { of } from 'rxjs';
- * import { distinct } from 'rxjs/operators';
+ * import { of } from 'rxjs.ts';
+ * import { distinct } from 'rxjs/operators.ts';
  *
  * of(1, 1, 2, 2, 2, 1, 2, 3, 4, 3, 2, 1)
  *   .pipe(
@@ -44,8 +44,8 @@ import { MonoTypeOperatorFunction, TeardownLogic } from '../types';
  * An example using a keySelector function
  *
  * ```ts
- * import { of } from 'rxjs';
- * import { distinct } from 'rxjs/operators';
+ * import { of } from 'rxjs.ts';
+ * import { distinct } from 'rxjs/operators.ts';
  *
  * interface Person {
  *    age: number,

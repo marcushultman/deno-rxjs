@@ -1,7 +1,7 @@
-import { Observable } from '../Observable';
-import { isArray } from '../util/isArray';
-import { MonoTypeOperatorFunction, OperatorFunction, ObservableInput, ObservedValueUnionFromArray } from '../types';
-import { race as raceStatic } from '../observable/race';
+import { Observable } from '../Observable.ts';
+import { isArray } from '../util/isArray.ts';
+import { MonoTypeOperatorFunction, OperatorFunction, ObservableInput, ObservedValueUnionFromArray } from '../types.ts';
+import { race as raceStatic } from '../observable/race.ts';
 
 /* tslint:disable:max-line-length */
 /** @deprecated Deprecated use {@link raceWith} */
@@ -44,8 +44,8 @@ export function race<T>(...observables: (Observable<T> | Observable<T>[])[]): Mo
  * ## Example
  *
  * ```ts
- * import { interval } from 'rxjs';
- * import { mapTo, raceWith } from 'rxjs/operators';
+ * import { interval } from 'rxjs.ts';
+ * import { mapTo, raceWith } from 'rxjs/operators.ts';
  *
  * const obs1 = interval(1000).pipe(mapTo('fast one'));
  * const obs2 = interval(3000).pipe(mapTo('medium one'));

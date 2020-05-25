@@ -1,7 +1,7 @@
-import { Observable } from '../Observable';
-import { Operator } from '../Operator';
-import { Subscriber } from '../Subscriber';
-import { OperatorFunction } from '../types';
+import { Observable } from '../Observable.ts';
+import { Operator } from '../Operator.ts';
+import { Subscriber } from '../Subscriber.ts';
+import { OperatorFunction } from '../types.ts';
 
 /**
  * Ignores all items emitted by the source Observable and only passes calls of `complete` or `error`.
@@ -17,8 +17,8 @@ import { OperatorFunction } from '../types';
  *
  * ## Examples
  * ```ts
- * import { of } from 'rxjs';
- * import { ignoreElements } from 'rxjs/operators';
+ * import { of } from 'rxjs.ts';
+ * import { ignoreElements } from 'rxjs/operators.ts';
  *
  * of('you', 'talking', 'to', 'me').pipe(
  *   ignoreElements(),

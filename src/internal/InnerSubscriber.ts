@@ -1,5 +1,5 @@
-import { Subscriber } from './Subscriber';
-import { OuterSubscriber } from './OuterSubscriber';
+import { Subscriber } from './Subscriber.ts';
+import { OuterSubscriber } from './OuterSubscriber.ts';
 
 /**
  * We need this JSDoc comment for affecting ESDoc.

@@ -1,5 +1,5 @@
-import { of } from 'rxjs';
-import { retryWhen } from 'rxjs/operators';
+import { of } from 'rxjs.ts';
+import { retryWhen } from 'rxjs/operators.ts';
 
 it('should infer correctly', () => {
   const o = of(1, 2, 3).pipe(retryWhen(errors => errors)); // $ExpectType Observable<number>

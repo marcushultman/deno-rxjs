@@ -1,5 +1,5 @@
-import { Observable } from '../Observable';
-import { SchedulerLike } from '../types';
+import { Observable } from '../Observable.ts';
+import { SchedulerLike } from '../types.ts';
 
 /**
  * The same Observable instance returned by any call to {@link empty} without a
@@ -14,7 +14,7 @@ import { SchedulerLike } from '../types';
  * ### Log complete notification
  *
  * ```ts
- * import { EMPTY } from 'rxjs';
+ * import { EMPTY } from 'rxjs.ts';
  *
  * EMPTY.subscribe({
  *   next: () => console.log('Next'),
@@ -44,8 +44,8 @@ export const EMPTY = new Observable<never>(subscriber => subscriber.complete());
  * ### Emit the number 7, then complete
  *
  * ```ts
- * import { empty } from 'rxjs';
- * import { startWith } from 'rxjs/operators';
+ * import { empty } from 'rxjs.ts';
+ * import { startWith } from 'rxjs/operators.ts';
  *
  * const result = empty().pipe(startWith(7));
  * result.subscribe(x => console.log(x));
@@ -57,8 +57,8 @@ export const EMPTY = new Observable<never>(subscriber => subscriber.complete());
  * ### Map and flatten only odd numbers to the sequence 'a', 'b', 'c'
  *
  * ```ts
- * import { empty, interval, of } from 'rxjs';
- * import { mergeMap } from 'rxjs/operators';
+ * import { empty, interval, of } from 'rxjs.ts';
+ * import { mergeMap } from 'rxjs/operators.ts';
  *
  * const interval$ = interval(1000);
  * const result = interval$.pipe(

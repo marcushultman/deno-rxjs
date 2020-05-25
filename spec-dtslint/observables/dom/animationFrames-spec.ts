@@ -1,4 +1,4 @@
-import { animationFrames } from 'rxjs';
+import { animationFrames } from 'rxjs.ts';
 
 it('should just be an observable of numbers', () => {
   const o$ = animationFrames(); // $ExpectType Observable<number>

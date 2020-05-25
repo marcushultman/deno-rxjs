@@ -1,9 +1,9 @@
-import { Subscriber } from '../Subscriber';
-import { Subscription } from '../Subscription';
-import { Observable } from '../Observable';
-import { Operator } from '../Operator';
-import { Subject } from '../Subject';
-import { OperatorFunction } from '../types';
+import { Subscriber } from '../Subscriber.ts';
+import { Subscription } from '../Subscription.ts';
+import { Observable } from '../Observable.ts';
+import { Operator } from '../Operator.ts';
+import { Subject } from '../Subject.ts';
+import { OperatorFunction } from '../types.ts';
 
 /* tslint:disable:max-line-length */
 export function groupBy<T, K extends T>(keySelector: (value: T) => value is K): OperatorFunction<T, GroupedObservable<true, K> | GroupedObservable<false, Exclude<T, K>>>;
@@ -36,8 +36,8 @@ export function groupBy<T, K, R>(keySelector: (value: T) => K, elementSelector?:
  * ### Group objects by id and return as array
  *
  * ```ts
- * import { of } from 'rxjs';
- * import { mergeMap, groupBy, reduce } from 'rxjs/operators';
+ * import { of } from 'rxjs.ts';
+ * import { mergeMap, groupBy, reduce } from 'rxjs/operators.ts';
  *
  * of(
  *   {id: 1, name: 'JavaScript'},
@@ -64,8 +64,8 @@ export function groupBy<T, K, R>(keySelector: (value: T) => K, elementSelector?:
  * ### Pivot data on the id field
  *
  * ```ts
- * import { of } from 'rxjs';
- * import { groupBy, map, mergeMap, reduce } from 'rxjs/operators';
+ * import { of } from 'rxjs.ts';
+ * import { groupBy, map, mergeMap, reduce } from 'rxjs/operators.ts';
  *
  * of(
  *   { id: 1, name: 'JavaScript' },

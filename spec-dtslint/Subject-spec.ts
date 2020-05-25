@@ -1,4 +1,4 @@
-import { Subject } from 'rxjs';
+import { Subject } from 'rxjs.ts';
 
 describe('Subject', () => {
   it('should handle no generic appropriately', () => {

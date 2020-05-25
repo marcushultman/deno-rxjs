@@ -1,5 +1,5 @@
-import { of } from 'rxjs';
-import { concatMap } from 'rxjs/operators';
+import { of } from 'rxjs.ts';
+import { concatMap } from 'rxjs/operators.ts';
 
 it('should infer correctly', () => {
   const o = of(1, 2, 3).pipe(concatMap(p => of(Boolean(p)))); // $ExpectType Observable<boolean>

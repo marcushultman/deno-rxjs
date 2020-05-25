@@ -1,9 +1,9 @@
-import { Operator } from '../Operator';
-import { Subscriber } from '../Subscriber';
-import { Subscription } from '../Subscription';
-import { MonoTypeOperatorFunction, TeardownLogic } from '../types';
-import { ConnectableObservable } from '../observable/ConnectableObservable';
-import { Observable } from '../Observable';
+import { Operator } from '../Operator.ts';
+import { Subscriber } from '../Subscriber.ts';
+import { Subscription } from '../Subscription.ts';
+import { MonoTypeOperatorFunction, TeardownLogic } from '../types.ts';
+import { ConnectableObservable } from '../observable/ConnectableObservable.ts';
+import { Observable } from '../Observable.ts';
 
 /**
  * Make a {@link ConnectableObservable} behave like a ordinary observable and automates the way
@@ -28,8 +28,8 @@ import { Observable } from '../Observable';
  * until you call its connect function.
  *
  * ```ts
- * import { interval } from 'rxjs';
- * import { tap, publish, refCount } from 'rxjs/operators';
+ * import { interval } from 'rxjs.ts';
+ * import { tap, publish, refCount } from 'rxjs/operators.ts';
  *
  * // Turn the interval observable into a ConnectableObservable (hot)
  * const refCountInterval = interval(400).pipe(

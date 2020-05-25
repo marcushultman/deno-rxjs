@@ -1,7 +1,7 @@
-import { Action } from './Action';
-import { SchedulerAction } from '../types';
-import { Subscription } from '../Subscription';
-import { AsyncScheduler } from './AsyncScheduler';
+import { Action } from './Action.ts';
+import { SchedulerAction } from '../types.ts';
+import { Subscription } from '../Subscription.ts';
+import { AsyncScheduler } from './AsyncScheduler.ts';
 
 /**
  * We need this JSDoc comment for affecting ESDoc.

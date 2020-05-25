@@ -1,4 +1,4 @@
-import { interval, animationFrameScheduler } from 'rxjs';
+import { interval, animationFrameScheduler } from 'rxjs.ts';
 
   it('should infer correctly with number param', () => {
     const a = interval(1); // $ExpectType Observable<number>

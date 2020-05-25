@@ -1,7 +1,7 @@
-import { Operator } from '../Operator';
-import { Subscriber } from '../Subscriber';
-import { Observable } from '../Observable';
-import { MonoTypeOperatorFunction, TeardownLogic } from '../types';
+import { Operator } from '../Operator.ts';
+import { Subscriber } from '../Subscriber.ts';
+import { Observable } from '../Observable.ts';
+import { MonoTypeOperatorFunction, TeardownLogic } from '../types.ts';
 
 /**
  * Returns an Observable that skips the first `count` items emitted by the source Observable.

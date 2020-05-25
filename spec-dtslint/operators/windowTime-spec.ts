@@ -1,5 +1,5 @@
-import { of, asyncScheduler } from 'rxjs';
-import { windowTime } from 'rxjs/operators';
+import { of, asyncScheduler } from 'rxjs.ts';
+import { windowTime } from 'rxjs/operators.ts';
 
 it('should infer correctly', () => {
   const o = of('a', 'b', 'c').pipe(windowTime(10)); // $ExpectType Observable<Observable<string>>

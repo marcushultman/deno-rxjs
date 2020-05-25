@@ -1,7 +1,7 @@
-import { Operator } from '../Operator';
-import { Observable } from '../Observable';
-import { Subscriber } from '../Subscriber';
-import { OperatorFunction, TeardownLogic } from '../types';
+import { Operator } from '../Operator.ts';
+import { Observable } from '../Observable.ts';
+import { Subscriber } from '../Subscriber.ts';
+import { OperatorFunction, TeardownLogic } from '../types.ts';
 
 /* tslint:disable:max-line-length */
 export function scan<V, A = V>(accumulator: (acc: A|V, value: V, index: number) => A): OperatorFunction<V, V|A>;
@@ -31,8 +31,8 @@ export function scan<V, A, S>(accumulator: (acc: A|S, value: V, index: number) =
  * ## Example
  * Count the number of click events
  * ```ts
- * import { fromEvent } from 'rxjs';
- * import { scan, mapTo } from 'rxjs/operators';
+ * import { fromEvent } from 'rxjs.ts';
+ * import { scan, mapTo } from 'rxjs/operators.ts';
  *
  * const clicks = fromEvent(document, 'click');
  * const ones = clicks.pipe(mapTo(1));

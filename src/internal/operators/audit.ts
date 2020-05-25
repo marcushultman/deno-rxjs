@@ -1,11 +1,11 @@
-import { Operator } from '../Operator';
-import { Subscriber } from '../Subscriber';
-import { Observable } from '../Observable';
-import { Subscription } from '../Subscription';
-import { MonoTypeOperatorFunction, SubscribableOrPromise, TeardownLogic } from '../types';
+import { Operator } from '../Operator.ts';
+import { Subscriber } from '../Subscriber.ts';
+import { Observable } from '../Observable.ts';
+import { Subscription } from '../Subscription.ts';
+import { MonoTypeOperatorFunction, SubscribableOrPromise, TeardownLogic } from '../types.ts';
 
-import { OuterSubscriber } from '../OuterSubscriber';
-import { subscribeToResult } from '../util/subscribeToResult';
+import { OuterSubscriber } from '../OuterSubscriber.ts';
+import { subscribeToResult } from '../util/subscribeToResult.ts';
 
 /**
  * Ignores source values for a duration determined by another Observable, then
@@ -32,7 +32,7 @@ import { subscribeToResult } from '../util/subscribeToResult';
  *
  * Emit clicks at a rate of at most one click per second
  * ```ts
- * import { fromEvent, interval } from 'rxjs';
+ * import { fromEvent, interval } from 'rxjs.ts';
  * import { audit } from 'rxjs/operators'
  *
  * const clicks = fromEvent(document, 'click');

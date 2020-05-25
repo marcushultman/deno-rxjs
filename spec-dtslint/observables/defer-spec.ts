@@ -1,4 +1,4 @@
-import { of, defer } from 'rxjs';
+import { of, defer } from 'rxjs.ts';
 
 it('should enforce function parameter', () => {
   const a = defer(); // $ExpectError

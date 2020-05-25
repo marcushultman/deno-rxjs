@@ -1,5 +1,5 @@
-import { raceWith } from 'rxjs/operators';
-import { a$, b, b$, c, c$, d$, e$, f$ } from '../helpers';
+import { raceWith } from 'rxjs/operators.ts';
+import { a$, b, b$, c, c$, d$, e$, f$ } from '../helpers.ts';
 
 describe('raceWith', () => {
   it('should support N arguments of different types', () => {

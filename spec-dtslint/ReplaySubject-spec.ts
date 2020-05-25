@@ -1,4 +1,4 @@
-import { ReplaySubject } from 'rxjs';
+import { ReplaySubject } from 'rxjs.ts';
 
 describe('ReplaySubject', () => {
   it('should handle no generic appropriately', () => {

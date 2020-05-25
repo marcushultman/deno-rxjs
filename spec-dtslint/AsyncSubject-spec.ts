@@ -1,4 +1,4 @@
-import { AsyncSubject } from 'rxjs';
+import { AsyncSubject } from 'rxjs.ts';
 
 describe('AsyncSubject', () => {
   it('should handle no generic appropriately', () => {

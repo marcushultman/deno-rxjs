@@ -1,5 +1,5 @@
-import { SchedulerAction, SchedulerLike } from '../types';
-import { Observable } from '../Observable';
+import { SchedulerAction, SchedulerLike } from '../types.ts';
+import { Observable } from '../Observable.ts';
 
 /**
  * Creates an Observable that emits a sequence of numbers within a specified
@@ -19,7 +19,7 @@ import { Observable } from '../Observable';
  * ### Produce a range of numbers
  *
  * ```ts
- * import { range } from 'rxjs';
+ * import { range } from 'rxjs.ts';
  *
  * const numbers = range(1, 3);
  *

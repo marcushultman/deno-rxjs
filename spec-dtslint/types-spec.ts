@@ -6,8 +6,8 @@ import {
   Cons,
   Head,
   Tail
-} from 'rxjs';
-import { A, B, C } from './helpers';
+} from 'rxjs.ts';
+import { A, B, C } from './helpers.ts';
 
 describe('ObservedValueOf', () => {
   it('should infer from an observable', () => {

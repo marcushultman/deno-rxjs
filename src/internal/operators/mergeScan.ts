@@ -1,11 +1,11 @@
-import { Operator } from '../Operator';
-import { Observable } from '../Observable';
-import { Subscriber } from '../Subscriber';
-import { Subscription } from '../Subscription';
-import { subscribeToResult } from '../util/subscribeToResult';
-import { OuterSubscriber } from '../OuterSubscriber';
-import { InnerSubscriber } from '../InnerSubscriber';
-import { ObservableInput, OperatorFunction } from '../types';
+import { Operator } from '../Operator.ts';
+import { Observable } from '../Observable.ts';
+import { Subscriber } from '../Subscriber.ts';
+import { Subscription } from '../Subscription.ts';
+import { subscribeToResult } from '../util/subscribeToResult.ts';
+import { OuterSubscriber } from '../OuterSubscriber.ts';
+import { InnerSubscriber } from '../InnerSubscriber.ts';
+import { ObservableInput, OperatorFunction } from '../types.ts';
 
 /**
  * Applies an accumulator function over the source Observable where the
@@ -18,8 +18,8 @@ import { ObservableInput, OperatorFunction } from '../types';
  * ## Example
  * Count the number of click events
  * ```ts
- * import { fromEvent, of } from 'rxjs';
- * import { mapTo, mergeScan } from 'rxjs/operators';
+ * import { fromEvent, of } from 'rxjs.ts';
+ * import { mapTo, mergeScan } from 'rxjs/operators.ts';
  *
  * const click$ = fromEvent(document, 'click');
  * const one$ = click$.pipe(mapTo(1));

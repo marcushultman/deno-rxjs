@@ -1,4 +1,4 @@
-import { Subscriber } from '../Subscriber';
+import { Subscriber } from '../Subscriber.ts';
 
 export function subscribeToAsyncIterable<T>(asyncIterable: AsyncIterable<T>) {
   return (subscriber: Subscriber<T>) => {

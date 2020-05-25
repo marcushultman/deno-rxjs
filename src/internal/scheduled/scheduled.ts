@@ -1,14 +1,14 @@
-import { scheduleObservable } from './scheduleObservable';
-import { schedulePromise } from './schedulePromise';
-import { scheduleArray } from './scheduleArray';
-import { scheduleIterable } from './scheduleIterable';
-import { isInteropObservable } from '../util/isInteropObservable';
-import { isPromise } from '../util/isPromise';
-import { isArrayLike } from '../util/isArrayLike';
-import { isIterable } from '../util/isIterable';
-import { ObservableInput, SchedulerLike } from '../types';
-import { Observable } from '../Observable';
-import { scheduleAsyncIterable } from './scheduleAsyncIterable';
+import { scheduleObservable } from './scheduleObservable.ts';
+import { schedulePromise } from './schedulePromise.ts';
+import { scheduleArray } from './scheduleArray.ts';
+import { scheduleIterable } from './scheduleIterable.ts';
+import { isInteropObservable } from '../util/isInteropObservable.ts';
+import { isPromise } from '../util/isPromise.ts';
+import { isArrayLike } from '../util/isArrayLike.ts';
+import { isIterable } from '../util/isIterable.ts';
+import { ObservableInput, SchedulerLike } from '../types.ts';
+import { Observable } from '../Observable.ts';
+import { scheduleAsyncIterable } from './scheduleAsyncIterable.ts';
 
 /**
  * Converts from a common {@link ObservableInput} type to an observable where subscription and emissions

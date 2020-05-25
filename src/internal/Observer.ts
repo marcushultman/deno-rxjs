@@ -1,6 +1,6 @@
-import { Observer } from './types';
-import { config } from './config';
-import { hostReportError } from './util/hostReportError';
+import { Observer } from './types.ts';
+import { config } from './config.ts';
+import { hostReportError } from './util/hostReportError.ts';
 
 export const empty: Observer<any> = {
   closed: true,

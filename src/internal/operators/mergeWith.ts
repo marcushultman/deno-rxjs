@@ -1,6 +1,6 @@
-import { merge as mergeStatic } from '../observable/merge';
-import { Observable } from '../Observable';
-import { ObservableInput, OperatorFunction, MonoTypeOperatorFunction, SchedulerLike, ObservedValueUnionFromArray } from '../types';
+import { merge as mergeStatic } from '../observable/merge.ts';
+import { Observable } from '../Observable.ts';
+import { ObservableInput, OperatorFunction, MonoTypeOperatorFunction, SchedulerLike, ObservedValueUnionFromArray } from '../types.ts';
 
 /* tslint:disable:max-line-length */
 
@@ -83,8 +83,8 @@ export function mergeWith<T, A extends ObservableInput<any>[]>(...otherSources: 
  * Joining all outputs from multiple user input event streams:
  *
  * ```ts
- * import { fromEvent } from 'rxjs';
- * import { map, mergeWith } from 'rxjs/operators';
+ * import { fromEvent } from 'rxjs.ts';
+ * import { map, mergeWith } from 'rxjs/operators.ts';
  *
  * const clicks$ = fromEvent(document, 'click').pipe(map(() => 'click'));
  * const mousemoves$ = fromEvent(document, 'mousemove').pipe(map(() => 'mousemove'));

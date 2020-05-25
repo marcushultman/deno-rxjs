@@ -1,9 +1,9 @@
-import { Observable } from '../Observable';
-import { ObservableInput, ObservedValueUnionFromArray, ObservedValueOf, SubscribableOrPromise } from '../types';
-import { isArray } from '../util/isArray';
-import { map } from '../operators/map';
-import { isObject } from '../util/isObject';
-import { from } from './from';
+import { Observable } from '../Observable.ts';
+import { ObservableInput, ObservedValueUnionFromArray, ObservedValueOf, SubscribableOrPromise } from '../types.ts';
+import { isArray } from '../util/isArray.ts';
+import { map } from '../operators/map.ts';
+import { isObject } from '../util/isObject.ts';
+import { from } from './from.ts';
 
 /* tslint:disable:max-line-length */
 
@@ -92,7 +92,7 @@ export function forkJoin<T>(...sources: ObservableInput<T>[]): Observable<T[]>;
  *
  * ### Use forkJoin with a dictionary of observable inputs
  * ```ts
- * import { forkJoin, of, timer } from 'rxjs';
+ * import { forkJoin, of, timer } from 'rxjs.ts';
  *
  * const observable = forkJoin({
  *   foo: of(1, 2, 3, 4),
@@ -111,7 +111,7 @@ export function forkJoin<T>(...sources: ObservableInput<T>[]): Observable<T[]>;
  *
  * ### Use forkJoin with an array of observable inputs
  * ```ts
- * import { forkJoin, of, timer } from 'rxjs';
+ * import { forkJoin, of, timer } from 'rxjs.ts';
  *
  * const observable = forkJoin([
  *   of(1, 2, 3, 4),

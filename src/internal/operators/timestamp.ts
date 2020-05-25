@@ -1,5 +1,5 @@
-import { OperatorFunction, TimestampProvider, Timestamp } from '../types';
-import { map } from './map';
+import { OperatorFunction, TimestampProvider, Timestamp } from '../types.ts';
+import { map } from './map.ts';
 
 /**
  * Attaches a timestamp to each item emitted by an observable indicating when it was emitted
@@ -17,8 +17,8 @@ import { map } from './map';
  * In this example there is a timestamp attached to the documents click event.
  *
  * ```ts
- * import { fromEvent } from 'rxjs';
- * import { timestamp } from 'rxjs/operators';
+ * import { fromEvent } from 'rxjs.ts';
+ * import { timestamp } from 'rxjs/operators.ts';
  *
  * const clickWithTimestamp = fromEvent(document, 'click').pipe(
  *   timestamp()

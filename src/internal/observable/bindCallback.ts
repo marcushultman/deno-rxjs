@@ -1,11 +1,11 @@
-import { SchedulerLike, SchedulerAction } from '../types';
-import { Observable } from '../Observable';
-import { AsyncSubject } from '../AsyncSubject';
-import { Subscriber } from '../Subscriber';
-import { map } from '../operators/map';
-import { canReportError } from '../util/canReportError';
-import { isArray } from '../util/isArray';
-import { isScheduler } from '../util/isScheduler';
+import { SchedulerLike, SchedulerAction } from '../types.ts';
+import { Observable } from '../Observable.ts';
+import { AsyncSubject } from '../AsyncSubject.ts';
+import { Subscriber } from '../Subscriber.ts';
+import { map } from '../operators/map.ts';
+import { canReportError } from '../util/canReportError.ts';
+import { isArray } from '../util/isArray.ts';
+import { isScheduler } from '../util/isScheduler.ts';
 
 // tslint:disable:max-line-length
 /** @deprecated resultSelector is no longer supported, use a mapping function. */
@@ -112,8 +112,8 @@ export function bindCallback(callbackFunc: Function, scheduler?: SchedulerLike):
  *
  * ### Convert jQuery's getJSON to an Observable API
  * ```ts
- * import { bindCallback } from 'rxjs';
- * import * as jQuery from 'jquery';
+ * import { bindCallback } from 'rxjs.ts';
+ * import * as jQuery from 'jquery.ts';
  *
  * // Suppose we have jQuery.getJSON('/my/url', callback)
  * const getJSONAsObservable = bindCallback(jQuery.getJSON);
@@ -123,7 +123,7 @@ export function bindCallback(callbackFunc: Function, scheduler?: SchedulerLike):
  *
  * ### Receive an array of arguments passed to a callback
  * ```ts
- * import { bindCallback } from 'rxjs';
+ * import { bindCallback } from 'rxjs.ts';
  *
  * const someFunction = (cb) => {
  *   cb(5, 'some string', {someProperty: 'someValue'})
@@ -137,7 +137,7 @@ export function bindCallback(callbackFunc: Function, scheduler?: SchedulerLike):
  *
  * ### Compare behaviour with and without async Scheduler
  * ```ts
- * import { bindCallback, asyncScheduler } from 'rxjs';
+ * import { bindCallback, asyncScheduler } from 'rxjs.ts';
  *
  * function iCallMyCallbackSynchronously(cb) {
  *   cb();
@@ -158,7 +158,7 @@ export function bindCallback(callbackFunc: Function, scheduler?: SchedulerLike):
  *
  * ### Use bindCallback on an object method
  * ```ts
- * import { bindCallback } from 'rxjs';
+ * import { bindCallback } from 'rxjs.ts';
  *
  * const boundMethod = bindCallback(someObject.methodWithCallback);
  * boundMethod

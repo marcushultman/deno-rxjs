@@ -1,6 +1,6 @@
-import { CombineLatestOperator } from '../observable/combineLatest';
-import { Observable } from '../Observable';
-import { OperatorFunction, ObservableInput } from '../types';
+import { CombineLatestOperator } from '../observable/combineLatest.ts';
+import { Observable } from '../Observable.ts';
+import { OperatorFunction, ObservableInput } from '../types.ts';
 
 export function combineAll<T>(): OperatorFunction<ObservableInput<T>, T[]>;
 export function combineAll<T>(): OperatorFunction<any, T[]>;
@@ -27,8 +27,8 @@ export function combineAll<R>(project: (...values: Array<any>) => R): OperatorFu
  * ### Map two click events to a finite interval Observable, then apply `combineAll`
  *
  * ```ts
- * import { fromEvent, interval } from 'rxjs';
- * import { map, combineAll, take } from 'rxjs/operators';
+ * import { fromEvent, interval } from 'rxjs.ts';
+ * import { map, combineAll, take } from 'rxjs/operators.ts';
  *
  * const clicks = fromEvent(document, 'click');
  * const higherOrder = clicks.pipe(

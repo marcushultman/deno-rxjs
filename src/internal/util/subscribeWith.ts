@@ -1,6 +1,6 @@
-import { Observable } from '../Observable';
-import { Subscriber } from '../Subscriber';
-import { Subscription } from '../Subscription';
+import { Observable } from '../Observable.ts';
+import { Subscriber } from '../Subscriber.ts';
+import { Subscription } from '../Subscription.ts';
 
 /**
  * Subscribes a subscriber to an observable and ensures the subscriber is

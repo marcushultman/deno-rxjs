@@ -1,5 +1,5 @@
-import { ObservableInput, OperatorFunction } from '../types';
-import { switchMap } from './switchMap';
+import { ObservableInput, OperatorFunction } from '../types.ts';
+import { switchMap } from './switchMap.ts';
 
 /* tslint:disable:max-line-length */
 export function switchMapTo<R>(observable: ObservableInput<R>): OperatorFunction<any, R>;
@@ -27,8 +27,8 @@ export function switchMapTo<T, I, R>(observable: ObservableInput<I>, resultSelec
  * ## Example
  * Rerun an interval Observable on every click event
  * ```ts
- * import { fromEvent, interval } from 'rxjs';
- * import { switchMapTo } from 'rxjs/operators';
+ * import { fromEvent, interval } from 'rxjs.ts';
+ * import { switchMapTo } from 'rxjs/operators.ts';
  *
  * const clicks = fromEvent(document, 'click');
  * const result = clicks.pipe(switchMapTo(interval(1000)));

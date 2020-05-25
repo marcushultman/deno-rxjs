@@ -1,5 +1,5 @@
-import { mergeMap } from './mergeMap';
-import { ObservableInput, OperatorFunction, ObservedValueOf } from '../types';
+import { mergeMap } from './mergeMap.ts';
+import { ObservableInput, OperatorFunction, ObservedValueOf } from '../types.ts';
 
 /* tslint:disable:max-line-length */
 export function concatMap<T, O extends ObservableInput<any>>(project: (value: T, index: number) =>  O): OperatorFunction<T, ObservedValueOf<O>>;
@@ -36,8 +36,8 @@ export function concatMap<T, R, O extends ObservableInput<any>>(project: (value:
  * For each click event, tick every second from 0 to 3, with no concurrency
  *
  * ```ts
- * import { fromEvent, interval } from 'rxjs';
- * import { concatMap, take } from 'rxjs/operators';
+ * import { fromEvent, interval } from 'rxjs.ts';
+ * import { concatMap, take } from 'rxjs/operators.ts';
  *
  * const clicks = fromEvent(document, 'click');
  * const result = clicks.pipe(

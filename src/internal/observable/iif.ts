@@ -1,7 +1,7 @@
-import { Observable } from '../Observable';
-import { defer } from './defer';
-import { EMPTY } from './empty';
-import { SubscribableOrPromise } from '../types';
+import { Observable } from '../Observable.ts';
+import { defer } from './defer.ts';
+import { EMPTY } from './empty.ts';
+import { SubscribableOrPromise } from '../types.ts';
 
 /**
  * Decides at subscription time which Observable will actually be subscribed.
@@ -28,7 +28,7 @@ import { SubscribableOrPromise } from '../types';
  * ## Examples
  * ### Change at runtime which Observable will be subscribed
  * ```ts
- * import { iif, of } from 'rxjs';
+ * import { iif, of } from 'rxjs.ts';
  *
  * let subscribeToFirst;
  * const firstOrSecond = iif(

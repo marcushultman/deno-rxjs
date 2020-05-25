@@ -1,11 +1,11 @@
-import { Observable } from '../Observable';
-import { EmptyError } from '../util/EmptyError';
-import { OperatorFunction } from '../../internal/types';
-import { filter } from './filter';
-import { take } from './take';
-import { defaultIfEmpty } from './defaultIfEmpty';
-import { throwIfEmpty } from './throwIfEmpty';
-import { identity } from '../util/identity';
+import { Observable } from '../Observable.ts';
+import { EmptyError } from '../util/EmptyError.ts';
+import { OperatorFunction } from '../../internal/types.ts';
+import { filter } from './filter.ts';
+import { take } from './take.ts';
+import { defaultIfEmpty } from './defaultIfEmpty.ts';
+import { throwIfEmpty } from './throwIfEmpty.ts';
+import { identity } from '../util/identity.ts';
 
 /* tslint:disable:max-line-length */
 export function first<T, D = T>(
@@ -42,8 +42,8 @@ export function first<T, D = T>(
  * ## Examples
  * Emit only the first click that happens on the DOM
  * ```ts
- * import { fromEvent } from 'rxjs';
- * import { first } from 'rxjs/operators';
+ * import { fromEvent } from 'rxjs.ts';
+ * import { first } from 'rxjs/operators.ts';
  *
  * const clicks = fromEvent(document, 'click');
  * const result = clicks.pipe(first());
@@ -52,8 +52,8 @@ export function first<T, D = T>(
  *
  * Emits the first click that happens on a DIV
  * ```ts
- * import { fromEvent } from 'rxjs';
- * import { first } from 'rxjs/operators';
+ * import { fromEvent } from 'rxjs.ts';
+ * import { first } from 'rxjs/operators.ts';
  *
  * const clicks = fromEvent(document, 'click');
  * const result = clicks.pipe(first(ev => ev.target.tagName === 'DIV'));

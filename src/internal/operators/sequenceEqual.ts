@@ -1,9 +1,9 @@
-import { Operator } from '../Operator';
-import { Observable } from '../Observable';
-import { Subscriber } from '../Subscriber';
-import { Subscription } from '../Subscription';
+import { Operator } from '../Operator.ts';
+import { Observable } from '../Observable.ts';
+import { Subscriber } from '../Subscriber.ts';
+import { Subscription } from '../Subscription.ts';
 
-import { Observer, OperatorFunction } from '../types';
+import { Observer, OperatorFunction } from '../types.ts';
 
 /**
  * Compares all values of two observables in sequence using an optional comparator function
@@ -24,8 +24,8 @@ import { Observer, OperatorFunction } from '../types';
  * ## Example
  * figure out if the Konami code matches
  * ```ts
- * import { from, fromEvent } from 'rxjs';
- * import { sequenceEqual, bufferCount, mergeMap, map } from 'rxjs/operators';
+ * import { from, fromEvent } from 'rxjs.ts';
+ * import { sequenceEqual, bufferCount, mergeMap, map } from 'rxjs/operators.ts';
  *
  * const codes = from([
  *   'ArrowUp',

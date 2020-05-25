@@ -1,8 +1,8 @@
-import { Observable } from '../Observable';
-import { Operator } from '../Operator';
-import { Subscriber } from '../Subscriber';
-import { async } from '../scheduler/async';
-import { MonoTypeOperatorFunction, SchedulerAction, SchedulerLike, TeardownLogic } from '../types';
+import { Observable } from '../Observable.ts';
+import { Operator } from '../Operator.ts';
+import { Subscriber } from '../Subscriber.ts';
+import { async } from '../scheduler/async.ts';
+import { MonoTypeOperatorFunction, SchedulerAction, SchedulerLike, TeardownLogic } from '../types.ts';
 
 /**
  * Emits the most recently emitted value from the source Observable within
@@ -23,8 +23,8 @@ import { MonoTypeOperatorFunction, SchedulerAction, SchedulerLike, TeardownLogic
  * ## Example
  * Every second, emit the most recent click at most once
  * ```ts
- * import { fromEvent } from 'rxjs';
- * import { sampleTime } from 'rxjs/operators';
+ * import { fromEvent } from 'rxjs.ts';
+ * import { sampleTime } from 'rxjs/operators.ts';
  *
  * const clicks = fromEvent(document, 'click');
  * const result = clicks.pipe(sampleTime(1000));

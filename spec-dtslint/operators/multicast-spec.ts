@@ -1,5 +1,5 @@
-import { of, Subject, Observable } from 'rxjs';
-import { multicast } from 'rxjs/operators';
+import { of, Subject, Observable } from 'rxjs.ts';
+import { multicast } from 'rxjs/operators.ts';
 
 it('should infer correctly', () => {
   const o = of(1, 2, 3).pipe(multicast(new Subject<number>())); // $ExpectType Observable<number>

@@ -1,4 +1,4 @@
-import { errorObject } from './errorObject';
+import { errorObject } from './errorObject.ts';
 
 let tryCatchTarget: Function | undefined;
 

@@ -1,13 +1,13 @@
-import { Operator } from '../Operator';
-import { Observable } from '../Observable';
-import { Subscriber } from '../Subscriber';
-import { Subscription } from '../Subscription';
-import { OuterSubscriber } from '../OuterSubscriber';
-import { InnerSubscriber } from '../InnerSubscriber';
-import { subscribeToResult } from '../util/subscribeToResult';
-import { ObservableInput, OperatorFunction, ObservedValueOf } from '../types';
-import { map } from './map';
-import { from } from '../observable/from';
+import { Operator } from '../Operator.ts';
+import { Observable } from '../Observable.ts';
+import { Subscriber } from '../Subscriber.ts';
+import { Subscription } from '../Subscription.ts';
+import { OuterSubscriber } from '../OuterSubscriber.ts';
+import { InnerSubscriber } from '../InnerSubscriber.ts';
+import { subscribeToResult } from '../util/subscribeToResult.ts';
+import { ObservableInput, OperatorFunction, ObservedValueOf } from '../types.ts';
+import { map } from './map.ts';
+import { from } from '../observable/from.ts';
 
 /* tslint:disable:max-line-length */
 export function switchMap<T, O extends ObservableInput<any>>(project: (value: T, index: number) => O): OperatorFunction<T, ObservedValueOf<O>>;
@@ -38,8 +38,8 @@ export function switchMap<T, R, O extends ObservableInput<any>>(project: (value:
  * ## Example
  * Generate new Observable according to source Observable values
  * ```typescript
- * import { of } from 'rxjs';
- * import { switchMap } from 'rxjs/operators';
+ * import { of } from 'rxjs.ts';
+ * import { switchMap } from 'rxjs/operators.ts';
  *
  * const switched = of(1, 2, 3).pipe(switchMap((x: number) => of(x, x ** 2, x ** 3)));
  * switched.subscribe(x => console.log(x));
@@ -55,8 +55,8 @@ export function switchMap<T, R, O extends ObservableInput<any>>(project: (value:
  *
  * Rerun an interval Observable on every click event
  * ```ts
- * import { fromEvent, interval } from 'rxjs';
- * import { switchMap } from 'rxjs/operators';
+ * import { fromEvent, interval } from 'rxjs.ts';
+ * import { switchMap } from 'rxjs/operators.ts';
  *
  * const clicks = fromEvent(document, 'click');
  * const result = clicks.pipe(switchMap((ev) => interval(1000)));

@@ -1,8 +1,8 @@
-import { Observable } from '../Observable';
-import { Subscriber } from '../Subscriber';
-import { identity } from '../util/identity';
-import { SchedulerAction, SchedulerLike } from '../types';
-import { isScheduler } from '../util/isScheduler';
+import { Observable } from '../Observable.ts';
+import { Subscriber } from '../Subscriber.ts';
+import { identity } from '../util/identity.ts';
+import { SchedulerAction, SchedulerLike } from '../types.ts';
+import { isScheduler } from '../util/isScheduler.ts';
 
 export type ConditionFunc<S> = (state: S) => boolean;
 export type IterateFunc<S> = (state: S) => S;
@@ -58,7 +58,7 @@ export interface GenerateOptions<T, S> extends GenerateBaseOptions<S> {
  * ### Produces sequences of number
  *
  * ```ts
- * import { generate } from 'rxjs';
+ * import { generate } from 'rxjs.ts';
  *
  * const result = generate(0, x => x < 3, x => x + 1, x => x);
  *
@@ -73,7 +73,7 @@ export interface GenerateOptions<T, S> extends GenerateBaseOptions<S> {
  * ### Use asap scheduler
  *
  * ```ts
- * import { generate } from 'rxjs';
+ * import { generate } from 'rxjs.ts';
  *
  * const result = generate(1, x => x < 5, x => x * 2, x => x + 1, asap);
  *
@@ -150,7 +150,7 @@ export interface GenerateOptions<T, S> extends GenerateBaseOptions<S> {
  * ### Use with condition and iterate functions
  *
  * ```ts
- * import { generate } from 'rxjs';
+ * import { generate } from 'rxjs.ts';
  *
  * const result = generate(0, x => x < 3, x => x + 1);
  *
@@ -169,7 +169,7 @@ export interface GenerateOptions<T, S> extends GenerateBaseOptions<S> {
  * ### Use with condition, iterate and resultSelector functions
  *
  * ```ts
- * import { generate } from 'rxjs';
+ * import { generate } from 'rxjs.ts';
  *
  * const result = generate(0, x => x < 3, x => x + 1, x => x * 1000);
  *
@@ -188,7 +188,7 @@ export interface GenerateOptions<T, S> extends GenerateBaseOptions<S> {
  * ### Use with options object
  *
  * ```ts
- * import { generate } from 'rxjs';
+ * import { generate } from 'rxjs.ts';
  *
  * const result = generate({
  *   initialState: 0,
@@ -212,7 +212,7 @@ export interface GenerateOptions<T, S> extends GenerateBaseOptions<S> {
  * ### Use options object without condition function
  *
  * ```ts
- * import { generate } from 'rxjs';
+ * import { generate } from 'rxjs.ts';
  *
  * const result = generate({
  *   initialState: 0,
@@ -262,7 +262,7 @@ export function generate<S>(initialState: S,
  * ### Use options object with condition function
  *
  * ```ts
- * import { generate } from 'rxjs';
+ * import { generate } from 'rxjs.ts';
  *
  * const result = generate({
  *   initialState: 0,
@@ -304,7 +304,7 @@ export function generate<S>(options: GenerateBaseOptions<S>): Observable<S>;
  * ### Use options object with condition and iterate function
  *
  * ```ts
- * import { generate } from 'rxjs';
+ * import { generate } from 'rxjs.ts';
  *
  * const result = generate({
  *   initialState: 0,

@@ -1,5 +1,5 @@
-import { of } from 'rxjs';
-import { race } from 'rxjs/operators';
+import { of } from 'rxjs.ts';
+import { race } from 'rxjs/operators.ts';
 
 it('should infer correctly', () => {
   const o = of('a', 'b', 'c').pipe(race()); // $ExpectType Observable<string>

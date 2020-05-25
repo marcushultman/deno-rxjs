@@ -1,8 +1,8 @@
-import { Observable } from '../Observable';
-import { isArray } from '../util/isArray';
-import { isFunction } from '../util/isFunction';
-import { NodeEventHandler } from './fromEvent';
-import { map } from '../operators/map';
+import { Observable } from '../Observable.ts';
+import { isArray } from '../util/isArray.ts';
+import { isFunction } from '../util/isFunction.ts';
+import { NodeEventHandler } from './fromEvent.ts';
+import { map } from '../operators/map.ts';
 
 /* tslint:disable:max-line-length */
 export function fromEventPattern<T>(addHandler: (handler: NodeEventHandler) => any, removeHandler?: (handler: NodeEventHandler, signal?: any) => void): Observable<T>;
@@ -59,7 +59,7 @@ export function fromEventPattern<T>(addHandler: (handler: NodeEventHandler) => a
  * ### Emits clicks happening on the DOM document
  *
  * ```ts
- * import { fromEventPattern } from 'rxjs';
+ * import { fromEventPattern } from 'rxjs.ts';
  *
  * function addClickHandler(handler) {
  *   document.addEventListener('click', handler);
@@ -83,7 +83,7 @@ export function fromEventPattern<T>(addHandler: (handler: NodeEventHandler) => a
  * ### Use with API that returns cancellation token
  *
  * ```ts
- * import { fromEventPattern } from 'rxjs';
+ * import { fromEventPattern } from 'rxjs.ts';
  *
  * const token = someAPI.registerEventHandler(function() {});
  * someAPI.unregisterEventHandler(token); // this APIs cancellation method accepts
@@ -99,7 +99,7 @@ export function fromEventPattern<T>(addHandler: (handler: NodeEventHandler) => a
  * ### Use with project function
  *
  * ```ts
- * import { fromEventPattern } from 'rxjs';
+ * import { fromEventPattern } from 'rxjs.ts';
  *
  * someAPI.registerEventHandler((eventType, eventMessage) => {
  *   console.log(eventType, eventMessage); // Logs "EVENT_TYPE" "EVENT_MESSAGE" to console.

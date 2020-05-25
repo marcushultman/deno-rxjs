@@ -1,13 +1,13 @@
-import { Observable } from '../Observable';
-import { from } from '../observable/from';
-import { Operator } from '../Operator';
-import { Subscriber } from '../Subscriber';
-import { Subscription } from '../Subscription';
-import { isArray } from '../util/isArray';
-import { OuterSubscriber } from '../OuterSubscriber';
-import { InnerSubscriber } from '../InnerSubscriber';
-import { subscribeToResult } from '../util/subscribeToResult';
-import { ObservableInput, OperatorFunction } from '../types';
+import { Observable } from '../Observable.ts';
+import { from } from '../observable/from.ts';
+import { Operator } from '../Operator.ts';
+import { Subscriber } from '../Subscriber.ts';
+import { Subscription } from '../Subscription.ts';
+import { isArray } from '../util/isArray.ts';
+import { OuterSubscriber } from '../OuterSubscriber.ts';
+import { InnerSubscriber } from '../InnerSubscriber.ts';
+import { subscribeToResult } from '../util/subscribeToResult.ts';
+import { ObservableInput, OperatorFunction } from '../types.ts';
 
 /* tslint:disable:max-line-length */
 export function onErrorResumeNext<T>(): OperatorFunction<T, T>;
@@ -54,8 +54,8 @@ export function onErrorResumeNext<T, R>(array: ObservableInput<any>[]): Operator
  * ## Example
  * Subscribe to the next Observable after map fails
  * ```ts
- * import { of } from 'rxjs';
- * import { onErrorResumeNext, map } from 'rxjs/operators';
+ * import { of } from 'rxjs.ts';
+ * import { onErrorResumeNext, map } from 'rxjs/operators.ts';
  *
  * of(1, 2, 3, 0).pipe(
  *   map(x => {

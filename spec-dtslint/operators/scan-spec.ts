@@ -1,5 +1,5 @@
-import { of, Observable } from 'rxjs';
-import { scan } from 'rxjs/operators';
+import { of, Observable } from 'rxjs.ts';
+import { scan } from 'rxjs/operators.ts';
 
 it('should enforce parameter', () => {
   const a = of(1, 2, 3).pipe(scan()); // $ExpectError

@@ -1,2 +1,1 @@
-alias gitone='git --git-dir=.gitone'
-alias gittwo='git --git-dir=.gittwo'
+alias gitone='git --git-dir=.gitone' && alias gittwo='git --git-dir=.gittwo'

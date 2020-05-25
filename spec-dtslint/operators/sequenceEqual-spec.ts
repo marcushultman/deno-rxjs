@@ -1,5 +1,5 @@
-import { of } from 'rxjs';
-import { sequenceEqual } from 'rxjs/operators';
+import { of } from 'rxjs.ts';
+import { sequenceEqual } from 'rxjs/operators.ts';
 
 it('should enforce compareTo Observable', () => {
   const a = of(1, 2, 3).pipe(sequenceEqual()); // $ExpectError

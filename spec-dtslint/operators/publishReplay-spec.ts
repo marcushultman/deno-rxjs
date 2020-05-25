@@ -1,5 +1,5 @@
-import { of, asyncScheduler, Observable } from 'rxjs';
-import { publishReplay } from 'rxjs/operators';
+import { of, asyncScheduler, Observable } from 'rxjs.ts';
+import { publishReplay } from 'rxjs/operators.ts';
 
 it('should accept empty parameter', () => {
   const a = of(1, 2, 3).pipe(publishReplay()); // $ExpectType Observable<number>

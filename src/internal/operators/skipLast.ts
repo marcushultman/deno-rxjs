@@ -1,8 +1,8 @@
-import { Operator } from '../Operator';
-import { Subscriber } from '../Subscriber';
-import { ArgumentOutOfRangeError } from '../util/ArgumentOutOfRangeError';
-import { Observable } from '../Observable';
-import { MonoTypeOperatorFunction, TeardownLogic } from '../types';
+import { Operator } from '../Operator.ts';
+import { Subscriber } from '../Subscriber.ts';
+import { ArgumentOutOfRangeError } from '../util/ArgumentOutOfRangeError.ts';
+import { Observable } from '../Observable.ts';
+import { MonoTypeOperatorFunction, TeardownLogic } from '../types.ts';
 
 /**
  * Skip the last `count` values emitted by the source Observable.
@@ -17,8 +17,8 @@ import { MonoTypeOperatorFunction, TeardownLogic } from '../types';
  * ## Example
  * Skip the last 2 values of an Observable with many values
  * ```ts
- * import { range } from 'rxjs';
- * import { skipLast } from 'rxjs/operators';
+ * import { range } from 'rxjs.ts';
+ * import { skipLast } from 'rxjs/operators.ts';
  *
  * const many = range(1, 5);
  * const skipLastTwo = many.pipe(skipLast(2));

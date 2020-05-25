@@ -1,8 +1,8 @@
-import { Operator } from '../Operator';
-import { Subscriber } from '../Subscriber';
-import { Observable } from '../Observable';
+import { Operator } from '../Operator.ts';
+import { Subscriber } from '../Subscriber.ts';
+import { Observable } from '../Observable.ts';
 
-import { MonoTypeOperatorFunction, TeardownLogic } from '../types';
+import { MonoTypeOperatorFunction, TeardownLogic } from '../types.ts';
 
 export interface RetryConfig {
   count: number;
@@ -23,8 +23,8 @@ export interface RetryConfig {
  *
  * ## Example
  * ```ts
- * import { interval, of, throwError } from 'rxjs';
- * import { mergeMap, retry } from 'rxjs/operators';
+ * import { interval, of, throwError } from 'rxjs.ts';
+ * import { mergeMap, retry } from 'rxjs/operators.ts';
  *
  * const source = interval(1000);
  * const example = source.pipe(

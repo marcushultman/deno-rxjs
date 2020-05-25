@@ -1,12 +1,12 @@
-import { Observable } from '../Observable';
-import { Notification } from '../Notification';
-import { ColdObservable } from './ColdObservable';
-import { HotObservable } from './HotObservable';
-import { TestMessage } from './TestMessage';
-import { SubscriptionLog } from './SubscriptionLog';
-import { Subscription } from '../Subscription';
-import { VirtualTimeScheduler, VirtualAction } from '../scheduler/VirtualTimeScheduler';
-import { AsyncScheduler } from '../scheduler/AsyncScheduler';
+import { Observable } from '../Observable.ts';
+import { Notification } from '../Notification.ts';
+import { ColdObservable } from './ColdObservable.ts';
+import { HotObservable } from './HotObservable.ts';
+import { TestMessage } from './TestMessage.ts';
+import { SubscriptionLog } from './SubscriptionLog.ts';
+import { Subscription } from '../Subscription.ts';
+import { VirtualTimeScheduler, VirtualAction } from '../scheduler/VirtualTimeScheduler.ts';
+import { AsyncScheduler } from '../scheduler/AsyncScheduler.ts';
 
 const defaultMaxFrame: number = 750;
 

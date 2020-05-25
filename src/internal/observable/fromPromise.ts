@@ -1,7 +1,7 @@
-import { Observable } from '../Observable';
-import { SchedulerLike } from '../types';
-import { subscribeToPromise } from '../util/subscribeToPromise';
-import { schedulePromise } from '../scheduled/schedulePromise';
+import { Observable } from '../Observable.ts';
+import { SchedulerLike } from '../types.ts';
+import { subscribeToPromise } from '../util/subscribeToPromise.ts';
+import { schedulePromise } from '../scheduled/schedulePromise.ts';
 
 export function fromPromise<T>(input: PromiseLike<T>, scheduler?: SchedulerLike) {
   if (!scheduler) {

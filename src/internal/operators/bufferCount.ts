@@ -1,7 +1,7 @@
-import { Operator } from '../Operator';
-import { Subscriber } from '../Subscriber';
-import { Observable } from '../Observable';
-import { OperatorFunction, TeardownLogic } from '../types';
+import { Operator } from '../Operator.ts';
+import { Subscriber } from '../Subscriber.ts';
+import { Observable } from '../Observable.ts';
+import { OperatorFunction, TeardownLogic } from '../types.ts';
 
 /**
  * Buffers the source Observable values until the size hits the maximum
@@ -23,8 +23,8 @@ import { OperatorFunction, TeardownLogic } from '../types';
  * Emit the last two click events as an array
  *
  * ```ts
- * import { fromEvent } from 'rxjs';
- * import { bufferCount } from 'rxjs/operators';
+ * import { fromEvent } from 'rxjs.ts';
+ * import { bufferCount } from 'rxjs/operators.ts';
  *
  * const clicks = fromEvent(document, 'click');
  * const buffered = clicks.pipe(bufferCount(2));
@@ -34,8 +34,8 @@ import { OperatorFunction, TeardownLogic } from '../types';
  * On every click, emit the last two click events as an array
  *
  * ```ts
- * import { fromEvent } from 'rxjs';
- * import { bufferCount } from 'rxjs/operators';
+ * import { fromEvent } from 'rxjs.ts';
+ * import { bufferCount } from 'rxjs/operators.ts';
  *
  * const clicks = fromEvent(document, 'click');
  * const buffered = clicks.pipe(bufferCount(2, 1));

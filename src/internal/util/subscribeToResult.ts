@@ -1,9 +1,9 @@
-import { Subscription } from '../Subscription';
-import { InnerSubscriber } from '../InnerSubscriber';
-import { OuterSubscriber } from '../OuterSubscriber';
-import { Subscriber } from '../Subscriber';
-import { subscribeTo } from './subscribeTo';
-import { Observable } from '../Observable';
+import { Subscription } from '../Subscription.ts';
+import { InnerSubscriber } from '../InnerSubscriber.ts';
+import { OuterSubscriber } from '../OuterSubscriber.ts';
+import { Subscriber } from '../Subscriber.ts';
+import { subscribeTo } from './subscribeTo.ts';
+import { Observable } from '../Observable.ts';
 
 export function subscribeToResult<T, R>(
   outerSubscriber: OuterSubscriber<T, R>,

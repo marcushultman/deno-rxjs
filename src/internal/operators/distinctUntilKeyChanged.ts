@@ -1,5 +1,5 @@
-import { distinctUntilChanged } from './distinctUntilChanged';
-import { MonoTypeOperatorFunction } from '../types';
+import { distinctUntilChanged } from './distinctUntilChanged.ts';
+import { MonoTypeOperatorFunction } from '../types.ts';
 
 /* tslint:disable:max-line-length */
 export function distinctUntilKeyChanged<T>(key: keyof T): MonoTypeOperatorFunction<T>;
@@ -17,8 +17,8 @@ export function distinctUntilKeyChanged<T, K extends keyof T>(key: K, compare: (
  * ## Examples
  * An example comparing the name of persons
  * ```typescript
- * import { of } from 'rxjs';
- * import { distinctUntilKeyChanged } from 'rxjs/operators';
+ * import { of } from 'rxjs.ts';
+ * import { distinctUntilKeyChanged } from 'rxjs/operators.ts';
  *
  *  interface Person {
  *     age: number,
@@ -43,8 +43,8 @@ export function distinctUntilKeyChanged<T, K extends keyof T>(key: K, compare: (
  *
  * An example comparing the first letters of the name
  * ```typescript
- * import { of } from 'rxjs';
- * import { distinctUntilKeyChanged } from 'rxjs/operators';
+ * import { of } from 'rxjs.ts';
+ * import { distinctUntilKeyChanged } from 'rxjs/operators.ts';
  *
  * interface Person {
  *     age: number,

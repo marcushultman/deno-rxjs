@@ -1,5 +1,5 @@
-import { Subscriber } from '../Subscriber';
-import { hostReportError } from './hostReportError';
+import { Subscriber } from '../Subscriber.ts';
+import { hostReportError } from './hostReportError.ts';
 
 export const subscribeToPromise = <T>(promise: PromiseLike<T>) => (subscriber: Subscriber<T>) => {
   promise.then(

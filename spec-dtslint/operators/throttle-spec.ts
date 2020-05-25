@@ -1,5 +1,5 @@
-import { of, timer } from 'rxjs';
-import { throttle } from 'rxjs/operators';
+import { of, timer } from 'rxjs.ts';
+import { throttle } from 'rxjs/operators.ts';
 
 it('should infer correctly', () => {
   const o = of(1, 2, 3).pipe(throttle(() => timer(47))); // $ExpectType Observable<number>

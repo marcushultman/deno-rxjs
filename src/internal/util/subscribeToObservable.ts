@@ -1,6 +1,6 @@
-import { Subscriber } from '../Subscriber';
-import { observable as Symbol_observable } from '../symbol/observable';
-import { subscribeWith } from './subscribeWith';
+import { Subscriber } from '../Subscriber.ts';
+import { observable as Symbol_observable } from '../symbol/observable.ts';
+import { subscribeWith } from './subscribeWith.ts';
 
 /**
  * Subscribes to an object that implements Symbol.observable with the given

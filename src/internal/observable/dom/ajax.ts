@@ -1,4 +1,4 @@
-import {  AjaxObservable, AjaxCreationMethod  } from './AjaxObservable';
+import {  AjaxObservable, AjaxCreationMethod  } from './AjaxObservable.ts';
 /**
  * There is an ajax operator on the Rx object.
  *
@@ -8,9 +8,9 @@ import {  AjaxObservable, AjaxCreationMethod  } from './AjaxObservable';
  *
  * ## Using ajax() to fetch the response object that is being returned from API.
  * ```ts
- * import { ajax } from 'rxjs/ajax';
- * import { map, catchError } from 'rxjs/operators';
- * import { of } from 'rxjs';
+ * import { ajax } from 'rxjs/ajax.ts';
+ * import { map, catchError } from 'rxjs/operators.ts';
+ * import { of } from 'rxjs.ts';
  *
  * const obs$ = ajax(`https://api.github.com/users?per_page=5`).pipe(
  *   map(userResponse => console.log('users: ', userResponse)),
@@ -24,9 +24,9 @@ import {  AjaxObservable, AjaxCreationMethod  } from './AjaxObservable';
  *
  * ## Using ajax.getJSON() to fetch data from API.
  * ```ts
- * import { ajax } from 'rxjs/ajax';
- * import { map, catchError } from 'rxjs/operators';
- * import { of } from 'rxjs';
+ * import { ajax } from 'rxjs/ajax.ts';
+ * import { map, catchError } from 'rxjs/operators.ts';
+ * import { of } from 'rxjs.ts';
  *
  * const obs$ = ajax.getJSON(`https://api.github.com/users?per_page=5`).pipe(
  *   map(userResponse => console.log('users: ', userResponse)),
@@ -40,9 +40,9 @@ import {  AjaxObservable, AjaxCreationMethod  } from './AjaxObservable';
  *
  * ## Using ajax() with object as argument and method POST with a two seconds delay.
  * ```ts
- * import { ajax } from 'rxjs/ajax';
- * import { map, catchError } from 'rxjs/operators';
- * import { of } from 'rxjs';
+ * import { ajax } from 'rxjs/ajax.ts';
+ * import { map, catchError } from 'rxjs/operators.ts';
+ * import { of } from 'rxjs.ts';
  *
  * const users = ajax({
  *   url: 'https://httpbin.org/delay/2',
@@ -66,9 +66,9 @@ import {  AjaxObservable, AjaxCreationMethod  } from './AjaxObservable';
  *
  * ## Using ajax() to fetch. An error object that is being returned from the request.
  * ```ts
- * import { ajax } from 'rxjs/ajax';
- * import { map, catchError } from 'rxjs/operators';
- * import { of } from 'rxjs';
+ * import { ajax } from 'rxjs/ajax.ts';
+ * import { map, catchError } from 'rxjs/operators.ts';
+ * import { of } from 'rxjs.ts';
  *
  * const obs$ = ajax(`https://api.github.com/404`).pipe(
  *   map(userResponse => console.log('users: ', userResponse)),

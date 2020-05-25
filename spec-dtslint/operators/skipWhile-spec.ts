@@ -1,5 +1,5 @@
-import { of } from 'rxjs';
-import { skipWhile } from 'rxjs/operators';
+import { of } from 'rxjs.ts';
+import { skipWhile } from 'rxjs/operators.ts';
 
 it('should support a predicate', () => {
   const o = of('foo', 'bar', 'baz').pipe(skipWhile(value => value === 'bar')); // $ExpectType Observable<string>

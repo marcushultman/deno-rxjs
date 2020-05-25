@@ -1,7 +1,7 @@
-import { Operator } from '../Operator';
-import { Observable } from '../Observable';
-import { Subscriber } from '../Subscriber';
-import { OperatorFunction } from '../types';
+import { Operator } from '../Operator.ts';
+import { Observable } from '../Observable.ts';
+import { Subscriber } from '../Subscriber.ts';
+import { OperatorFunction } from '../types.ts';
 
 /* tslint:disable:max-line-length */
 export function defaultIfEmpty<T, R = T>(defaultValue?: R): OperatorFunction<T, T | R>;
@@ -23,8 +23,8 @@ export function defaultIfEmpty<T, R = T>(defaultValue?: R): OperatorFunction<T, 
  * ## Example
  * If no clicks happen in 5 seconds, then emit "no clicks"
  * ```ts
- * import { fromEvent } from 'rxjs';
- * import { defaultIfEmpty, takeUntil } from 'rxjs/operators';
+ * import { fromEvent } from 'rxjs.ts';
+ * import { defaultIfEmpty, takeUntil } from 'rxjs/operators.ts';
  *
  * const clicks = fromEvent(document, 'click');
  * const clicksBeforeFive = clicks.pipe(takeUntil(interval(5000)));

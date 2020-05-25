@@ -1,7 +1,7 @@
-import { Immediate } from '../util/Immediate';
-import { AsyncAction } from './AsyncAction';
-import { AsapScheduler } from './AsapScheduler';
-import { SchedulerAction } from '../types';
+import { Immediate } from '../util/Immediate.ts';
+import { AsyncAction } from './AsyncAction.ts';
+import { AsapScheduler } from './AsapScheduler.ts';
+import { SchedulerAction } from '../types.ts';
 /**
  * We need this JSDoc comment for affecting ESDoc.
  * @ignore

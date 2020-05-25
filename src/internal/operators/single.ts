@@ -1,10 +1,10 @@
-import { Observable } from '../Observable';
-import { Subscriber } from '../Subscriber';
-import { EmptyError } from '../util/EmptyError';
+import { Observable } from '../Observable.ts';
+import { Subscriber } from '../Subscriber.ts';
+import { EmptyError } from '../util/EmptyError.ts';
 
-import { MonoTypeOperatorFunction } from '../types';
-import { SequenceError } from '../util/SequenceError';
-import { NotFoundError } from '../util/NotFoundError';
+import { MonoTypeOperatorFunction } from '../types.ts';
+import { SequenceError } from '../util/SequenceError.ts';
+import { NotFoundError } from '../util/NotFoundError.ts';
 
 const defaultPredicate = () => true;
 
@@ -29,8 +29,8 @@ const defaultPredicate = () => true;
  * Expect only name beginning with 'B':
  *
  * ```ts
- * import { of } from 'rxjs';
- * import { single } from 'rxjs/operators';
+ * import { of } from 'rxjs.ts';
+ * import { single } from 'rxjs/operators.ts';
  *
  * const source1 = of(
  *  { name: 'Ben' },

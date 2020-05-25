@@ -1,5 +1,5 @@
-import { identity } from './identity';
-import { UnaryFunction } from '../types';
+import { identity } from './identity.ts';
+import { UnaryFunction } from '../types.ts';
 
 /* tslint:disable:max-line-length */
 export function pipe<T>(): UnaryFunction<T, T>;

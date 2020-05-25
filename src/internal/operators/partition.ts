@@ -1,7 +1,7 @@
-import { not } from '../util/not';
-import { filter } from './filter';
-import { Observable } from '../Observable';
-import { UnaryFunction } from '../types';
+import { not } from '../util/not.ts';
+import { filter } from './filter.ts';
+import { Observable } from '../Observable.ts';
+import { UnaryFunction } from '../types.ts';
 
 /**
  * Splits the source Observable into two, one with values that satisfy a
@@ -23,8 +23,8 @@ import { UnaryFunction } from '../types';
  * ## Example
  * Partition click events into those on DIV elements and those elsewhere
  * ```ts
- * import { fromEvent } from 'rxjs';
- * import { partition } from 'rxjs/operators';
+ * import { fromEvent } from 'rxjs.ts';
+ * import { partition } from 'rxjs/operators.ts';
  *
  * const clicks = fromEvent(document, 'click');
  * const parts = clicks.pipe(partition(ev => ev.target.tagName === 'DIV'));

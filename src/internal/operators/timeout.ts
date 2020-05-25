@@ -1,8 +1,8 @@
-import { async } from '../scheduler/async';
-import { TimeoutError } from '../util/TimeoutError';
-import { MonoTypeOperatorFunction, SchedulerLike } from '../types';
-import { timeoutWith } from './timeoutWith';
-import { throwError } from '../observable/throwError';
+import { async } from '../scheduler/async.ts';
+import { TimeoutError } from '../util/TimeoutError.ts';
+import { MonoTypeOperatorFunction, SchedulerLike } from '../types.ts';
+import { timeoutWith } from './timeoutWith.ts';
+import { throwError } from '../observable/throwError.ts';
 
 /**
  *
@@ -36,8 +36,8 @@ import { throwError } from '../observable/throwError';
  * ## Examples
  * Check if ticks are emitted within certain timespan
  * ```ts
- * import { interval } from 'rxjs';
- * import { timeout } from 'rxjs/operators';
+ * import { interval } from 'rxjs.ts';
+ * import { timeout } from 'rxjs/operators.ts';
  *
  * const seconds = interval(1000);
  *
@@ -58,8 +58,8 @@ import { throwError } from '../observable/throwError';
  *
  * Use Date to check if Observable completed
  * ```ts
- * import { interval } from 'rxjs';
- * import { timeout } from 'rxjs/operators';
+ * import { interval } from 'rxjs.ts';
+ * import { timeout } from 'rxjs/operators.ts';
  *
  * const seconds = interval(1000);
  *

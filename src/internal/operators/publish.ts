@@ -1,8 +1,8 @@
-import { Observable } from '../Observable';
-import { Subject } from '../Subject';
-import { multicast } from './multicast';
-import { ConnectableObservable } from '../observable/ConnectableObservable';
-import { MonoTypeOperatorFunction, OperatorFunction, UnaryFunction, ObservableInput, ObservedValueOf } from '../types';
+import { Observable } from '../Observable.ts';
+import { Subject } from '../Subject.ts';
+import { multicast } from './multicast.ts';
+import { ConnectableObservable } from '../observable/ConnectableObservable.ts';
+import { MonoTypeOperatorFunction, OperatorFunction, UnaryFunction, ObservableInput, ObservedValueOf } from '../types.ts';
 
 /* tslint:disable:max-line-length */
 export function publish<T>(): UnaryFunction<Observable<T>, ConnectableObservable<T>>;

@@ -1,8 +1,8 @@
-import { Observable } from '../Observable';
-import { ReplaySubject } from '../ReplaySubject';
-import { multicast } from './multicast';
-import { ConnectableObservable } from '../observable/ConnectableObservable';
-import { UnaryFunction, MonoTypeOperatorFunction, OperatorFunction, SchedulerLike, ObservableInput, ObservedValueOf } from '../types';
+import { Observable } from '../Observable.ts';
+import { ReplaySubject } from '../ReplaySubject.ts';
+import { multicast } from './multicast.ts';
+import { ConnectableObservable } from '../observable/ConnectableObservable.ts';
+import { UnaryFunction, MonoTypeOperatorFunction, OperatorFunction, SchedulerLike, ObservableInput, ObservedValueOf } from '../types.ts';
 
 /* tslint:disable:max-line-length */
 export function publishReplay<T>(bufferSize?: number, windowTime?: number, scheduler?: SchedulerLike): MonoTypeOperatorFunction<T>;

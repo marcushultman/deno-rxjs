@@ -1,10 +1,10 @@
-import { Operator } from '../Operator';
-import { Subscriber } from '../Subscriber';
-import { Subscription } from '../Subscription';
-import { async } from '../scheduler/async';
-import { Observable } from '../Observable';
-import { ThrottleConfig, defaultThrottleConfig } from './throttle';
-import { MonoTypeOperatorFunction, SchedulerLike, TeardownLogic } from '../types';
+import { Operator } from '../Operator.ts';
+import { Subscriber } from '../Subscriber.ts';
+import { Subscription } from '../Subscription.ts';
+import { async } from '../scheduler/async.ts';
+import { Observable } from '../Observable.ts';
+import { ThrottleConfig, defaultThrottleConfig } from './throttle.ts';
+import { MonoTypeOperatorFunction, SchedulerLike, TeardownLogic } from '../types.ts';
 
 /**
  * Emits a value from the source Observable, then ignores subsequent source
@@ -30,8 +30,8 @@ import { MonoTypeOperatorFunction, SchedulerLike, TeardownLogic } from '../types
  *
  * Emit clicks at a rate of at most one click per second
  * ```ts
- * import { fromEvent } from 'rxjs';
- * import { throttleTime } from 'rxjs/operators';
+ * import { fromEvent } from 'rxjs.ts';
+ * import { throttleTime } from 'rxjs/operators.ts';
  *
  * const clicks = fromEvent(document, 'click');
  * const result = clicks.pipe(throttleTime(1000));
@@ -45,8 +45,8 @@ import { MonoTypeOperatorFunction, SchedulerLike, TeardownLogic } from '../types
  * click. It makes use of the `trailing` parameter of the throttle configuration.
  *
  * ```ts
- * import { fromEvent, asyncScheduler } from 'rxjs';
- * import { throttleTime, withLatestFrom } from 'rxjs/operators';
+ * import { fromEvent, asyncScheduler } from 'rxjs.ts';
+ * import { throttleTime, withLatestFrom } from 'rxjs/operators.ts';
  *
  * // defaultThottleConfig = { leading: true, trailing: false }
  * const throttleConfig = {

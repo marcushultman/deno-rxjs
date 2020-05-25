@@ -1,5 +1,5 @@
-import { of } from 'rxjs';
-import { defaultIfEmpty, map } from 'rxjs/operators';
+import { of } from 'rxjs.ts';
+import { defaultIfEmpty, map } from 'rxjs/operators.ts';
 
 it('should infer correctly', () => {
   const o = of(1, 2, 3).pipe(defaultIfEmpty()); // $ExpectType Observable<number>

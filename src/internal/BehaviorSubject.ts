@@ -1,8 +1,8 @@
-import { Subject } from './Subject';
-import { Subscriber } from './Subscriber';
-import { Subscription } from './Subscription';
-import { SubscriptionLike } from './types';
-import { ObjectUnsubscribedError } from './util/ObjectUnsubscribedError';
+import { Subject } from './Subject.ts';
+import { Subscriber } from './Subscriber.ts';
+import { Subscription } from './Subscription.ts';
+import { SubscriptionLike } from './types.ts';
+import { ObjectUnsubscribedError } from './util/ObjectUnsubscribedError.ts';
 
 /**
  * A variant of Subject that requires an initial value and emits its current

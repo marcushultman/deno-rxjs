@@ -1,7 +1,7 @@
-import { async } from '../scheduler/async';
-import { audit } from './audit';
-import { timer } from '../observable/timer';
-import { MonoTypeOperatorFunction, SchedulerLike } from '../types';
+import { async } from '../scheduler/async.ts';
+import { audit } from './audit.ts';
+import { timer } from '../observable/timer.ts';
+import { MonoTypeOperatorFunction, SchedulerLike } from '../types.ts';
 
 /**
  * Ignores source values for `duration` milliseconds, then emits the most recent
@@ -28,8 +28,8 @@ import { MonoTypeOperatorFunction, SchedulerLike } from '../types';
  *
  * Emit clicks at a rate of at most one click per second
  * ```ts
- * import { fromEvent } from 'rxjs';
- * import { auditTime } from 'rxjs/operators';
+ * import { fromEvent } from 'rxjs.ts';
+ * import { auditTime } from 'rxjs/operators.ts';
  *
  * const clicks = fromEvent(document, 'click');
  * const result = clicks.pipe(auditTime(1000));

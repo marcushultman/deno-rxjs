@@ -1,4 +1,4 @@
-import { Observable } from '../../Observable';
+import { Observable } from '../../Observable.ts';
 
 // TODO: move to types.ts
 export interface TimestampProvider {
@@ -25,8 +25,8 @@ export interface TimestampProvider {
  * Tweening a div to move it on the screen
  *
  * ```ts
- * import { animationFrames } from 'rxjs';
- * import { map, takeWhile, endWith } from 'rxjs/operators';
+ * import { animationFrames } from 'rxjs.ts';
+ * import { map, takeWhile, endWith } from 'rxjs/operators.ts';
  *
  * function tween(start: number, end: number, duration: number) {
  *   const diff = end - start;
@@ -45,11 +45,11 @@ export interface TimestampProvider {
  * // Setup a div for us to move around
  * const div = document.createElement('div');
  * document.body.appendChild(div);
- * div.style.position = 'absolute';
- * div.style.width = '40px';
- * div.style.height = '40px';
- * div.style.backgroundColor = 'lime';
- * div.style.transform = 'translate3d(10px, 0, 0)';
+ * div.style.position = 'absolute.ts';
+ * div.style.width = '40px.ts';
+ * div.style.height = '40px.ts';
+ * div.style.backgroundColor = 'lime.ts';
+ * div.style.transform = 'translate3d(10px, 0, 0).ts';
  *
  * tween(10, 200, 4000).subscribe(x => {
  *   div.style.transform = `translate3d(${x}px, 0, 0)`;
@@ -61,7 +61,7 @@ export interface TimestampProvider {
  * Providing a custom timestamp provider
  *
  * ```ts
- * import { animationFrames, TimestampProvider } from 'rxjs';
+ * import { animationFrames, TimestampProvider } from 'rxjs.ts';
  *
  * // A custom timestamp provider
  * let now = 0;

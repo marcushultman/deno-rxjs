@@ -1,14 +1,14 @@
-import { Operator } from '../Operator';
-import { Subscriber } from '../Subscriber';
-import { Observable } from '../Observable';
-import { Subject } from '../Subject';
-import { Subscription } from '../Subscription';
+import { Operator } from '../Operator.ts';
+import { Subscriber } from '../Subscriber.ts';
+import { Observable } from '../Observable.ts';
+import { Subject } from '../Subject.ts';
+import { Subscription } from '../Subscription.ts';
 
-import { OuterSubscriber } from '../OuterSubscriber';
-import { InnerSubscriber } from '../InnerSubscriber';
-import { subscribeToResult } from '../util/subscribeToResult';
+import { OuterSubscriber } from '../OuterSubscriber.ts';
+import { InnerSubscriber } from '../InnerSubscriber.ts';
+import { subscribeToResult } from '../util/subscribeToResult.ts';
 
-import { MonoTypeOperatorFunction, TeardownLogic } from '../types';
+import { MonoTypeOperatorFunction, TeardownLogic } from '../types.ts';
 
 /**
  * Returns an Observable that mirrors the source Observable with the exception of a `complete`. If the source
@@ -21,8 +21,8 @@ import { MonoTypeOperatorFunction, TeardownLogic } from '../types';
  * ## Example
  * Repeat a message stream on click
  * ```ts
- * import { of, fromEvent } from 'rxjs';
- * import { repeatWhen } from 'rxjs/operators';
+ * import { of, fromEvent } from 'rxjs.ts';
+ * import { repeatWhen } from 'rxjs/operators.ts';
  *
  * const source = of('Repeat message');
  * const documentClick$ = fromEvent(document, 'click');

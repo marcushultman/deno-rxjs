@@ -1,6 +1,6 @@
-import { Observable } from '../Observable';
-import { SchedulerLike } from '../types';
-import { Subscriber } from '../Subscriber';
+import { Observable } from '../Observable.ts';
+import { SchedulerLike } from '../types.ts';
+import { Subscriber } from '../Subscriber.ts';
 
 /**
  * Creates an Observable that emits no items to the Observer and immediately
@@ -18,7 +18,7 @@ import { Subscriber } from '../Subscriber';
  * ## Examples
  * ### Emit the number 7, then emit an error
  * ```ts
- * import { throwError, concat, of } from 'rxjs';
+ * import { throwError, concat, of } from 'rxjs.ts';
  *
  * const result = concat(of(7), throwError(new Error('oops!')));
  * result.subscribe(x => console.log(x), e => console.error(e));
@@ -32,8 +32,8 @@ import { Subscriber } from '../Subscriber';
  *
  * ### Map and flatten numbers to the sequence 'a', 'b', 'c', but throw an error for 2
  * ```ts
- * import { throwError, interval, of } from 'rxjs';
- * import { mergeMap } from 'rxjs/operators';
+ * import { throwError, interval, of } from 'rxjs.ts';
+ * import { mergeMap } from 'rxjs/operators.ts';
  *
  * interval(1000).pipe(
  *   mergeMap(x => x === 2

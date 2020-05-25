@@ -1,7 +1,7 @@
-import { Observable } from '../Observable';
-import { ObservedValueOf, ObservableInput } from '../types';
-import { from } from './from'; // lol
-import { EMPTY } from './empty';
+import { Observable } from '../Observable.ts';
+import { ObservedValueOf, ObservableInput } from '../types.ts';
+import { from } from './from.ts'; // lol
+import { EMPTY } from './empty.ts';
 
 /**
  * Creates an Observable that, on subscribe, calls an Observable factory to
@@ -24,7 +24,7 @@ import { EMPTY } from './empty';
  * ## Example
  * ### Subscribe to either an Observable of clicks or an Observable of interval, at random
  * ```ts
- * import { defer, fromEvent, interval } from 'rxjs';
+ * import { defer, fromEvent, interval } from 'rxjs.ts';
  *
  * const clicksOrInterval = defer(function () {
  *   return Math.random() > 0.5

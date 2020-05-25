@@ -1,9 +1,9 @@
-import { Operator } from '../Operator';
-import { Subscriber } from '../Subscriber';
-import { ArgumentOutOfRangeError } from '../util/ArgumentOutOfRangeError';
-import { EMPTY } from '../observable/empty';
-import { Observable } from '../Observable';
-import { MonoTypeOperatorFunction, TeardownLogic } from '../types';
+import { Operator } from '../Operator.ts';
+import { Subscriber } from '../Subscriber.ts';
+import { ArgumentOutOfRangeError } from '../util/ArgumentOutOfRangeError.ts';
+import { EMPTY } from '../observable/empty.ts';
+import { Observable } from '../Observable.ts';
+import { MonoTypeOperatorFunction, TeardownLogic } from '../types.ts';
 
 /**
  * Emits only the last `count` values emitted by the source Observable.
@@ -24,8 +24,8 @@ import { MonoTypeOperatorFunction, TeardownLogic } from '../types';
  * ## Example
  * Take the last 3 values of an Observable with many values
  * ```ts
- * import { range } from 'rxjs';
- * import { takeLast } from 'rxjs/operators';
+ * import { range } from 'rxjs.ts';
+ * import { takeLast } from 'rxjs/operators.ts';
  *
  * const many = range(1, 100);
  * const lastThree = many.pipe(takeLast(3));

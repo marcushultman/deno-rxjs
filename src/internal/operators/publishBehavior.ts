@@ -1,8 +1,8 @@
-import { Observable } from '../Observable';
-import { BehaviorSubject } from '../BehaviorSubject';
-import { multicast } from './multicast';
-import { ConnectableObservable } from '../observable/ConnectableObservable';
-import { UnaryFunction } from '../types';
+import { Observable } from '../Observable.ts';
+import { BehaviorSubject } from '../BehaviorSubject.ts';
+import { multicast } from './multicast.ts';
+import { ConnectableObservable } from '../observable/ConnectableObservable.ts';
+import { UnaryFunction } from '../types.ts';
 
 /**
  * @param value

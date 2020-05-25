@@ -1,5 +1,5 @@
-import { of, NEVER } from 'rxjs';
-import { audit } from 'rxjs/operators';
+import { of, NEVER } from 'rxjs.ts';
+import { audit } from 'rxjs/operators.ts';
 
 it('should infer correctly', () => {
   const o = of(1, 2, 3).pipe(audit(() => of('foo'))); // $ExpectType Observable<number>

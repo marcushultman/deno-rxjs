@@ -1,7 +1,7 @@
-import { Operator } from '../Operator';
-import { Observable } from '../Observable';
-import { Subscriber } from '../Subscriber';
-import { OperatorFunction } from '../types';
+import { Operator } from '../Operator.ts';
+import { Observable } from '../Observable.ts';
+import { Subscriber } from '../Subscriber.ts';
+import { OperatorFunction } from '../types.ts';
 
 /**
  * Groups pairs of consecutive emissions together and emits them as an array of
@@ -21,8 +21,8 @@ import { OperatorFunction } from '../types';
  * ## Example
  * On every click (starting from the second), emit the relative distance to the previous click
  * ```ts
- * import { fromEvent } from 'rxjs';
- * import { pairwise, map } from 'rxjs/operators';
+ * import { fromEvent } from 'rxjs.ts';
+ * import { pairwise, map } from 'rxjs/operators.ts';
  *
  * const clicks = fromEvent(document, 'click');
  * const pairs = clicks.pipe(pairwise());

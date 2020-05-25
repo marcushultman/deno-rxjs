@@ -1,6 +1,6 @@
 
-import { mergeAll } from './mergeAll';
-import { OperatorFunction, ObservableInput } from '../types';
+import { mergeAll } from './mergeAll.ts';
+import { OperatorFunction, ObservableInput } from '../types.ts';
 
 export function concatAll<T>(): OperatorFunction<ObservableInput<T>, T>;
 export function concatAll<R>(): OperatorFunction<any, R>;
@@ -31,8 +31,8 @@ export function concatAll<R>(): OperatorFunction<any, R>;
  *
  * For each click event, tick every second from 0 to 3, with no concurrency
  * ```ts
- * import { fromEvent, interval } from 'rxjs';
- * import { map, take, concatAll } from 'rxjs/operators';
+ * import { fromEvent, interval } from 'rxjs.ts';
+ * import { map, take, concatAll } from 'rxjs/operators.ts';
  *
  * const clicks = fromEvent(document, 'click');
  * const higherOrder = clicks.pipe(

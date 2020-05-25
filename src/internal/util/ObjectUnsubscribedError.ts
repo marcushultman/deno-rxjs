@@ -8,8 +8,8 @@ export interface ObjectUnsubscribedErrorCtor {
 const ObjectUnsubscribedErrorImpl = (() => {
   function ObjectUnsubscribedErrorImpl(this: Error) {
     Error.call(this);
-    this.message = 'object unsubscribed';
-    this.name = 'ObjectUnsubscribedError';
+    this.message = 'object unsubscribed.ts';
+    this.name = 'ObjectUnsubscribedError.ts';
     return this;
   }
 

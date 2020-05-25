@@ -1,7 +1,7 @@
-import { Operator } from '../Operator';
-import { Subscriber } from '../Subscriber';
-import { Observable } from '../Observable';
-import { OperatorFunction, MonoTypeOperatorFunction, TeardownLogic } from '../types';
+import { Operator } from '../Operator.ts';
+import { Subscriber } from '../Subscriber.ts';
+import { Observable } from '../Observable.ts';
+import { OperatorFunction, MonoTypeOperatorFunction, TeardownLogic } from '../types.ts';
 
 /* tslint:disable:max-line-length */
 export function filter<T, S extends T>(predicate: (value: T, index: number) => value is S,
@@ -29,8 +29,8 @@ export function filter<T>(predicate: (value: T, index: number) => boolean,
  * ## Example
  * Emit only click events whose target was a DIV element
  * ```ts
- * import { fromEvent } from 'rxjs';
- * import { filter } from 'rxjs/operators';
+ * import { fromEvent } from 'rxjs.ts';
+ * import { filter } from 'rxjs/operators.ts';
  *
  * const clicks = fromEvent(document, 'click');
  * const clicksOnDivs = clicks.pipe(filter(ev => ev.target.tagName === 'DIV'));

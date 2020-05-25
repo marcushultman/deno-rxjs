@@ -1,7 +1,7 @@
-import { Operator } from '../Operator';
-import { Subscriber } from '../Subscriber';
-import { Observable } from '../Observable';
-import { OperatorFunction } from '../types';
+import { Operator } from '../Operator.ts';
+import { Subscriber } from '../Subscriber.ts';
+import { Observable } from '../Observable.ts';
+import { OperatorFunction } from '../types.ts';
 
 /**
  * Emits `false` if the input Observable emits any values, or emits `true` if the
@@ -26,8 +26,8 @@ import { OperatorFunction } from '../types';
  * Emit `false` for a non-empty Observable.
  *
  * ```ts
- * import { Subject } from 'rxjs';
- * import { isEmpty } from 'rxjs/operators';
+ * import { Subject } from 'rxjs.ts';
+ * import { isEmpty } from 'rxjs/operators.ts';
  *
  * const source = new Subject<string>();
  * const result = source.pipe(isEmpty());
@@ -50,8 +50,8 @@ import { OperatorFunction } from '../types';
  * Emit `true` for an empty Observable.
  *
  * ```ts
- * import { EMPTY } from 'rxjs';
- * import { isEmpty } from 'rxjs/operators';
+ * import { EMPTY } from 'rxjs.ts';
+ * import { isEmpty } from 'rxjs/operators.ts';
  *
  * const result = EMPTY.pipe(isEmpty());
  * result.subscribe(x => console.log(x));

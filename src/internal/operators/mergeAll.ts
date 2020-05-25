@@ -1,6 +1,6 @@
-import { mergeMap } from './mergeMap';
-import { identity } from '../util/identity';
-import { OperatorFunction, ObservableInput } from '../types';
+import { mergeMap } from './mergeMap.ts';
+import { identity } from '../util/identity.ts';
+import { OperatorFunction, ObservableInput } from '../types.ts';
 
 /**
  * Converts a higher-order Observable into a first-order Observable which
@@ -20,8 +20,8 @@ import { OperatorFunction, ObservableInput } from '../types';
  * ## Examples
  * Spawn a new interval Observable for each click event, and blend their outputs as one Observable
  * ```ts
- * import { fromEvent, interval } from 'rxjs';
- * import { map, mergeAll } from 'rxjs/operators';
+ * import { fromEvent, interval } from 'rxjs.ts';
+ * import { map, mergeAll } from 'rxjs/operators.ts';
  *
  * const clicks = fromEvent(document, 'click');
  * const higherOrder = clicks.pipe(map((ev) => interval(1000)));
@@ -31,8 +31,8 @@ import { OperatorFunction, ObservableInput } from '../types';
  *
  * Count from 0 to 9 every second for each click, but only allow 2 concurrent timers
  * ```ts
- * import { fromEvent, interval } from 'rxjs';
- * import { take, map, mergeAll } from 'rxjs/operators';
+ * import { fromEvent, interval } from 'rxjs.ts';
+ * import { take, map, mergeAll } from 'rxjs/operators.ts';
  *
  * const clicks = fromEvent(document, 'click');
  * const higherOrder = clicks.pipe(

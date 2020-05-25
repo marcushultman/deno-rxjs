@@ -1,8 +1,8 @@
-import { Operator } from '../Operator';
-import { Subscriber } from '../Subscriber';
-import { Observable } from '../Observable';
-import { MonoTypeOperatorFunction, TeardownLogic } from '../types';
-import { subscribeWith } from '../util/subscribeWith';
+import { Operator } from '../Operator.ts';
+import { Subscriber } from '../Subscriber.ts';
+import { Observable } from '../Observable.ts';
+import { MonoTypeOperatorFunction, TeardownLogic } from '../types.ts';
+import { subscribeWith } from '../util/subscribeWith.ts';
 
 /**
  * Returns an Observable that mirrors the source Observable, but will call a specified function when
@@ -13,8 +13,8 @@ import { subscribeWith } from '../util/subscribeWith';
  * Execute callback function when the observable completes
  *
  * ```ts
- * import { interval } from 'rxjs';
- * import { take, finalize } from 'rxjs/operators';
+ * import { interval } from 'rxjs.ts';
+ * import { take, finalize } from 'rxjs/operators.ts';
  *
  * // emit value in sequence every 1 second
  * const source = interval(1000);
@@ -36,8 +36,8 @@ import { subscribeWith } from '../util/subscribeWith';
  * Execute callback function when the subscriber explicitly unsubscribes
  *
  * ```ts
- * import { interval, timer, noop } from 'rxjs';
- * import { finalize, tap } from 'rxjs/operators';
+ * import { interval, timer, noop } from 'rxjs.ts';
+ * import { finalize, tap } from 'rxjs/operators.ts';
  *
  * const source = interval(100).pipe(
  *   finalize(() => console.log('[finalize] Called')),

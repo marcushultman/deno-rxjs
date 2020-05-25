@@ -1,8 +1,8 @@
-import { Operator } from '../Operator';
-import { Observable } from '../Observable';
-import { Subscriber } from '../Subscriber';
-import { Notification } from '../Notification';
-import { OperatorFunction } from '../types';
+import { Operator } from '../Operator.ts';
+import { Observable } from '../Observable.ts';
+import { Subscriber } from '../Subscriber.ts';
+import { Notification } from '../Notification.ts';
+import { OperatorFunction } from '../types.ts';
 
 /**
  * Converts an Observable of {@link Notification} objects into the emissions
@@ -24,8 +24,8 @@ import { OperatorFunction } from '../types';
  * ## Example
  * Convert an Observable of Notifications to an actual Observable
  * ```ts
- * import { of, Notification } from 'rxjs';
- * import { dematerialize } from 'rxjs/operators';
+ * import { of, Notification } from 'rxjs.ts';
+ * import { dematerialize } from 'rxjs/operators.ts';
  *
  * const notifA = new Notification('N', 'A');
  * const notifB = new Notification('N', 'B');

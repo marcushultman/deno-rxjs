@@ -1,8 +1,8 @@
-import { Operator } from '../Operator';
-import { Subscriber } from '../Subscriber';
-import { Observable } from '../Observable';
-import { SubscribeOnObservable } from '../observable/SubscribeOnObservable';
-import { MonoTypeOperatorFunction, SchedulerLike, TeardownLogic } from '../types';
+import { Operator } from '../Operator.ts';
+import { Subscriber } from '../Subscriber.ts';
+import { Observable } from '../Observable.ts';
+import { SubscribeOnObservable } from '../observable/SubscribeOnObservable.ts';
+import { MonoTypeOperatorFunction, SchedulerLike, TeardownLogic } from '../types.ts';
 
 /**
  * Asynchronously subscribes Observers to this Observable on the specified {@link SchedulerLike}.
@@ -18,7 +18,7 @@ import { MonoTypeOperatorFunction, SchedulerLike, TeardownLogic } from '../types
  * Given the following code:
  *
  * ```ts
- * import { of, merge } from 'rxjs';
+ * import { of, merge } from 'rxjs.ts';
  *
  * const a = of(1, 2, 3);
  * const b = of(4, 5, 6);
@@ -39,8 +39,8 @@ import { MonoTypeOperatorFunction, SchedulerLike, TeardownLogic } from '../types
  * If we instead use the `subscribeOn` operator declaring that we want to use the {@link asyncScheduler} for values emited by Observable `a`:
  *
  * ```ts
- * import { of, merge, asyncScheduler } from 'rxjs';
- * import { subscribeOn } from 'rxjs/operators';
+ * import { of, merge, asyncScheduler } from 'rxjs.ts';
+ * import { subscribeOn } from 'rxjs/operators.ts';
  *
  * const a = of(1, 2, 3).pipe(subscribeOn(asyncScheduler));
  * const b = of(4, 5, 6);

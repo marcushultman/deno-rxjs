@@ -1,13 +1,13 @@
-import { Observable } from '../Observable';
-import { ObservableInput, SchedulerLike, ObservedValueOf } from '../types';
-import { isScheduler  } from '../util/isScheduler';
-import { isArray  } from '../util/isArray';
-import { Subscriber } from '../Subscriber';
-import { OuterSubscriber } from '../OuterSubscriber';
-import { Operator } from '../Operator';
-import { InnerSubscriber } from '../InnerSubscriber';
-import { subscribeToResult } from '../util/subscribeToResult';
-import { fromArray } from './fromArray';
+import { Observable } from '../Observable.ts';
+import { ObservableInput, SchedulerLike, ObservedValueOf } from '../types.ts';
+import { isScheduler  } from '../util/isScheduler.ts';
+import { isArray  } from '../util/isArray.ts';
+import { Subscriber } from '../Subscriber.ts';
+import { OuterSubscriber } from '../OuterSubscriber.ts';
+import { Operator } from '../Operator.ts';
+import { InnerSubscriber } from '../InnerSubscriber.ts';
+import { subscribeToResult } from '../util/subscribeToResult.ts';
+import { fromArray } from './fromArray.ts';
 
 const NONE = {};
 
@@ -147,7 +147,7 @@ export function combineLatest<R>(...observables: Array<ObservableInput<any> | ((
  * ## Examples
  * ### Combine two timer Observables
  * ```ts
- * import { combineLatest, timer } from 'rxjs';
+ * import { combineLatest, timer } from 'rxjs.ts';
  *
  * const firstTimer = timer(0, 1000); // emit 0, 1, 2... after every second, starting from now
  * const secondTimer = timer(500, 1000); // emit 0, 1, 2... after every second, starting 0,5s from now
@@ -162,8 +162,8 @@ export function combineLatest<R>(...observables: Array<ObservableInput<any> | ((
  *
  * ### Combine an array of Observables
  * ```ts
- * import { combineLatest, of } from 'rxjs';
- * import { delay, startWith } from 'rxjs/operators';
+ * import { combineLatest, of } from 'rxjs.ts';
+ * import { delay, startWith } from 'rxjs/operators.ts';
  *
  * const observables = [1, 5, 10].map(
  *   n => of(n).pipe(
@@ -183,8 +183,8 @@ export function combineLatest<R>(...observables: Array<ObservableInput<any> | ((
  *
  * ### Use map operator to dynamically calculate the Body-Mass Index
  * ```ts
- * import { combineLatest, of } from 'rxjs';
- * import { map } from 'rxjs/operators';
+ * import { combineLatest, of } from 'rxjs.ts';
+ * import { map } from 'rxjs/operators.ts';
  *
  * const weight = of(70, 72, 76, 79, 75);
  * const height = of(1.76, 1.77, 1.78);

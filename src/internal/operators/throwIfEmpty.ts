@@ -1,8 +1,8 @@
-import { EmptyError } from '../util/EmptyError';
-import { Observable } from '../Observable';
-import { Operator } from '../Operator';
-import { Subscriber } from '../Subscriber';
-import { TeardownLogic, MonoTypeOperatorFunction } from '../types';
+import { EmptyError } from '../util/EmptyError.ts';
+import { Observable } from '../Observable.ts';
+import { Operator } from '../Operator.ts';
+import { Subscriber } from '../Subscriber.ts';
+import { TeardownLogic, MonoTypeOperatorFunction } from '../types.ts';
 
 /**
  * If the source observable completes without emitting a value, it will emit
@@ -13,8 +13,8 @@ import { TeardownLogic, MonoTypeOperatorFunction } from '../types';
  *
  * ## Example
  * ```ts
- * import { fromEvent, timer } from 'rxjs';
- * import { throwIfEmpty, takeUntil } from 'rxjs/operators';
+ * import { fromEvent, timer } from 'rxjs.ts';
+ * import { throwIfEmpty, takeUntil } from 'rxjs/operators.ts';
  *
  * const click$ = fromEvent(document, 'click');
  *

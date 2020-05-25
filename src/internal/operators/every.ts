@@ -1,7 +1,7 @@
-import { Operator } from '../Operator';
-import { Observable } from '../Observable';
-import { Subscriber } from '../Subscriber';
-import { Observer, OperatorFunction } from '../types';
+import { Operator } from '../Operator.ts';
+import { Observable } from '../Observable.ts';
+import { Subscriber } from '../Subscriber.ts';
+import { Observer, OperatorFunction } from '../types.ts';
 
 /**
  * Returns an Observable that emits whether or not every item of the source satisfies the condition specified.
@@ -14,8 +14,8 @@ import { Observer, OperatorFunction } from '../types';
  * ## Example
  * A simple example emitting true if all elements are less than 5, false otherwise
  * ```ts
- * import { of } from 'rxjs';
- * import { every } from 'rxjs/operators';
+ * import { of } from 'rxjs.ts';
+ * import { every } from 'rxjs/operators.ts';
  *
  *  of(1, 2, 3, 4, 5, 6).pipe(
  *     every(x => x < 5),

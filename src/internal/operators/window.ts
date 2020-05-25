@@ -1,11 +1,11 @@
-import { Observable } from '../Observable';
-import { OperatorFunction } from '../types';
-import { Subject } from '../Subject';
-import { Subscriber } from '../Subscriber';
-import { OuterSubscriber } from '../OuterSubscriber';
-import { InnerSubscriber } from '../InnerSubscriber';
-import { subscribeToResult } from '../util/subscribeToResult';
-import { Operator } from '../Operator';
+import { Observable } from '../Observable.ts';
+import { OperatorFunction } from '../types.ts';
+import { Subject } from '../Subject.ts';
+import { Subscriber } from '../Subscriber.ts';
+import { OuterSubscriber } from '../OuterSubscriber.ts';
+import { InnerSubscriber } from '../InnerSubscriber.ts';
+import { subscribeToResult } from '../util/subscribeToResult.ts';
+import { Operator } from '../Operator.ts';
 
 /**
  * Branch out the source Observable values as a nested Observable whenever
@@ -25,8 +25,8 @@ import { Operator } from '../Operator';
  * ## Example
  * In every window of 1 second each, emit at most 2 click events
  * ```ts
- * import { fromEvent, interval } from 'rxjs';
- * import { window, mergeAll, map, take } from 'rxjs/operators';
+ * import { fromEvent, interval } from 'rxjs.ts';
+ * import { window, mergeAll, map, take } from 'rxjs/operators.ts';
  *
  *  const clicks = fromEvent(document, 'click');
  *  const sec = interval(1000);

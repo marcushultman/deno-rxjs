@@ -1,5 +1,5 @@
-import { of, asyncScheduler } from 'rxjs';
-import { delay } from 'rxjs/operators';
+import { of, asyncScheduler } from 'rxjs.ts';
+import { delay } from 'rxjs/operators.ts';
 
 it('should infer correctly', () => {
   const o = of(1, 2, 3).pipe(delay(100)); // $ExpectType Observable<number>

@@ -1,7 +1,7 @@
-import { Observable } from '../Observable';
-import { ObservableInput, SchedulerLike, ObservedValueOf, ObservedValueUnionFromArray } from '../types';
-import { of } from './of';
-import { concatAll } from '../operators/concatAll';
+import { Observable } from '../Observable.ts';
+import { ObservableInput, SchedulerLike, ObservedValueOf, ObservedValueUnionFromArray } from '../types.ts';
+import { of } from './of.ts';
+import { concatAll } from '../operators/concatAll.ts';
 
 /* tslint:disable:max-line-length */
 /** @deprecated remove in v8. Passing a scheduler to concat is deprecated, please use {@link scheduled} and {@link concatAll} `scheduled([o1, o2], scheduler).pipe(concatAll())` */
@@ -60,8 +60,8 @@ export function concat<A extends ObservableInput<any>[]>(...observables: A): Obs
  * ## Examples
  * ### Concatenate a timer counting from 0 to 3 with a synchronous sequence from 1 to 10
  * ```ts
- * import { concat, interval, range } from 'rxjs';
- * import { take } from 'rxjs/operators';
+ * import { concat, interval, range } from 'rxjs.ts';
+ * import { take } from 'rxjs/operators.ts';
  *
  * const timer = interval(1000).pipe(take(4));
  * const sequence = range(1, 10);
@@ -74,8 +74,8 @@ export function concat<A extends ObservableInput<any>[]>(...observables: A): Obs
  *
  * ### Concatenate 3 Observables
  * ```ts
- * import { concat, interval } from 'rxjs';
- * import { take } from 'rxjs/operators';
+ * import { concat, interval } from 'rxjs.ts';
+ * import { take } from 'rxjs/operators.ts';
  *
  * const timer1 = interval(1000).pipe(take(10));
  * const timer2 = interval(2000).pipe(take(6));
@@ -93,8 +93,8 @@ export function concat<A extends ObservableInput<any>[]>(...observables: A): Obs
  *
  * ### Concatenate the same Observable to repeat it
  * ```ts
- * import { concat, interval } from 'rxjs';
- * import { take } from 'rxjs/operators';
+ * import { concat, interval } from 'rxjs.ts';
+ * import { take } from 'rxjs/operators.ts';
  *
  * const timer = interval(1000).pipe(take(2));
  *

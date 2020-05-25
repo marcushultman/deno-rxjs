@@ -1,9 +1,9 @@
-import { Operator } from '../Operator';
-import { Subscriber } from '../Subscriber';
-import { ArgumentOutOfRangeError } from '../util/ArgumentOutOfRangeError';
-import { Observable } from '../Observable';
-import { MonoTypeOperatorFunction, TeardownLogic } from '../types';
-import { EMPTY } from '../observable/empty';
+import { Operator } from '../Operator.ts';
+import { Subscriber } from '../Subscriber.ts';
+import { ArgumentOutOfRangeError } from '../util/ArgumentOutOfRangeError.ts';
+import { Observable } from '../Observable.ts';
+import { MonoTypeOperatorFunction, TeardownLogic } from '../types.ts';
+import { EMPTY } from '../observable/empty.ts';
 
 /**
  * Emits only the first `count` values emitted by the source Observable.
@@ -21,8 +21,8 @@ import { EMPTY } from '../observable/empty';
  * ## Example
  * Take the first 5 seconds of an infinite 1-second interval Observable
  * ```ts
- * import { interval } from 'rxjs';
- * import { take } from 'rxjs/operators';
+ * import { interval } from 'rxjs.ts';
+ * import { take } from 'rxjs/operators.ts';
  *
  * const intervalCount = interval(1000);
  * const takeFive = intervalCount.pipe(take(5));

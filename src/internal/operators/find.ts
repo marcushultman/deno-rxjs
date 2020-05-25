@@ -1,7 +1,7 @@
-import {Observable} from '../Observable';
-import {Operator} from '../Operator';
-import {Subscriber} from '../Subscriber';
-import {OperatorFunction} from '../types';
+import {Observable} from '../Observable.ts';
+import {Operator} from '../Operator.ts';
+import {Subscriber} from '../Subscriber.ts';
+import {OperatorFunction} from '../types.ts';
 
 export function find<T, S extends T>(predicate: (value: T, index: number, source: Observable<T>) => value is S,
                                      thisArg?: any): OperatorFunction<T, S | undefined>;
@@ -24,8 +24,8 @@ export function find<T>(predicate: (value: T, index: number, source: Observable<
  * ## Example
  * Find and emit the first click that happens on a DIV element
  * ```ts
- * import { fromEvent } from 'rxjs';
- * import { find } from 'rxjs/operators';
+ * import { fromEvent } from 'rxjs.ts';
+ * import { find } from 'rxjs/operators.ts';
  *
  * const clicks = fromEvent(document, 'click');
  * const result = clicks.pipe(find(ev => ev.target.tagName === 'DIV'));

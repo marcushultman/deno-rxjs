@@ -1,12 +1,12 @@
-import { Subject } from '../Subject';
-import { Operator } from '../Operator';
-import { async } from '../scheduler/async';
-import { Subscriber } from '../Subscriber';
-import { Observable } from '../Observable';
-import { Subscription } from '../Subscription';
-import { isNumeric } from '../util/isNumeric';
-import { isScheduler } from '../util/isScheduler';
-import { OperatorFunction, SchedulerLike, SchedulerAction } from '../types';
+import { Subject } from '../Subject.ts';
+import { Operator } from '../Operator.ts';
+import { async } from '../scheduler/async.ts';
+import { Subscriber } from '../Subscriber.ts';
+import { Observable } from '../Observable.ts';
+import { Subscription } from '../Subscription.ts';
+import { isNumeric } from '../util/isNumeric.ts';
+import { isScheduler } from '../util/isScheduler.ts';
+import { OperatorFunction, SchedulerLike, SchedulerAction } from '../types.ts';
 
 export function windowTime<T>(windowTimeSpan: number,
                               scheduler?: SchedulerLike): OperatorFunction<T, Observable<T>>;
@@ -42,8 +42,8 @@ export function windowTime<T>(windowTimeSpan: number,
  * ## Examples
  * In every window of 1 second each, emit at most 2 click events
  * ```ts
- * import { fromEvent } from 'rxjs';
- * import { windowTime, map, mergeAll, take } from 'rxjs/operators';
+ * import { fromEvent } from 'rxjs.ts';
+ * import { windowTime, map, mergeAll, take } from 'rxjs/operators.ts';
  *
  * const clicks = fromEvent(document, 'click');
  * const result = clicks.pipe(
@@ -56,8 +56,8 @@ export function windowTime<T>(windowTimeSpan: number,
  *
  * Every 5 seconds start a window 1 second long, and emit at most 2 click events per window
  * ```ts
- * import { fromEvent } from 'rxjs';
- * import { windowTime, map, mergeAll, take } from 'rxjs/operators';
+ * import { fromEvent } from 'rxjs.ts';
+ * import { windowTime, map, mergeAll, take } from 'rxjs/operators.ts';
  *
  * const clicks = fromEvent(document, 'click');
  * const result = clicks.pipe(
@@ -70,8 +70,8 @@ export function windowTime<T>(windowTimeSpan: number,
  *
  * Same as example above but with maxWindowCount instead of take
  * ```ts
- * import { fromEvent } from 'rxjs';
- * import { windowTime, mergeAll } from 'rxjs/operators';
+ * import { fromEvent } from 'rxjs.ts';
+ * import { windowTime, mergeAll } from 'rxjs/operators.ts';
  *
  * const clicks = fromEvent(document, 'click');
  * const result = clicks.pipe(

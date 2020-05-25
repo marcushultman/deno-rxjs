@@ -1,9 +1,9 @@
-import { Observable } from '../Observable';
-import { scan } from './scan';
-import { takeLast } from './takeLast';
-import { defaultIfEmpty } from './defaultIfEmpty';
-import { OperatorFunction } from '../types';
-import { pipe } from '../util/pipe';
+import { Observable } from '../Observable.ts';
+import { scan } from './scan.ts';
+import { takeLast } from './takeLast.ts';
+import { defaultIfEmpty } from './defaultIfEmpty.ts';
+import { OperatorFunction } from '../types.ts';
+import { pipe } from '../util/pipe.ts';
 
 /* tslint:disable:max-line-length */
 export function reduce<V, A = V>(accumulator: (acc: A|V, value: V, index: number) => A): OperatorFunction<V, V|A>;
@@ -37,8 +37,8 @@ export function reduce<V, A, S = A>(accumulator: (acc: A|S, value: V, index: num
  * ## Example
  * Count the number of click events that happened in 5 seconds
  * ```ts
- * import { fromEvent, interval } from 'rxjs';
- * import { reduce, takeUntil, mapTo } from 'rxjs/operators';
+ * import { fromEvent, interval } from 'rxjs.ts';
+ * import { reduce, takeUntil, mapTo } from 'rxjs/operators.ts';
  *
  * const clicksInFiveSeconds = fromEvent(document, 'click').pipe(
  *   takeUntil(interval(5000)),

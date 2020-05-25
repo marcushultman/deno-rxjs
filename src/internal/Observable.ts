@@ -1,15 +1,15 @@
-import { Operator } from './Operator';
-import { Subscriber } from './Subscriber';
-import { Subscription } from './Subscription';
-import { TeardownLogic, OperatorFunction, PartialObserver, Subscribable } from './types';
-import { canReportError } from './util/canReportError';
-import { toSubscriber } from './util/toSubscriber';
-import { iif } from './observable/iif';
-import { throwError } from './observable/throwError';
-import { observable as Symbol_observable } from './symbol/observable';
-import { pipeFromArray } from './util/pipe';
-import { config } from './config';
-import { asyncIteratorFrom } from './asyncIteratorFrom';
+import { Operator } from './Operator.ts';
+import { Subscriber } from './Subscriber.ts';
+import { Subscription } from './Subscription.ts';
+import { TeardownLogic, OperatorFunction, PartialObserver, Subscribable } from './types.ts';
+import { canReportError } from './util/canReportError.ts';
+import { toSubscriber } from './util/toSubscriber.ts';
+import { iif } from './observable/iif.ts';
+import { throwError } from './observable/throwError.ts';
+import { observable as Symbol_observable } from './symbol/observable.ts';
+import { pipeFromArray } from './util/pipe.ts';
+import { config } from './config.ts';
+import { asyncIteratorFrom } from './asyncIteratorFrom.ts';
 
 /**
  * A representation of any set of values over any amount of time. This is the most basic building block
@@ -122,7 +122,7 @@ export class Observable<T> implements Subscribable<T> {
    * ## Example
    * ### Subscribe with an Observer
    * ```ts
-   * import { of } from 'rxjs';
+   * import { of } from 'rxjs.ts';
    *
    * const sumObserver = {
    *   sum: 0,
@@ -173,7 +173,7 @@ export class Observable<T> implements Subscribable<T> {
    *
    * ### Cancel a subscription
    * ```ts
-   * import { interval } from 'rxjs';
+   * import { interval } from 'rxjs.ts';
    *
    * const subscription = interval(1000).subscribe(
    *   num => console.log(num),
@@ -287,12 +287,12 @@ export class Observable<T> implements Subscribable<T> {
   // favor of iif and throwError functions.
   /**
    * @nocollapse
-   * @deprecated In favor of iif creation function: import { iif } from 'rxjs';
+   * @deprecated In favor of iif creation function: import { iif } from 'rxjs.ts';
    */
   static if: typeof iif;
   /**
    * @nocollapse
-   * @deprecated In favor of throwError creation function: import { throwError } from 'rxjs';
+   * @deprecated In favor of throwError creation function: import { throwError } from 'rxjs.ts';
    */
   static throw: typeof throwError;
 
@@ -327,8 +327,8 @@ export class Observable<T> implements Subscribable<T> {
    *
    * ### Example
    * ```ts
-   * import { interval } from 'rxjs';
-   * import { map, filter, scan } from 'rxjs/operators';
+   * import { interval } from 'rxjs.ts';
+   * import { map, filter, scan } from 'rxjs/operators.ts';
    *
    * interval(1000)
    *   .pipe(

@@ -1,10 +1,10 @@
-import { Subject, AnonymousSubject } from '../../Subject';
-import { Subscriber } from '../../Subscriber';
-import { Observable } from '../../Observable';
-import { Subscription } from '../../Subscription';
-import { Operator } from '../../Operator';
-import { ReplaySubject } from '../../ReplaySubject';
-import { Observer, NextObserver } from '../../types';
+import { Subject, AnonymousSubject } from '../../Subject.ts';
+import { Subscriber } from '../../Subscriber.ts';
+import { Observable } from '../../Observable.ts';
+import { Subscription } from '../../Subscription.ts';
+import { Operator } from '../../Operator.ts';
+import { ReplaySubject } from '../../ReplaySubject.ts';
+import { Observer, NextObserver } from '../../types.ts';
 
 /**
  * WebSocketSubjectConfig is a plain Object that allows us to make our
@@ -25,7 +25,7 @@ import { Observer, NextObserver } from '../../types';
  * for incomming data, either be text or binarydata. We can apply a custom deserialization strategy
  * or just simply skip the default behaviour.
  * ```ts
- * import { webSocket } from 'rxjs/webSocket';
+ * import { webSocket } from 'rxjs/webSocket.ts';
  *
  * const wsSubject = webSocket({
  *     url: 'ws://localhost:8081',
@@ -43,7 +43,7 @@ import { Observer, NextObserver } from '../../types';
  *
  * **serializer** allows us to apply custom serialization strategy but for the outgoing messages
  * ```ts
- * import { webSocket } from 'rxjs/webSocket';
+ * import { webSocket } from 'rxjs/webSocket.ts';
  *
  * const wsSubject = webSocket({
  *     url: 'ws://localhost:8081',
@@ -63,7 +63,7 @@ import { Observer, NextObserver } from '../../types';
  *
  * **closeObserver** allows us to set a custom error when an error raise up.
  * ```ts
- * import { webSocket } from 'rxjs/webSocket';
+ * import { webSocket } from 'rxjs/webSocket.ts';
  *
  * const wsSubject = webSocket({
  *     url: 'ws://localhost:8081',
@@ -83,7 +83,7 @@ import { Observer, NextObserver } from '../../types';
  * webSocket or sending notification that the connection was successful, this is when
  * openObserver is usefull for.
  * ```ts
- * import { webSocket } from 'rxjs/webSocket';
+ * import { webSocket } from 'rxjs/webSocket.ts';
  *
  * const wsSubject = webSocket({
  *     url: 'ws://localhost:8081',
@@ -136,7 +136,7 @@ export interface WebSocketSubjectConfig<T> {
    */
   WebSocketCtor?: { new(url: string, protocols?: string|string[]): WebSocket };
   /** Sets the `binaryType` property of the underlying WebSocket. */
-  binaryType?: 'blob' | 'arraybuffer';
+  binaryType?: 'blob' | 'arraybuffer.ts';
 }
 
 const DEFAULT_WEBSOCKET_CONFIG: WebSocketSubjectConfig<any> = {
@@ -146,7 +146,7 @@ const DEFAULT_WEBSOCKET_CONFIG: WebSocketSubjectConfig<any> = {
 };
 
 const WEBSOCKETSUBJECT_INVALID_ERROR_OBJECT =
-  'WebSocketSubject.error must be called with an object with an error code, and an optional reason: { code: number, reason: string }';
+  'WebSocketSubject.error must be called with an object with an error code, and an optional reason: { code: number, reason: string }.ts';
 
 export type WebSocketMessage = string | ArrayBuffer | Blob | ArrayBufferView;
 

@@ -1,4 +1,4 @@
-import { of } from 'rxjs';
+import { of } from 'rxjs.ts';
 
 export class A { a = 0; }
 export class B { b = 0; }

@@ -1,11 +1,11 @@
-import { Observable } from '../Observable';
-import { AsyncSubject } from '../AsyncSubject';
-import { Subscriber } from '../Subscriber';
-import { SchedulerAction, SchedulerLike } from '../types';
-import { map } from '../operators/map';
-import { canReportError } from '../util/canReportError';
-import { isScheduler } from '../util/isScheduler';
-import { isArray } from '../util/isArray';
+import { Observable } from '../Observable.ts';
+import { AsyncSubject } from '../AsyncSubject.ts';
+import { Subscriber } from '../Subscriber.ts';
+import { SchedulerAction, SchedulerLike } from '../types.ts';
+import { map } from '../operators/map.ts';
+import { canReportError } from '../util/canReportError.ts';
+import { isScheduler } from '../util/isScheduler.ts';
+import { isArray } from '../util/isArray.ts';
 
 /* tslint:disable:max-line-length */
 /** @deprecated resultSelector is deprecated, pipe to map instead */
@@ -109,7 +109,7 @@ export function bindNodeCallback(callbackFunc: Function, scheduler?: SchedulerLi
  * ## Examples
  * ###  Read a file from the filesystem and get the data as an Observable
  * ```ts
- * import * as fs from 'fs';
+ * import * as fs from 'fs.ts';
  * const readFileAsObservable = bindNodeCallback(fs.readFile);
  * const result = readFileAsObservable('./roadNames.txt', 'utf8');
  * result.subscribe(x => console.log(x), e => console.error(e));

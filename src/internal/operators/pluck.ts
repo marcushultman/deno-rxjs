@@ -1,5 +1,5 @@
-import { map } from './map';
-import { OperatorFunction } from '../types';
+import { map } from './map.ts';
+import { OperatorFunction } from '../types.ts';
 
 /* tslint:disable:max-line-length */
 export function pluck<T, K1 extends keyof T>(k1: K1): OperatorFunction<T, T[K1]>;
@@ -28,8 +28,8 @@ export function pluck<T>(...properties: string[]): OperatorFunction<T, unknown>;
  * ## Example
  * Map every click to the tagName of the clicked target element
  * ```ts
- * import { fromEvent } from 'rxjs';
- * import { pluck } from 'rxjs/operators';
+ * import { fromEvent } from 'rxjs.ts';
+ * import { pluck } from 'rxjs/operators.ts';
  *
  * const clicks = fromEvent(document, 'click');
  * const tagNames = clicks.pipe(pluck('target', 'tagName'));

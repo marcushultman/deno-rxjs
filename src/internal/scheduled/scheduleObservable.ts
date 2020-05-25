@@ -1,7 +1,7 @@
-import { Observable } from '../Observable';
-import { Subscription } from '../Subscription';
-import { observable as Symbol_observable } from '../symbol/observable';
-import { InteropObservable, SchedulerLike, Subscribable } from '../types';
+import { Observable } from '../Observable.ts';
+import { Subscription } from '../Subscription.ts';
+import { observable as Symbol_observable } from '../symbol/observable.ts';
+import { InteropObservable, SchedulerLike, Subscribable } from '../types.ts';
 
 export function scheduleObservable<T>(input: InteropObservable<T>, scheduler: SchedulerLike) {
   return new Observable<T>(subscriber => {

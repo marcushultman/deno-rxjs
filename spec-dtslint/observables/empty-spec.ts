@@ -1,4 +1,4 @@
-import { of, empty, animationFrameScheduler, EMPTY } from 'rxjs';
+import { of, empty, animationFrameScheduler, EMPTY } from 'rxjs.ts';
 
 it('should infer correctly with no parameter', () => {
   const a = empty(); // $ExpectType Observable<never>

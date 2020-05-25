@@ -1,8 +1,8 @@
-import { Observable } from '../Observable';
-import { isArray } from '../util/isArray';
-import { isFunction } from '../util/isFunction';
-import { Subscriber } from '../Subscriber';
-import { map } from '../operators/map';
+import { Observable } from '../Observable.ts';
+import { isArray } from '../util/isArray.ts';
+import { isFunction } from '../util/isFunction.ts';
+import { Subscriber } from '../Subscriber.ts';
+import { map } from '../operators/map.ts';
 
 export interface NodeStyleEventEmitter {
   addListener: (eventName: string | symbol, handler: NodeEventHandler) => this;
@@ -131,7 +131,7 @@ export function fromEvent<T>(target: FromEventTarget<T>, eventName: string, opti
  * ## Examples
  * ### Emits clicks happening on the DOM document
  * ```ts
- * import { fromEvent } from 'rxjs';
+ * import { fromEvent } from 'rxjs.ts';
  *
  * const clicks = fromEvent(document, 'click');
  * clicks.subscribe(x => console.log(x));
@@ -143,7 +143,7 @@ export function fromEvent<T>(target: FromEventTarget<T>, eventName: string, opti
  *
  * ### Use addEventListener with capture option
  * ```ts
- * import { fromEvent } from 'rxjs';
+ * import { fromEvent } from 'rxjs.ts';
  *
  * const clicksInDocument = fromEvent(document, 'click', true); // note optional configuration parameter
  *                                                              // which will be passed to addEventListener
@@ -231,13 +231,13 @@ function setupSubscription<T>(sourceObj: FromEventTarget<T>, eventName: string,
 }
 
 function isNodeStyleEventEmitter(sourceObj: any): sourceObj is NodeStyleEventEmitter {
-  return sourceObj && typeof sourceObj.addListener === 'function' && typeof sourceObj.removeListener === 'function';
+  return sourceObj && typeof sourceObj.addListener === 'function' && typeof sourceObj.removeListener === 'function.ts';
 }
 
 function isJQueryStyleEventEmitter(sourceObj: any): sourceObj is JQueryStyleEventEmitter {
-  return sourceObj && typeof sourceObj.on === 'function' && typeof sourceObj.off === 'function';
+  return sourceObj && typeof sourceObj.on === 'function' && typeof sourceObj.off === 'function.ts';
 }
 
 function isEventTarget(sourceObj: any): sourceObj is HasEventTargetAddRemove<any> {
-  return sourceObj && typeof sourceObj.addEventListener === 'function' && typeof sourceObj.removeEventListener === 'function';
+  return sourceObj && typeof sourceObj.addEventListener === 'function' && typeof sourceObj.removeEventListener === 'function.ts';
 }

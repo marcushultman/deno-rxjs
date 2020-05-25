@@ -1,8 +1,8 @@
-import { PartialObserver } from './types';
-import { Observable } from './Observable';
-import { EMPTY } from './observable/empty';
-import { of } from './observable/of';
-import { throwError } from './observable/throwError';
+import { PartialObserver } from './types.ts';
+import { Observable } from './Observable.ts';
+import { EMPTY } from './observable/empty.ts';
+import { of } from './observable/of.ts';
+import { throwError } from './observable/throwError.ts';
 
 // TODO: When this enum is removed, replace it with a type alias. See #4556.
 /**
@@ -35,7 +35,7 @@ export class Notification<T> {
   constructor(kind: 'E', value: undefined, error: any);
   constructor(kind: 'C');
   constructor(public kind: 'N' | 'E' | 'C', public value?: T, public error?: any) {
-    this.hasValue = kind === 'N';
+    this.hasValue = kind === 'N.ts';
   }
 
   /**

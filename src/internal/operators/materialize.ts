@@ -1,8 +1,8 @@
-import { Operator } from '../Operator';
-import { Observable } from '../Observable';
-import { Subscriber } from '../Subscriber';
-import { Notification } from '../Notification';
-import { OperatorFunction } from '../types';
+import { Operator } from '../Operator.ts';
+import { Observable } from '../Observable.ts';
+import { Subscriber } from '../Subscriber.ts';
+import { Notification } from '../Notification.ts';
+import { OperatorFunction } from '../types.ts';
 
 /**
  * Represents all of the notifications from the source Observable as `next`
@@ -29,8 +29,8 @@ import { OperatorFunction } from '../types';
  * ## Example
  * Convert a faulty Observable to an Observable of Notifications
  * ```ts
- * import { of } from 'rxjs';
- * import { materialize, map } from 'rxjs/operators';
+ * import { of } from 'rxjs.ts';
+ * import { materialize, map } from 'rxjs/operators.ts';
  *
  * const letters = of('a', 'b', 13, 'd');
  * const upperCase = letters.pipe(map(x => x.toUpperCase()));

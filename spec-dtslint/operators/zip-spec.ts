@@ -1,5 +1,5 @@
-import { Observable, of } from 'rxjs';
-import { zip } from 'rxjs/operators';
+import { Observable, of } from 'rxjs.ts';
+import { zip } from 'rxjs/operators.ts';
 
 it('should support rest parameter observables', () => {
   const o = of(1); // $ExpectType Observable<number>

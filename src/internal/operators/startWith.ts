@@ -1,7 +1,7 @@
-import { Observable } from '../Observable';
-import { concat } from '../observable/concat';
-import { isScheduler } from '../util/isScheduler';
-import { MonoTypeOperatorFunction, OperatorFunction, SchedulerLike, ValueFromArray } from '../types';
+import { Observable } from '../Observable.ts';
+import { concat } from '../observable/concat.ts';
+import { isScheduler } from '../util/isScheduler.ts';
+import { MonoTypeOperatorFunction, OperatorFunction, SchedulerLike, ValueFromArray } from '../types.ts';
 
 /* tslint:disable:max-line-length */
 /** @deprecated use {@link scheduled} and {@link concatAll} (e.g. `scheduled([[a, b, c], source], scheduler).pipe(concatAll())`) */
@@ -38,8 +38,8 @@ export function startWith<T, A extends any[] = T[]>(...values: A): OperatorFunct
  * Emit a value when a timer starts.
  *
  * ```ts
- * import { timer } from 'rxjs';
- * import { startWith, map } from 'rxjs/operators';
+ * import { timer } from 'rxjs.ts';
+ * import { startWith, map } from 'rxjs/operators.ts';
  *
  * timer(1000)
  *   .pipe(

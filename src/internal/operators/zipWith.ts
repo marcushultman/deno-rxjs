@@ -1,6 +1,6 @@
-import { zip as zipStatic } from '../observable/zip';
-import { Observable } from '../Observable';
-import { ObservableInput, OperatorFunction, ObservedValueTupleFromArray, Cons } from '../types';
+import { zip as zipStatic } from '../observable/zip.ts';
+import { Observable } from '../Observable.ts';
+import { ObservableInput, OperatorFunction, ObservedValueTupleFromArray, Cons } from '../types.ts';
 
 /* tslint:disable:max-line-length */
 /** @deprecated Deprecated use {@link zipWith} */

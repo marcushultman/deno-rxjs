@@ -1,12 +1,12 @@
-import { Operator } from '../Operator';
-import { Observable } from '../Observable';
-import { Subscriber } from '../Subscriber';
+import { Operator } from '../Operator.ts';
+import { Observable } from '../Observable.ts';
+import { Subscriber } from '../Subscriber.ts';
 
-import { OuterSubscriber } from '../OuterSubscriber';
-import { InnerSubscriber } from '../InnerSubscriber';
-import { subscribeToResult } from '../util/subscribeToResult';
+import { OuterSubscriber } from '../OuterSubscriber.ts';
+import { InnerSubscriber } from '../InnerSubscriber.ts';
+import { subscribeToResult } from '../util/subscribeToResult.ts';
 
-import { MonoTypeOperatorFunction, TeardownLogic } from '../types';
+import { MonoTypeOperatorFunction, TeardownLogic } from '../types.ts';
 
 /**
  * Emits the values emitted by the source Observable until a `notifier`
@@ -26,8 +26,8 @@ import { MonoTypeOperatorFunction, TeardownLogic } from '../types';
  * ## Example
  * Tick every second until the first click happens
  * ```ts
- * import { fromEvent, interval } from 'rxjs';
- * import { takeUntil } from 'rxjs/operators';
+ * import { fromEvent, interval } from 'rxjs.ts';
+ * import { takeUntil } from 'rxjs/operators.ts';
  *
  * const source = interval(1000);
  * const clicks = fromEvent(document, 'click');

@@ -1,11 +1,11 @@
-import { Operator } from '../Operator';
-import { Subscriber } from '../Subscriber';
-import { Observable } from '../Observable';
-import { Subscription } from '../Subscription';
-import { subscribeToResult } from '../util/subscribeToResult';
-import { OuterSubscriber } from '../OuterSubscriber';
-import { InnerSubscriber } from '../InnerSubscriber';
-import { OperatorFunction, SubscribableOrPromise } from '../types';
+import { Operator } from '../Operator.ts';
+import { Subscriber } from '../Subscriber.ts';
+import { Observable } from '../Observable.ts';
+import { Subscription } from '../Subscription.ts';
+import { subscribeToResult } from '../util/subscribeToResult.ts';
+import { OuterSubscriber } from '../OuterSubscriber.ts';
+import { InnerSubscriber } from '../InnerSubscriber.ts';
+import { OperatorFunction, SubscribableOrPromise } from '../types.ts';
 
 /**
  * Buffers the source Observable values starting from an emission from
@@ -26,8 +26,8 @@ import { OperatorFunction, SubscribableOrPromise } from '../types';
  * Every other second, emit the click events from the next 500ms
  *
  * ```ts
- * import { fromEvent, interval, EMPTY } from 'rxjs';
- * import { bufferToggle } from 'rxjs/operators';
+ * import { fromEvent, interval, EMPTY } from 'rxjs.ts';
+ * import { bufferToggle } from 'rxjs/operators.ts';
  *
  * const clicks = fromEvent(document, 'click');
  * const openings = interval(1000);

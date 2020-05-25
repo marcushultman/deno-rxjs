@@ -1,5 +1,5 @@
-import { AsyncAction } from './AsyncAction';
-import { AsyncScheduler } from './AsyncScheduler';
+import { AsyncAction } from './AsyncAction.ts';
+import { AsyncScheduler } from './AsyncScheduler.ts';
 
 /**
  *
@@ -18,7 +18,7 @@ import { AsyncScheduler } from './AsyncScheduler';
  * ## Examples
  * Use async scheduler to delay task
  * ```ts
- * import { asyncScheduler } from 'rxjs';
+ * import { asyncScheduler } from 'rxjs.ts';
  *
  * const task = () => console.log('it works!');
  *
@@ -30,7 +30,7 @@ import { AsyncScheduler } from './AsyncScheduler';
  *
  * Use async scheduler to repeat task in intervals
  * ```ts
- * import { asyncScheduler } from 'rxjs';
+ * import { asyncScheduler } from 'rxjs.ts';
  *
  * function task(state) {
  *   console.log(state);

@@ -1,5 +1,5 @@
-import { reduce } from './reduce';
-import { OperatorFunction } from '../types';
+import { reduce } from './reduce.ts';
+import { OperatorFunction } from '../types.ts';
 
 function toArrayReducer<T>(arr: T[], item: T, index: number): T[] {
   if (index === 0) {
@@ -22,8 +22,8 @@ function toArrayReducer<T>(arr: T[], item: T, index: number): T[] {
  *
  *  ## Example
  * ```ts
- * import { interval } from 'rxjs';
- * import { toArray, take } from 'rxjs/operators';
+ * import { interval } from 'rxjs.ts';
+ * import { toArray, take } from 'rxjs/operators.ts';
  *
  * const source = interval(1000);
  * const example = source.pipe(

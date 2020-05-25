@@ -1,5 +1,5 @@
-import { Observable, of, OperatorFunction } from 'rxjs';
-import { mapTo } from 'rxjs/operators';
+import { Observable, of, OperatorFunction } from 'rxjs.ts';
+import { mapTo } from 'rxjs/operators.ts';
 
 function a<I extends string, O extends string>(input: I, output: O): OperatorFunction<I, O>;
 function a<I, O extends string>(output: O): OperatorFunction<I, O>;

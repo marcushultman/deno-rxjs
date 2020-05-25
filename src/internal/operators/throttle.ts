@@ -1,13 +1,13 @@
-import { Operator } from '../Operator';
-import { Observable } from '../Observable';
-import { Subscriber } from '../Subscriber';
-import { Subscription } from '../Subscription';
+import { Operator } from '../Operator.ts';
+import { Observable } from '../Observable.ts';
+import { Subscriber } from '../Subscriber.ts';
+import { Subscription } from '../Subscription.ts';
 
-import { OuterSubscriber } from '../OuterSubscriber';
-import { InnerSubscriber } from '../InnerSubscriber';
-import { subscribeToResult } from '../util/subscribeToResult';
+import { OuterSubscriber } from '../OuterSubscriber.ts';
+import { InnerSubscriber } from '../InnerSubscriber.ts';
+import { subscribeToResult } from '../util/subscribeToResult.ts';
 
-import { MonoTypeOperatorFunction, SubscribableOrPromise, TeardownLogic } from '../types';
+import { MonoTypeOperatorFunction, SubscribableOrPromise, TeardownLogic } from '../types.ts';
 
 export interface ThrottleConfig {
   leading?: boolean;
@@ -41,8 +41,8 @@ export const defaultThrottleConfig: ThrottleConfig = {
  * ## Example
  * Emit clicks at a rate of at most one click per second
  * ```ts
- * import { fromEvent, interval } from 'rxjs';
- * import { throttle } from 'rxjs/operators';
+ * import { fromEvent, interval } from 'rxjs.ts';
+ * import { throttle } from 'rxjs/operators.ts';
  *
  * const clicks = fromEvent(document, 'click');
  * const result = clicks.pipe(throttle(ev => interval(1000)));

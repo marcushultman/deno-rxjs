@@ -1,5 +1,5 @@
-import { of, asyncScheduler } from 'rxjs';
-import { throttleTime } from 'rxjs/operators';
+import { of, asyncScheduler } from 'rxjs.ts';
+import { throttleTime } from 'rxjs/operators.ts';
 
 it('should infer correctly', () => {
   const o = of(1, 2, 3).pipe(throttleTime(47)); // $ExpectType Observable<number>

@@ -1,4 +1,4 @@
-import { ajax } from 'rxjs/ajax';
+import { ajax } from 'rxjs/ajax.ts';
 
 it('should enforce function parameter', () => {
   const o = ajax(); // $ExpectError

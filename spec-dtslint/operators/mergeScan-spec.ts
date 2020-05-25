@@ -1,5 +1,5 @@
-import { of } from 'rxjs';
-import { mergeScan } from 'rxjs/operators';
+import { of } from 'rxjs.ts';
+import { mergeScan } from 'rxjs/operators.ts';
 
 it('should infer correctly', () => {
   const o = of(1, 2, 3).pipe(mergeScan((acc, value) => of(acc + value), 0)); // $ExpectType Observable<number>

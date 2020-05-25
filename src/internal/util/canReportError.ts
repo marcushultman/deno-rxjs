@@ -1,5 +1,5 @@
-import { Subscriber } from '../Subscriber';
-import { Subject } from '../Subject';
+import { Subscriber } from '../Subscriber.ts';
+import { Subject } from '../Subject.ts';
 
 /**
  * Determines whether the ErrorObserver is closed or stopped or has a

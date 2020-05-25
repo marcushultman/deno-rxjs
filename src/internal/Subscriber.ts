@@ -1,10 +1,10 @@
-import { isFunction } from './util/isFunction';
-import { empty as emptyObserver } from './Observer';
-import { Observer, PartialObserver } from './types';
-import { Subscription } from './Subscription';
-import { rxSubscriber as rxSubscriberSymbol } from '../internal/symbol/rxSubscriber';
-import { config } from './config';
-import { hostReportError } from './util/hostReportError';
+import { isFunction } from './util/isFunction.ts';
+import { empty as emptyObserver } from './Observer.ts';
+import { Observer, PartialObserver } from './types.ts';
+import { Subscription } from './Subscription.ts';
+import { rxSubscriber as rxSubscriberSymbol } from '../internal/symbol/rxSubscriber.ts';
+import { config } from './config.ts';
+import { hostReportError } from './util/hostReportError.ts';
 
 /**
  * Implements the {@link Observer} interface and extends the

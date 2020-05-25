@@ -1,9 +1,9 @@
-import { Observable } from '../Observable';
-import { SchedulerAction, SchedulerLike } from '../types';
-import { async } from '../scheduler/async';
-import { isNumeric } from '../util/isNumeric';
-import { isScheduler } from '../util/isScheduler';
-import { Subscriber } from '../Subscriber';
+import { Observable } from '../Observable.ts';
+import { SchedulerAction, SchedulerLike } from '../types.ts';
+import { async } from '../scheduler/async.ts';
+import { isNumeric } from '../util/isNumeric.ts';
+import { isScheduler } from '../util/isScheduler.ts';
+import { Subscriber } from '../Subscriber.ts';
 
 /**
  * Creates an Observable that starts emitting after an `dueTime` and
@@ -26,7 +26,7 @@ import { Subscriber } from '../Subscriber';
  * ## Examples
  * ### Emits ascending numbers, one every second (1000ms), starting after 3 seconds
  * ```ts
- * import { timer } from 'rxjs';
+ * import { timer } from 'rxjs.ts';
  *
  * const numbers = timer(3000, 1000);
  * numbers.subscribe(x => console.log(x));
@@ -34,7 +34,7 @@ import { Subscriber } from '../Subscriber';
  *
  * ### Emits one number after five seconds
  * ```ts
- * import { timer } from 'rxjs';
+ * import { timer } from 'rxjs.ts';
  *
  * const numbers = timer(5000);
  * numbers.subscribe(x => console.log(x));

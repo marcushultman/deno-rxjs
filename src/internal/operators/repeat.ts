@@ -1,8 +1,8 @@
-import { Operator } from '../Operator';
-import { Subscriber } from '../Subscriber';
-import { Observable } from '../Observable';
-import { EMPTY } from '../observable/empty';
-import { MonoTypeOperatorFunction, TeardownLogic } from '../types';
+import { Operator } from '../Operator.ts';
+import { Subscriber } from '../Subscriber.ts';
+import { Observable } from '../Observable.ts';
+import { EMPTY } from '../observable/empty.ts';
+import { MonoTypeOperatorFunction, TeardownLogic } from '../types.ts';
 
 /**
  * Returns an Observable that will resubscribe to the source stream when the source stream completes, at most count times.
@@ -19,8 +19,8 @@ import { MonoTypeOperatorFunction, TeardownLogic } from '../types';
  * ## Example
  * Repeat a message stream
  * ```ts
- * import { of } from 'rxjs';
- * import { repeat, delay } from 'rxjs/operators';
+ * import { of } from 'rxjs.ts';
+ * import { repeat, delay } from 'rxjs/operators.ts';
  *
  * const source = of('Repeat message');
  * const example = source.pipe(repeat(3));
@@ -34,8 +34,8 @@ import { MonoTypeOperatorFunction, TeardownLogic } from '../types';
  *
  * Repeat 3 values, 2 times
  * ```ts
- * import { interval } from 'rxjs';
- * import { repeat, take } from 'rxjs/operators';
+ * import { interval } from 'rxjs.ts';
+ * import { repeat, take } from 'rxjs/operators.ts';
  *
  * const source = interval(1000);
  * const example = source.pipe(take(3), repeat(2));

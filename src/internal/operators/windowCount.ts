@@ -1,8 +1,8 @@
-import { Operator } from '../Operator';
-import { Subscriber } from '../Subscriber';
-import { Observable } from '../Observable';
-import { Subject } from '../Subject';
-import { OperatorFunction } from '../types';
+import { Operator } from '../Operator.ts';
+import { Subscriber } from '../Subscriber.ts';
+import { Observable } from '../Observable.ts';
+import { Subject } from '../Subject.ts';
+import { OperatorFunction } from '../types.ts';
 
 /**
  * Branch out the source Observable values as a nested Observable with each
@@ -25,8 +25,8 @@ import { OperatorFunction } from '../types';
  * ## Examples
  * Ignore every 3rd click event, starting from the first one
  * ```ts
- * import { fromEvent } from 'rxjs';
- * import { windowCount, map, mergeAll, skip } from 'rxjs/operators';
+ * import { fromEvent } from 'rxjs.ts';
+ * import { windowCount, map, mergeAll, skip } from 'rxjs/operators.ts';
  *
  * const clicks = fromEvent(document, 'click');
  * const result = clicks.pipe(
@@ -39,8 +39,8 @@ import { OperatorFunction } from '../types';
  *
  * Ignore every 3rd click event, starting from the third one
  * ```ts
- * import { fromEvent } from 'rxjs';
- * import { windowCount, mergeAll } from 'rxjs/operators';
+ * import { fromEvent } from 'rxjs.ts';
+ * import { windowCount, mergeAll } from 'rxjs/operators.ts';
  *
  * const clicks = fromEvent(document, 'click');
  * const result = clicks.pipe(

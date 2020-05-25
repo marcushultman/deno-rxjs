@@ -1,9 +1,9 @@
-import { Observable } from '../Observable';
-import { async } from '../scheduler/async';
-import { SchedulerLike, OperatorFunction } from '../types';
-import { scan } from './scan';
-import { defer } from '../observable/defer';
-import { map } from './map';
+import { Observable } from '../Observable.ts';
+import { async } from '../scheduler/async.ts';
+import { SchedulerLike, OperatorFunction } from '../types.ts';
+import { scan } from './scan.ts';
+import { defer } from '../observable/defer.ts';
+import { map } from './map.ts';
 
 /**
  *

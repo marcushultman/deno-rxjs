@@ -1,5 +1,5 @@
-import { of } from 'rxjs';
-import { windowToggle } from 'rxjs/operators';
+import { of } from 'rxjs.ts';
+import { windowToggle } from 'rxjs/operators.ts';
 
 it('should infer correctly', () => {
   const o = of('a', 'b', 'c').pipe(windowToggle(of(1, 2, 3), () => of({}))); // $ExpectType Observable<Observable<string>>

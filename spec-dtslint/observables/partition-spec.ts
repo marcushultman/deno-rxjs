@@ -1,4 +1,4 @@
-import { of, partition } from 'rxjs';
+import { of, partition } from 'rxjs.ts';
 
 it('should infer correctly', () => {
   const o = partition(of('a', 'b', 'c'), (value, index) => true); // $ExpectType [Observable<string>, Observable<string>]

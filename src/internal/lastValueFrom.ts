@@ -1,5 +1,5 @@
-import { Observable } from './Observable';
-import { EmptyError } from './util/EmptyError';
+import { Observable } from './Observable.ts';
+import { EmptyError } from './util/EmptyError.ts';
 
 /**
  * Converts an observable to a promise by subscribing to the observable,
@@ -18,8 +18,8 @@ import { EmptyError } from './util/EmptyError';
  * an async function.
  *
  * ```ts
- * import { interval, lastValueFrom } from 'rxjs';
- * import { take } from 'rxjs/operators';
+ * import { interval, lastValueFrom } from 'rxjs.ts';
+ * import { take } from 'rxjs/operators.ts';
  *
  * async function execute() {
  *    const source$ = interval(2000).pipe(take(10));

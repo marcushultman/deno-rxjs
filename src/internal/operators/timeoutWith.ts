@@ -1,11 +1,11 @@
-import { Operator } from '../Operator';
-import { Subscriber } from '../Subscriber';
-import { async } from '../scheduler/async';
-import { Observable } from '../Observable';
-import { isDate } from '../util/isDate';
-import { OuterSubscriber } from '../OuterSubscriber';
-import { subscribeToResult } from '../util/subscribeToResult';
-import { ObservableInput, OperatorFunction, SchedulerAction, SchedulerLike, TeardownLogic } from '../types';
+import { Operator } from '../Operator.ts';
+import { Subscriber } from '../Subscriber.ts';
+import { async } from '../scheduler/async.ts';
+import { Observable } from '../Observable.ts';
+import { isDate } from '../util/isDate.ts';
+import { OuterSubscriber } from '../OuterSubscriber.ts';
+import { subscribeToResult } from '../util/subscribeToResult.ts';
+import { ObservableInput, OperatorFunction, SchedulerAction, SchedulerLike, TeardownLogic } from '../types.ts';
 
 /* tslint:disable:max-line-length */
 export function timeoutWith<T, R>(due: number | Date, withObservable: ObservableInput<R>, scheduler?: SchedulerLike): OperatorFunction<T, T | R>;
@@ -40,8 +40,8 @@ export function timeoutWith<T, R>(due: number | Date, withObservable: Observable
  * ## Example
  * Add fallback observable
  * ```ts
- * import { interval } from 'rxjs';
- * import { timeoutWith } from 'rxjs/operators';
+ * import { interval } from 'rxjs.ts';
+ * import { timeoutWith } from 'rxjs/operators.ts';
  *
  * const seconds = interval(1000);
  * const minutes = interval(60 * 1000);

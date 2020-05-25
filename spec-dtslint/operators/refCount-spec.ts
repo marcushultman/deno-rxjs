@@ -1,5 +1,5 @@
-import { of } from 'rxjs';
-import { refCount } from 'rxjs/operators';
+import { of } from 'rxjs.ts';
+import { refCount } from 'rxjs/operators.ts';
 
 it('should infer correctly', () => {
   const a = of(1, 2, 3).pipe(refCount()); // $ExpectType Observable<number>

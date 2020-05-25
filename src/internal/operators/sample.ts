@@ -1,11 +1,11 @@
-import { Operator } from '../Operator';
-import { Observable } from '../Observable';
-import { Subscriber } from '../Subscriber';
-import { OuterSubscriber } from '../OuterSubscriber';
-import { InnerSubscriber } from '../InnerSubscriber';
-import { subscribeToResult } from '../util/subscribeToResult';
+import { Operator } from '../Operator.ts';
+import { Observable } from '../Observable.ts';
+import { Subscriber } from '../Subscriber.ts';
+import { OuterSubscriber } from '../OuterSubscriber.ts';
+import { InnerSubscriber } from '../InnerSubscriber.ts';
+import { subscribeToResult } from '../util/subscribeToResult.ts';
 
-import { MonoTypeOperatorFunction, TeardownLogic } from '../types';
+import { MonoTypeOperatorFunction, TeardownLogic } from '../types.ts';
 
 /**
  * Emits the most recently emitted value from the source Observable whenever
@@ -25,8 +25,8 @@ import { MonoTypeOperatorFunction, TeardownLogic } from '../types';
  * ## Example
  * On every click, sample the most recent "seconds" timer
  * ```ts
- * import { fromEvent, interval } from 'rxjs';
- * import { sample } from 'rxjs/operators';
+ * import { fromEvent, interval } from 'rxjs.ts';
+ * import { sample } from 'rxjs/operators.ts';
  *
  * const seconds = interval(1000);
  * const clicks = fromEvent(document, 'click');

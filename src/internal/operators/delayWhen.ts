@@ -1,11 +1,11 @@
-import { Operator } from '../Operator';
-import { Subscriber } from '../Subscriber';
-import { Observable } from '../Observable';
-import { Subscription } from '../Subscription';
-import { OuterSubscriber } from '../OuterSubscriber';
-import { InnerSubscriber } from '../InnerSubscriber';
-import { subscribeToResult } from '../util/subscribeToResult';
-import { MonoTypeOperatorFunction, TeardownLogic } from '../types';
+import { Operator } from '../Operator.ts';
+import { Subscriber } from '../Subscriber.ts';
+import { Observable } from '../Observable.ts';
+import { Subscription } from '../Subscription.ts';
+import { OuterSubscriber } from '../OuterSubscriber.ts';
+import { InnerSubscriber } from '../InnerSubscriber.ts';
+import { subscribeToResult } from '../util/subscribeToResult.ts';
+import { MonoTypeOperatorFunction, TeardownLogic } from '../types.ts';
 
 /* tslint:disable:max-line-length */
 /** @deprecated In future versions, empty notifiers will no longer re-emit the source value on the output observable. */
@@ -41,8 +41,8 @@ export function delayWhen<T>(delayDurationSelector: (value: T, index: number) =>
  * ## Example
  * Delay each click by a random amount of time, between 0 and 5 seconds
  * ```ts
- * import { fromEvent, interval } from 'rxjs';
- * import { delayWhen } from 'rxjs/operators';
+ * import { fromEvent, interval } from 'rxjs.ts';
+ * import { delayWhen } from 'rxjs/operators.ts';
  *
  * const clicks = fromEvent(document, 'click');
  * const delayedClicks = clicks.pipe(

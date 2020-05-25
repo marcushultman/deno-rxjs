@@ -1,8 +1,8 @@
-import { Observable } from '../Observable';
-import { ObservableInput } from '../types';
-import { from } from './from';
-import { isArray } from '../util/isArray';
-import { EMPTY } from './empty';
+import { Observable } from '../Observable.ts';
+import { ObservableInput } from '../types.ts';
+import { from } from './from.ts';
+import { isArray } from '../util/isArray.ts';
+import { EMPTY } from './empty.ts';
 
 /* tslint:disable:max-line-length */
 export function onErrorResumeNext<R>(v: ObservableInput<R>): Observable<R>;
@@ -39,8 +39,8 @@ export function onErrorResumeNext<R>(array: ObservableInput<any>[]): Observable<
  * ## Example
  * Subscribe to the next Observable after map fails</caption>
  * ```ts
- * import { onErrorResumeNext, of } from 'rxjs';
- * import { map } from 'rxjs/operators';
+ * import { onErrorResumeNext, of } from 'rxjs.ts';
+ * import { map } from 'rxjs/operators.ts';
  *
  * onErrorResumeNext(
  *  of(1, 2, 3, 0).pipe(

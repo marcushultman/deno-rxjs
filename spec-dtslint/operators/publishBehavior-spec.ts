@@ -1,5 +1,5 @@
-import { of } from 'rxjs';
-import { publishBehavior } from 'rxjs/operators';
+import { of } from 'rxjs.ts';
+import { publishBehavior } from 'rxjs/operators.ts';
 
 it('should enforce parameter', () => {
   const a = of(1, 2, 3).pipe(publishBehavior()); // $ExpectError

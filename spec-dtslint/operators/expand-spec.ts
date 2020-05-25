@@ -1,5 +1,5 @@
-import { of, asyncScheduler } from 'rxjs';
-import { expand } from 'rxjs/operators';
+import { of, asyncScheduler } from 'rxjs.ts';
+import { expand } from 'rxjs/operators.ts';
 
 it('should infer correctly', () => {
   const o = of(1, 2, 3).pipe(expand(value => of(value))); // $ExpectType Observable<number>

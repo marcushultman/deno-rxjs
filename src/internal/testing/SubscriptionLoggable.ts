@@ -1,5 +1,5 @@
-import { Scheduler } from '../Scheduler';
-import { SubscriptionLog } from './SubscriptionLog';
+import { Scheduler } from '../Scheduler.ts';
+import { SubscriptionLog } from './SubscriptionLog.ts';
 
 export class SubscriptionLoggable {
   public subscriptions: SubscriptionLog[] = [];

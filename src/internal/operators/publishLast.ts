@@ -1,8 +1,8 @@
-import { Observable } from '../Observable';
-import { AsyncSubject } from '../AsyncSubject';
-import { multicast } from './multicast';
-import { ConnectableObservable } from '../observable/ConnectableObservable';
-import { UnaryFunction } from '../types';
+import { Observable } from '../Observable.ts';
+import { AsyncSubject } from '../AsyncSubject.ts';
+import { multicast } from './multicast.ts';
+import { ConnectableObservable } from '../observable/ConnectableObservable.ts';
+import { UnaryFunction } from '../types.ts';
 
 /**
  * Returns a connectable observable sequence that shares a single subscription to the
@@ -19,8 +19,8 @@ import { UnaryFunction } from '../types';
  * ## Example
  *
  * ```ts
- * import { interval } from 'rxjs';
- * import { publishLast, tap, take } from 'rxjs/operators';
+ * import { interval } from 'rxjs.ts';
+ * import { publishLast, tap, take } from 'rxjs/operators.ts';
  *
  * const connectable =
  *   interval(1000)

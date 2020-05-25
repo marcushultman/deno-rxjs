@@ -1,10 +1,10 @@
-import { Operator } from '../Operator';
-import { Observable } from '../Observable';
-import { Subscriber } from '../Subscriber';
-import { Subscription } from '../Subscription';
-import { OuterSubscriber } from '../OuterSubscriber';
-import { subscribeToResult } from '../util/subscribeToResult';
-import { ObservableInput, OperatorFunction, TeardownLogic } from '../types';
+import { Operator } from '../Operator.ts';
+import { Observable } from '../Observable.ts';
+import { Subscriber } from '../Subscriber.ts';
+import { Subscription } from '../Subscription.ts';
+import { OuterSubscriber } from '../OuterSubscriber.ts';
+import { subscribeToResult } from '../util/subscribeToResult.ts';
+import { ObservableInput, OperatorFunction, TeardownLogic } from '../types.ts';
 
 export function exhaust<T>(): OperatorFunction<ObservableInput<T>, T>;
 export function exhaust<R>(): OperatorFunction<any, R>;
@@ -29,8 +29,8 @@ export function exhaust<R>(): OperatorFunction<any, R>;
  * ## Example
  * Run a finite timer for each click, only if there is no currently active timer
  * ```ts
- * import { fromEvent, interval } from 'rxjs';
- * import { exhaust, map, take } from 'rxjs/operators';
+ * import { fromEvent, interval } from 'rxjs.ts';
+ * import { exhaust, map, take } from 'rxjs/operators.ts';
  *
  * const clicks = fromEvent(document, 'click');
  * const higherOrder = clicks.pipe(

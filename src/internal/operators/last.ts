@@ -1,11 +1,11 @@
-import { Observable } from '../Observable';
-import { EmptyError } from '../util/EmptyError';
-import { OperatorFunction } from '../../internal/types';
-import { filter } from './filter';
-import { takeLast } from './takeLast';
-import { throwIfEmpty } from './throwIfEmpty';
-import { defaultIfEmpty } from './defaultIfEmpty';
-import { identity } from '../util/identity';
+import { Observable } from '../Observable.ts';
+import { EmptyError } from '../util/EmptyError.ts';
+import { OperatorFunction } from '../../internal/types.ts';
+import { filter } from './filter.ts';
+import { takeLast } from './takeLast.ts';
+import { throwIfEmpty } from './throwIfEmpty.ts';
+import { defaultIfEmpty } from './defaultIfEmpty.ts';
+import { identity } from '../util/identity.ts';
 
 /* tslint:disable:max-line-length */
 export function last<T, D = T>(

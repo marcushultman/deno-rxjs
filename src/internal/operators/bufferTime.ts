@@ -1,10 +1,10 @@
-import { Operator } from '../Operator';
-import { async } from '../scheduler/async';
-import { Observable } from '../Observable';
-import { Subscriber } from '../Subscriber';
-import { Subscription } from '../Subscription';
-import { isScheduler } from '../util/isScheduler';
-import { OperatorFunction, SchedulerAction, SchedulerLike } from '../types';
+import { Operator } from '../Operator.ts';
+import { async } from '../scheduler/async.ts';
+import { Observable } from '../Observable.ts';
+import { Subscriber } from '../Subscriber.ts';
+import { Subscription } from '../Subscription.ts';
+import { isScheduler } from '../util/isScheduler.ts';
+import { OperatorFunction, SchedulerAction, SchedulerLike } from '../types.ts';
 
 /* tslint:disable:max-line-length */
 export function bufferTime<T>(bufferTimeSpan: number, scheduler?: SchedulerLike): OperatorFunction<T, T[]>;
@@ -34,8 +34,8 @@ export function bufferTime<T>(bufferTimeSpan: number, bufferCreationInterval: nu
  * Every second, emit an array of the recent click events
  *
  * ```ts
- * import { fromEvent } from 'rxjs';
- * import { bufferTime } from 'rxjs/operators';
+ * import { fromEvent } from 'rxjs.ts';
+ * import { bufferTime } from 'rxjs/operators.ts';
  *
  * const clicks = fromEvent(document, 'click');
  * const buffered = clicks.pipe(bufferTime(1000));
@@ -45,8 +45,8 @@ export function bufferTime<T>(bufferTimeSpan: number, bufferCreationInterval: nu
  * Every 5 seconds, emit the click events from the next 2 seconds
  *
  * ```ts
- * import { fromEvent } from 'rxjs';
- * import { bufferTime } from 'rxjs/operators';
+ * import { fromEvent } from 'rxjs.ts';
+ * import { bufferTime } from 'rxjs/operators.ts';
  *
  * const clicks = fromEvent(document, 'click');
  * const buffered = clicks.pipe(bufferTime(2000, 5000));

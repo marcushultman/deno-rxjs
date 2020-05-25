@@ -1,6 +1,6 @@
-import { of } from 'rxjs';
-import { concatWith } from 'rxjs/operators';
-import { a$, b$, c$, d$, e$ } from 'helpers';
+import { of } from 'rxjs.ts';
+import { concatWith } from 'rxjs/operators.ts';
+import { a$, b$, c$, d$, e$ } from 'helpers.ts';
 
 it('should support rest params', () => {
   const arr = [b$, c$];

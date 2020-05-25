@@ -1,11 +1,11 @@
-import { Operator } from '../Operator';
-import { Subscriber } from '../Subscriber';
-import { Observable } from '../Observable';
+import { Operator } from '../Operator.ts';
+import { Subscriber } from '../Subscriber.ts';
+import { Observable } from '../Observable.ts';
 
-import { OuterSubscriber } from '../OuterSubscriber';
-import { InnerSubscriber } from '../InnerSubscriber';
-import { subscribeToResult } from '../util/subscribeToResult';
-import { ObservableInput, OperatorFunction, ObservedValueOf } from '../types';
+import { OuterSubscriber } from '../OuterSubscriber.ts';
+import { InnerSubscriber } from '../InnerSubscriber.ts';
+import { subscribeToResult } from '../util/subscribeToResult.ts';
+import { ObservableInput, OperatorFunction, ObservedValueOf } from '../types.ts';
 
 /* tslint:disable:max-line-length */
 export function catchError<T, O extends ObservableInput<any>>(selector: (err: any, caught: Observable<T>) => O): OperatorFunction<T, T | ObservedValueOf<O>>;
@@ -30,13 +30,13 @@ export function catchError<T, O extends ObservableInput<any>>(selector: (err: an
  * Continues with a different Observable when there's an error
  *
  * ```ts
- * import { of } from 'rxjs';
- * import { map, catchError } from 'rxjs/operators';
+ * import { of } from 'rxjs.ts';
+ * import { map, catchError } from 'rxjs/operators.ts';
  *
  * of(1, 2, 3, 4, 5).pipe(
  *     map(n => {
  *   	   if (n === 4) {
- * 	       throw 'four!';
+ * 	       throw 'four!.ts';
  *       }
  *	     return n;
  *     }),
@@ -49,13 +49,13 @@ export function catchError<T, O extends ObservableInput<any>>(selector: (err: an
  * Retries the caught source Observable again in case of error, similar to retry() operator
  *
  * ```ts
- * import { of } from 'rxjs';
- * import { map, catchError, take } from 'rxjs/operators';
+ * import { of } from 'rxjs.ts';
+ * import { map, catchError, take } from 'rxjs/operators.ts';
  *
  * of(1, 2, 3, 4, 5).pipe(
  *     map(n => {
  *   	   if (n === 4) {
- *   	     throw 'four!';
+ *   	     throw 'four!.ts';
  *       }
  * 	     return n;
  *     }),
@@ -69,13 +69,13 @@ export function catchError<T, O extends ObservableInput<any>>(selector: (err: an
  * Throws a new error when the source Observable throws an error
  *
  * ```ts
- * import { of } from 'rxjs';
- * import { map, catchError } from 'rxjs/operators';
+ * import { of } from 'rxjs.ts';
+ * import { map, catchError } from 'rxjs/operators.ts';
  *
  * of(1, 2, 3, 4, 5).pipe(
  *     map(n => {
  *       if (n === 4) {
- *         throw 'four!';
+ *         throw 'four!.ts';
  *       }
  *       return n;
  *     }),

@@ -642,7 +642,7 @@ trailing values
 * **bindCallback:** removes result selector, use `map` instead: `bindCallback(fn1, fn2)()` becomes `bindCallback(fn1)().pipe(map(fn2))`
 * **Rx.ts:** importing from `rxjs/Rx` is no longer available. Upcoming backwards compat solution will allow that
 * **Symbol.iterator:** We are no longer polyfilling `Symbol.iterator`. That would be done by a proper polyfilling library
-* **Observable.if:** TypeScript users using `Observable.if` will have to cast `Observable` as any to get to `if`. It is a better idae to just use `iif` directly via `import { iif } from 'rxjs';`
+* **Observable.if:** TypeScript users using `Observable.if` will have to cast `Observable` as any to get to `if`. It is a better idae to just use `iif` directly via `import { iif } from 'rxjs.ts';`
 * **bindNodeCallback:** resultSelector removed, use `map` instead: `bindNodeCallback(fn1, fn2)()` becomes `bindNodeCallback(fn1)().pipe(map(fn2))`
 * **Symbol.observable:** RxJS will no longer be polyfilling Symbol.observable. That should be done by an actual polyfill library. This is to prevent duplication of code, and also to prevent having modules with side-effects in rxjs.
 * **fromEvent:** result selector removed, use `map` instead: `fromEvent(target, 'click', fn)` becomes `fromEvent(target, 'click').pipe(map(fn))`
@@ -710,7 +710,7 @@ trailing values
 * **bindCallback:** removes result selector, use `map` instead: `bindCallback(fn1, fn2)()` becomes `bindCallback(fn1)().pipe(map(fn2))`
 * **Rx.ts:** importing from `rxjs/Rx` is no longer available. Upcoming backwards compat solution will allow that
 * **Symbol.iterator:** We are no longer polyfilling `Symbol.iterator`. That would be done by a proper polyfilling library
-* **Observable.if:** TypeScript users using `Observable.if` will have to cast `Observable` as any to get to `if`. It is a better idae to just use `iif` directly via `import { iif } from 'rxjs';`
+* **Observable.if:** TypeScript users using `Observable.if` will have to cast `Observable` as any to get to `if`. It is a better idae to just use `iif` directly via `import { iif } from 'rxjs.ts';`
 * **bindNodeCallback:** resultSelector removed, use `map` instead: `bindNodeCallback(fn1, fn2)()` becomes `bindNodeCallback(fn1)().pipe(map(fn2))`
 * **never:** no longer exported. Use the `NEVER` constant instead.
 * **fromEvent:** result selector removed, use `map` instead: `fromEvent(target, 'click', fn)` becomes `fromEvent(target, 'click').pipe(map(fn))`
@@ -836,10 +836,10 @@ subscription
 * **creation functions:** All create functions such as `of`, `from`, `combineLatest` and `fromEvent` should now be imported from `rxjs/create`.
 * **types and interfaces:** Can no longer explicitly import types from `rxjs/interfaces`, import them from `rxjs` instead
 * **symbols:** Symbols are no longer exported directly from modules such as `rxjs/symbol/observable` please use `Symbol.observable` and `Symbol.iterator` (polyfills may be required)
-* **deep imports:** Can no longer deep import top-level types such as `rxjs/Observable`, `rxjs/Subject`, `rxjs/ReplaySubject`, et al. All imports should be done directly from `rxjs`, for example: `import \{ Observable, Subject \} from 'rxjs';`
+* **deep imports:** Can no longer deep import top-level types such as `rxjs/Observable`, `rxjs/Subject`, `rxjs/ReplaySubject`, et al. All imports should be done directly from `rxjs`, for example: `import \{ Observable, Subject \} from 'rxjs.ts';`
 * **schedulers:** Scheduler instances have changed names to be suffixed with `Scheduler`, (e.g. `asap` -> `asapScheduler`)
 * **operators:** Pipeable operators must now be imported from `rxjs`
-like so: `import { map, filter, switchMap } from 'rxjs/operators';`. No deep imports.
+like so: `import { map, filter, switchMap } from 'rxjs/operators.ts';`. No deep imports.
 * **ajax:** Ajax observable should be imported from `rxjs/ajax`.
 * **Observable:** You should no longer deep import custom Observable
 implementations such as `ArrayObservable` or `ForkJoinObservable`.

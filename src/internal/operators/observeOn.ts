@@ -1,9 +1,9 @@
-import { Observable } from '../Observable';
-import { Operator } from '../Operator';
-import { Subscriber } from '../Subscriber';
-import { Subscription } from '../Subscription';
-import { Notification } from '../Notification';
-import { MonoTypeOperatorFunction, PartialObserver, SchedulerAction, SchedulerLike, TeardownLogic } from '../types';
+import { Observable } from '../Observable.ts';
+import { Operator } from '../Operator.ts';
+import { Subscriber } from '../Subscriber.ts';
+import { Subscription } from '../Subscription.ts';
+import { Notification } from '../Notification.ts';
+import { MonoTypeOperatorFunction, PartialObserver, SchedulerAction, SchedulerLike, TeardownLogic } from '../types.ts';
 
 /**
  *
@@ -34,8 +34,8 @@ import { MonoTypeOperatorFunction, PartialObserver, SchedulerAction, SchedulerLi
  * ## Example
  * Ensure values in subscribe are called just before browser repaint.
  * ```ts
- * import { interval, animationFrameScheduler } from 'rxjs';
- * import { observeOn } from 'rxjs/operators';
+ * import { interval, animationFrameScheduler } from 'rxjs.ts';
+ * import { observeOn } from 'rxjs/operators.ts';
  *
  * const someDiv = document.querySelector("#someDiv");
  * const intervals = interval(10);                // Intervals are scheduled
@@ -44,7 +44,7 @@ import { MonoTypeOperatorFunction, PartialObserver, SchedulerAction, SchedulerLi
  *   observeOn(animationFrameScheduler),          // ...but we will observe on animationFrame
  * )                                              // scheduler to ensure smooth animation.
  * .subscribe(val => {
- *   someDiv.style.height = val + 'px';
+ *   someDiv.style.height = val + 'px.ts';
  * });
  * ```
  *

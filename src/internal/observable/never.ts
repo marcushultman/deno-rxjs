@@ -1,5 +1,5 @@
-import { Observable } from '../Observable';
-import { noop } from '../util/noop';
+import { Observable } from '../Observable.ts';
+import { noop } from '../util/noop.ts';
 
 /**
  * An Observable that emits no items to the Observer and never completes.
@@ -15,8 +15,8 @@ import { noop } from '../util/noop';
  * ##  Example
  * ### Emit the number 7, then never emit anything else (not even complete)
  * ```ts
- * import { NEVER } from 'rxjs';
- * import { startWith } from 'rxjs/operators';
+ * import { NEVER } from 'rxjs.ts';
+ * import { startWith } from 'rxjs/operators.ts';
  *
  * function info() {
  *   console.log('Will not be called');

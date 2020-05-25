@@ -1,8 +1,8 @@
-import { Observable } from '../Observable';
-import { ObservableInput, SchedulerLike} from '../types';
-import { isScheduler } from '../util/isScheduler';
-import { mergeAll } from '../operators/mergeAll';
-import { fromArray } from './fromArray';
+import { Observable } from '../Observable.ts';
+import { ObservableInput, SchedulerLike} from '../types.ts';
+import { isScheduler } from '../util/isScheduler.ts';
+import { mergeAll } from '../operators/mergeAll.ts';
+import { fromArray } from './fromArray.ts';
 
 /* tslint:disable:max-line-length */
 /** @deprecated use {@link scheduled} and {@link mergeAll} (e.g. `scheduled([ob1, ob2, ob3], scheduled).pipe(mergeAll())*/
@@ -67,7 +67,7 @@ export function merge<T, R>(...observables: (ObservableInput<any> | SchedulerLik
  * ## Examples
  * ### Merge together two Observables: 1s interval and clicks
  * ```ts
- * import { merge, fromEvent, interval } from 'rxjs';
+ * import { merge, fromEvent, interval } from 'rxjs.ts';
  *
  * const clicks = fromEvent(document, 'click');
  * const timer = interval(1000);
@@ -83,8 +83,8 @@ export function merge<T, R>(...observables: (ObservableInput<any> | SchedulerLik
  *
  * ### Merge together 3 Observables, but only 2 run concurrently
  * ```ts
- * import { merge, interval } from 'rxjs';
- * import { take } from 'rxjs/operators';
+ * import { merge, interval } from 'rxjs.ts';
+ * import { take } from 'rxjs/operators.ts';
  *
  * const timer1 = interval(1000).pipe(take(10));
  * const timer2 = interval(2000).pipe(take(6));

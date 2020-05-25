@@ -1,9 +1,9 @@
-import { Subject } from './Subject';
-import { TimestampProvider } from './types';
-import { Subscriber } from './Subscriber';
-import { Subscription } from './Subscription';
-import { ObjectUnsubscribedError } from './util/ObjectUnsubscribedError';
-import { SubjectSubscription } from './SubjectSubscription';
+import { Subject } from './Subject.ts';
+import { TimestampProvider } from './types.ts';
+import { Subscriber } from './Subscriber.ts';
+import { Subscription } from './Subscription.ts';
+import { ObjectUnsubscribedError } from './util/ObjectUnsubscribedError.ts';
+import { SubjectSubscription } from './SubjectSubscription.ts';
 
 /**
  * A variant of {@link Subject} that "replays" old values to new subscribers by emitting them when they first subscribe.

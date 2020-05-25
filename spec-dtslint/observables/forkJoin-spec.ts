@@ -1,4 +1,4 @@
-import { of, forkJoin } from 'rxjs';
+import { of, forkJoin } from 'rxjs.ts';
 
 describe('deprecated rest args', () => {
   it('should infer correctly with 1 parameter', () => {

@@ -1,13 +1,13 @@
-import { Observable } from '../Observable';
-import { Operator } from '../Operator';
-import { Subscriber } from '../Subscriber';
-import { Subscription } from '../Subscription';
-import { subscribeToResult } from '../util/subscribeToResult';
-import { OuterSubscriber } from '../OuterSubscriber';
-import { InnerSubscriber } from '../InnerSubscriber';
-import { ObservableInput, OperatorFunction, ObservedValueOf } from '../types';
-import { map } from './map';
-import { from } from '../observable/from';
+import { Observable } from '../Observable.ts';
+import { Operator } from '../Operator.ts';
+import { Subscriber } from '../Subscriber.ts';
+import { Subscription } from '../Subscription.ts';
+import { subscribeToResult } from '../util/subscribeToResult.ts';
+import { OuterSubscriber } from '../OuterSubscriber.ts';
+import { InnerSubscriber } from '../InnerSubscriber.ts';
+import { ObservableInput, OperatorFunction, ObservedValueOf } from '../types.ts';
+import { map } from './map.ts';
+import { from } from '../observable/from.ts';
 
 /* tslint:disable:max-line-length */
 export function mergeMap<T, O extends ObservableInput<any>>(project: (value: T, index: number) => O, concurrent?: number): OperatorFunction<T, ObservedValueOf<O>>;
@@ -34,8 +34,8 @@ export function mergeMap<T, R, O extends ObservableInput<any>>(project: (value: 
  * ## Example
  * Map and flatten each letter to an Observable ticking every 1 second
  * ```ts
- * import { of, interval } from 'rxjs';
- * import { mergeMap, map } from 'rxjs/operators';
+ * import { of, interval } from 'rxjs.ts';
+ * import { mergeMap, map } from 'rxjs/operators.ts';
  *
  * const letters = of('a', 'b', 'c');
  * const result = letters.pipe(

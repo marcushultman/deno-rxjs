@@ -1,5 +1,5 @@
-import { of, Observable } from 'rxjs';
-import { pluck } from 'rxjs/operators';
+import { of, Observable } from 'rxjs.ts';
+import { pluck } from 'rxjs/operators.ts';
 
 it('should infer correctly', () => {
   const a = of({ name: 'abc' }).pipe(pluck('name')); // $ExpectType Observable<string>

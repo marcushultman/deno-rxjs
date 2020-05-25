@@ -8,8 +8,8 @@ export interface EmptyErrorCtor {
 const EmptyErrorImpl = (() => {
   function EmptyErrorImpl(this: Error) {
     Error.call(this);
-    this.message = 'no elements in sequence';
-    this.name = 'EmptyError';
+    this.message = 'no elements in sequence.ts';
+    this.name = 'EmptyError.ts';
     return this;
   }
 

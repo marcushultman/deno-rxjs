@@ -1,5 +1,5 @@
-import { of } from 'rxjs';
-import { zipWith } from 'rxjs/operators';
+import { of } from 'rxjs.ts';
+import { zipWith } from 'rxjs/operators.ts';
 
 describe('zipWith', () => {
   describe('without project parameter', () => {

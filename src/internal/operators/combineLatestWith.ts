@@ -1,9 +1,9 @@
 
-import { isArray } from '../util/isArray';
-import { CombineLatestOperator } from '../observable/combineLatest';
-import { from } from '../observable/from';
-import { Observable } from '../Observable';
-import { ObservableInput, OperatorFunction, ObservedValueTupleFromArray, Cons } from '../types';
+import { isArray } from '../util/isArray.ts';
+import { CombineLatestOperator } from '../observable/combineLatest.ts';
+import { from } from '../observable/from.ts';
+import { Observable } from '../Observable.ts';
+import { ObservableInput, OperatorFunction, ObservedValueTupleFromArray, Cons } from '../types.ts';
 
 /* tslint:disable:max-line-length */
 /** @deprecated use {@link combineLatestWith} */

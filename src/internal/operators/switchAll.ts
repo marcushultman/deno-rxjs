@@ -1,6 +1,6 @@
-import {OperatorFunction, ObservableInput} from '../types';
-import { switchMap } from './switchMap';
-import { identity } from '../util/identity';
+import {OperatorFunction, ObservableInput} from '../types.ts';
+import { switchMap } from './switchMap.ts';
+import { identity } from '../util/identity.ts';
 
 export function switchAll<T>(): OperatorFunction<ObservableInput<T>, T>;
 export function switchAll<R>(): OperatorFunction<any, R>;
@@ -26,8 +26,8 @@ export function switchAll<R>(): OperatorFunction<any, R>;
  * click, cancel the previous interval and subscribe to the new one.
  *
  * ```ts
- * import { fromEvent, interval } from 'rxjs';
- * import { switchAll, map, tap } from 'rxjs/operators';
+ * import { fromEvent, interval } from 'rxjs.ts';
+ * import { switchAll, map, tap } from 'rxjs/operators.ts';
  *
  * const clicks = fromEvent(document, 'click').pipe(tap(() => console.log('click')));
  * const source = clicks.pipe(map((ev) => interval(1000)));

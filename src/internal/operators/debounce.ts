@@ -1,12 +1,12 @@
-import { Operator } from '../Operator';
-import { Observable } from '../Observable';
-import { Subscriber } from '../Subscriber';
-import { Subscription } from '../Subscription';
-import { MonoTypeOperatorFunction, SubscribableOrPromise, TeardownLogic } from '../types';
+import { Operator } from '../Operator.ts';
+import { Observable } from '../Observable.ts';
+import { Subscriber } from '../Subscriber.ts';
+import { Subscription } from '../Subscription.ts';
+import { MonoTypeOperatorFunction, SubscribableOrPromise, TeardownLogic } from '../types.ts';
 
-import { OuterSubscriber } from '../OuterSubscriber';
-import { InnerSubscriber } from '../InnerSubscriber';
-import { subscribeToResult } from '../util/subscribeToResult';
+import { OuterSubscriber } from '../OuterSubscriber.ts';
+import { InnerSubscriber } from '../InnerSubscriber.ts';
+import { subscribeToResult } from '../util/subscribeToResult.ts';
 
 /**
  * Emits a notification from the source Observable only after a particular time span
@@ -38,8 +38,8 @@ import { subscribeToResult } from '../util/subscribeToResult';
  * ## Example
  * Emit the most recent click after a burst of clicks
  * ```ts
- * import { fromEvent, interval } from 'rxjs';
- * import { scan, debounce } from 'rxjs/operators';
+ * import { fromEvent, interval } from 'rxjs.ts';
+ * import { scan, debounce } from 'rxjs/operators.ts';
  *
  * const clicks = fromEvent(document, 'click');
  * const result = clicks.pipe(

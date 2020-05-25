@@ -1,10 +1,10 @@
-import { Subject, SubjectSubscriber } from '../Subject';
-import { Operator } from '../Operator';
-import { Observable } from '../Observable';
-import { Subscriber } from '../Subscriber';
-import { Subscription } from '../Subscription';
-import { TeardownLogic } from '../types';
-import { refCount as higherOrderRefCount } from '../operators/refCount';
+import { Subject, SubjectSubscriber } from '../Subject.ts';
+import { Operator } from '../Operator.ts';
+import { Observable } from '../Observable.ts';
+import { Subscriber } from '../Subscriber.ts';
+import { Subscription } from '../Subscription.ts';
+import { TeardownLogic } from '../types.ts';
+import { refCount as higherOrderRefCount } from '../operators/refCount.ts';
 
 /**
  * @class ConnectableObservable<T>

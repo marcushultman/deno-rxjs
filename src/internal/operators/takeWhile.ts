@@ -1,7 +1,7 @@
-import { Operator } from '../Operator';
-import { Observable } from '../Observable';
-import { Subscriber } from '../Subscriber';
-import { OperatorFunction, MonoTypeOperatorFunction, TeardownLogic } from '../types';
+import { Operator } from '../Operator.ts';
+import { Observable } from '../Observable.ts';
+import { Subscriber } from '../Subscriber.ts';
+import { OperatorFunction, MonoTypeOperatorFunction, TeardownLogic } from '../types.ts';
 
 export function takeWhile<T, S extends T>(predicate: (value: T, index: number) => value is S): OperatorFunction<T, S>;
 export function takeWhile<T, S extends T>(predicate: (value: T, index: number) => value is S, inclusive: false): OperatorFunction<T, S>;
@@ -27,8 +27,8 @@ export function takeWhile<T>(predicate: (value: T, index: number) => boolean, in
  * ## Example
  * Emit click events only while the clientX property is greater than 200
  * ```ts
- * import { fromEvent } from 'rxjs';
- * import { takeWhile } from 'rxjs/operators';
+ * import { fromEvent } from 'rxjs.ts';
+ * import { takeWhile } from 'rxjs/operators.ts';
  *
  * const clicks = fromEvent(document, 'click');
  * const result = clicks.pipe(takeWhile(ev => ev.clientX > 200));

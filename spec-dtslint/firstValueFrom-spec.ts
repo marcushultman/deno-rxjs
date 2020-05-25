@@ -1,5 +1,5 @@
-import { firstValueFrom } from 'rxjs';
-import { a$ } from 'helpers';
+import { firstValueFrom } from 'rxjs.ts';
+import { a$ } from 'helpers.ts';
 
 describe('firstValueFrom', () => {
   const r0 = firstValueFrom(a$); // $ExpectType Promise<A>

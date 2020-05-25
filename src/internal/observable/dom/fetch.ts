@@ -1,7 +1,7 @@
-import { Observable } from '../../Observable';
-import { Subscription } from '../../Subscription';
-import { from } from '../../observable/from';
-import { ObservableInput } from '../../types';
+import { Observable } from '../../Observable.ts';
+import { Subscription } from '../../Subscription.ts';
+import { from } from '../../observable/from.ts';
+import { ObservableInput } from '../../types.ts';
 
 export function fromFetch<T>(
   input: string | Request,
@@ -32,9 +32,9 @@ export function fromFetch(
  * ### Basic Use
  *
  * ```ts
- * import { of } from 'rxjs';
- * import { fromFetch } from 'rxjs/fetch';
- * import { switchMap, catchError } from 'rxjs/operators';
+ * import { of } from 'rxjs.ts';
+ * import { fromFetch } from 'rxjs/fetch.ts';
+ * import { switchMap, catchError } from 'rxjs/operators.ts';
  *
  * const data$ = fromFetch('https://api.github.com/users?per_page=5').pipe(
  *  switchMap(response => {
@@ -75,8 +75,8 @@ export function fromFetch(
  * a `selector` can be specified via the `init` parameter:
  *
  * ```ts
- * import { of } from 'rxjs';
- * import { fromFetch } from 'rxjs/fetch';
+ * import { of } from 'rxjs.ts';
+ * import { fromFetch } from 'rxjs/fetch.ts';
  *
  * const data$ = fromFetch('https://api.github.com/users?per_page=5', {
  *   selector: response => response.json()

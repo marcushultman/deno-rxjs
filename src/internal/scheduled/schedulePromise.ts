@@ -1,6 +1,6 @@
-import { Observable } from '../Observable';
-import { SchedulerLike } from '../types';
-import { Subscription } from '../Subscription';
+import { Observable } from '../Observable.ts';
+import { SchedulerLike } from '../types.ts';
+import { Subscription } from '../Subscription.ts';
 
 export function schedulePromise<T>(input: PromiseLike<T>, scheduler: SchedulerLike) {
   return new Observable<T>(subscriber => {

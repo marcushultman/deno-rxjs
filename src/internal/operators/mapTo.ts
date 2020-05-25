@@ -1,7 +1,7 @@
-import { Operator } from '../Operator';
-import { Subscriber } from '../Subscriber';
-import { Observable } from '../Observable';
-import { OperatorFunction } from '../types';
+import { Operator } from '../Operator.ts';
+import { Subscriber } from '../Subscriber.ts';
+import { Observable } from '../Observable.ts';
+import { OperatorFunction } from '../types.ts';
 
 export function mapTo<R>(value: R): OperatorFunction<any, R>;
 /** @deprecated remove in v8. Use mapTo<R>(value: R): OperatorFunction<any, R> signature instead **/
@@ -23,8 +23,8 @@ export function mapTo<T, R>(value: R): OperatorFunction<T, R>;
  * ## Example
  * Map every click to the string 'Hi'
  * ```ts
- * import { fromEvent } from 'rxjs';
- * import { mapTo } from 'rxjs/operators';
+ * import { fromEvent } from 'rxjs.ts';
+ * import { mapTo } from 'rxjs/operators.ts';
  *
  * const clicks = fromEvent(document, 'click');
  * const greetings = clicks.pipe(mapTo('Hi'));

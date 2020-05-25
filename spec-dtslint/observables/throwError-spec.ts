@@ -1,4 +1,4 @@
-import { throwError, animationFrameScheduler } from 'rxjs';
+import { throwError, animationFrameScheduler } from 'rxjs.ts';
 
 it('should accept any type and return never observable', () => {
   const a = throwError(1); // $ExpectType Observable<never>

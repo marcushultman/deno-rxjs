@@ -1,5 +1,5 @@
-import { Subscriber } from '../Subscriber';
-import { iterator as Symbol_iterator } from '../symbol/iterator';
+import { Subscriber } from '../Subscriber.ts';
+import { iterator as Symbol_iterator } from '../symbol/iterator.ts';
 
 export const subscribeToIterable = <T>(iterable: Iterable<T>) => (subscriber: Subscriber<T>) => {
   const iterator = (iterable as any)[Symbol_iterator]();

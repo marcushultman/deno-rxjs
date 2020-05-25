@@ -9,7 +9,7 @@ const SequenceErrorImpl = (() => {
   function SequenceErrorImpl(this: Error, message: string) {
     Error.call(this);
     this.message = message;
-    this.name = 'SequenceError';
+    this.name = 'SequenceError.ts';
     return this;
   }
 

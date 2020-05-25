@@ -1,8 +1,8 @@
-import { root } from '../../util/root';
-import { Observable } from '../../Observable';
-import { Subscriber } from '../../Subscriber';
-import { TeardownLogic } from '../../types';
-import { map } from '../../operators/map';
+import { root } from '../../util/root.ts';
+import { Observable } from '../../Observable.ts';
+import { Subscriber } from '../../Subscriber.ts';
+import { TeardownLogic } from '../../types.ts';
+import { map } from '../../operators/map.ts';
 
 export interface AjaxRequest {
   url?: string;
@@ -110,7 +110,7 @@ export class AjaxObservable<T> extends Observable<T> {
    *
    * ## Example
    * ```ts
-   * import { ajax } from 'rxjs/ajax';
+   * import { ajax } from 'rxjs/ajax.ts';
  *
    * const source1 = ajax('/products');
    * const source2 = ajax({ url: 'products', method: 'GET' });
@@ -204,13 +204,13 @@ export class AjaxSubscriber<T> extends Subscriber<Event> {
 
     // force CORS if requested
     if (!request.crossDomain && !this.getHeader(headers, 'X-Requested-With')) {
-      (headers as any)['X-Requested-With'] = 'XMLHttpRequest';
+      (headers as any)['X-Requested-With'] = 'XMLHttpRequest.ts';
     }
 
     // ensure content type is set
     let contentTypeHeader = this.getHeader(headers, 'Content-Type');
     if (!contentTypeHeader && !(root.FormData && request.body instanceof root.FormData) && typeof request.body !== 'undefined') {
-      (headers as any)['Content-Type'] = 'application/x-www-form-urlencoded; charset=UTF-8';
+      (headers as any)['Content-Type'] = 'application/x-www-form-urlencoded; charset=UTF-8.ts';
     }
 
     // properly serialize body
@@ -283,7 +283,7 @@ export class AjaxSubscriber<T> extends Subscriber<Event> {
     }
 
     if (contentType) {
-      const splitIndex = contentType.indexOf(';');
+      const splitIndex = contentType.indexOf(.ts';');
       if (splitIndex !== -1) {
         contentType = contentType.substring(0, splitIndex);
       }
@@ -458,7 +458,7 @@ export class AjaxResponse {
   }
 }
 
-export type AjaxErrorNames = 'AjaxError' | 'AjaxTimeoutError';
+export type AjaxErrorNames = 'AjaxError' | 'AjaxTimeoutError.ts';
 
 /**
  * A normalized AJAX error.
@@ -492,7 +492,7 @@ const AjaxErrorImpl = (() => {
   function AjaxErrorImpl(this: any, message: string, xhr: XMLHttpRequest, request: AjaxRequest): AjaxError {
     Error.call(this);
     this.message = message;
-    this.name = 'AjaxError';
+    this.name = 'AjaxError.ts';
     this.xhr = xhr;
     this.request = request;
     this.status = xhr.status;
@@ -541,7 +541,7 @@ export interface AjaxTimeoutErrorCtor {
 const AjaxTimeoutErrorImpl = (() => {
   function AjaxTimeoutErrorImpl(this: any, xhr: XMLHttpRequest, request: AjaxRequest) {
     AjaxError.call(this, 'ajax timeout', xhr, request);
-    this.name = 'AjaxTimeoutError';
+    this.name = 'AjaxTimeoutError.ts';
     return this;
   }
   AjaxTimeoutErrorImpl.prototype = Object.create(AjaxError.prototype);

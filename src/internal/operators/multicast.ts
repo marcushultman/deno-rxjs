@@ -1,9 +1,9 @@
-import { Subject } from '../Subject';
-import { Operator } from '../Operator';
-import { Subscriber } from '../Subscriber';
-import { Observable } from '../Observable';
-import { ConnectableObservable, connectableObservableDescriptor } from '../observable/ConnectableObservable';
-import { OperatorFunction, UnaryFunction, ObservedValueOf, ObservableInput } from '../types';
+import { Subject } from '../Subject.ts';
+import { Operator } from '../Operator.ts';
+import { Subscriber } from '../Subscriber.ts';
+import { Observable } from '../Observable.ts';
+import { ConnectableObservable, connectableObservableDescriptor } from '../observable/ConnectableObservable.ts';
+import { OperatorFunction, UnaryFunction, ObservedValueOf, ObservableInput } from '../types.ts';
 
 /* tslint:disable:max-line-length */
 export function multicast<T>(subject: Subject<T>): UnaryFunction<Observable<T>, ConnectableObservable<T>>;

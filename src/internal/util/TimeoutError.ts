@@ -8,8 +8,8 @@ export interface TimeoutErrorCtor {
 const TimeoutErrorImpl = (() => {
   function TimeoutErrorImpl(this: Error) {
     Error.call(this);
-    this.message = 'Timeout has occurred';
-    this.name = 'TimeoutError';
+    this.message = 'Timeout has occurred.ts';
+    this.name = 'TimeoutError.ts';
     return this;
   }
 

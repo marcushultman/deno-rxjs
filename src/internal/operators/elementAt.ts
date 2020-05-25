@@ -1,10 +1,10 @@
-import { ArgumentOutOfRangeError } from '../util/ArgumentOutOfRangeError';
-import { Observable } from '../Observable';
-import { MonoTypeOperatorFunction } from '../types';
-import { filter } from './filter';
-import { throwIfEmpty } from './throwIfEmpty';
-import { defaultIfEmpty } from './defaultIfEmpty';
-import { take } from './take';
+import { ArgumentOutOfRangeError } from '../util/ArgumentOutOfRangeError.ts';
+import { Observable } from '../Observable.ts';
+import { MonoTypeOperatorFunction } from '../types.ts';
+import { filter } from './filter.ts';
+import { throwIfEmpty } from './throwIfEmpty.ts';
+import { defaultIfEmpty } from './defaultIfEmpty.ts';
+import { take } from './take.ts';
 
 /**
  * Emits the single value at the specified `index` in a sequence of emissions
@@ -23,8 +23,8 @@ import { take } from './take';
  * ## Example
  * Emit only the third click event
  * ```ts
- * import { fromEvent } from 'rxjs';
- * import { elementAt } from 'rxjs/operators';
+ * import { fromEvent } from 'rxjs.ts';
+ * import { elementAt } from 'rxjs/operators.ts';
  *
  * const clicks = fromEvent(document, 'click');
  * const result = clicks.pipe(elementAt(2));

@@ -1,7 +1,7 @@
-import { Observable } from '../Observable';
-import { Operator } from '../Operator';
-import { Observer, OperatorFunction } from '../types';
-import { Subscriber } from '../Subscriber';
+import { Observable } from '../Observable.ts';
+import { Operator } from '../Operator.ts';
+import { Observer, OperatorFunction } from '../types.ts';
+import { Subscriber } from '../Subscriber.ts';
 /**
  * Counts the number of emissions on the source and emits that number when the
  * source completes.
@@ -24,8 +24,8 @@ import { Subscriber } from '../Subscriber';
  *
  * Counts how many seconds have passed before the first click happened
  * ```ts
- * import { fromEvent, interval } from 'rxjs';
- * import { count, takeUntil } from 'rxjs/operators';
+ * import { fromEvent, interval } from 'rxjs.ts';
+ * import { count, takeUntil } from 'rxjs/operators.ts';
  *
  * const seconds = interval(1000);
  * const clicks = fromEvent(document, 'click');
@@ -36,8 +36,8 @@ import { Subscriber } from '../Subscriber';
  *
  * Counts how many odd numbers are there between 1 and 7
  * ```ts
- * import { range } from 'rxjs';
- * import { count } from 'rxjs/operators';
+ * import { range } from 'rxjs.ts';
+ * import { count } from 'rxjs/operators.ts';
  *
  * const numbers = range(1, 7);
  * const result = numbers.pipe(count(i => i % 2 === 1));

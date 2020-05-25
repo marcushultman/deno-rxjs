@@ -1,6 +1,6 @@
-import { of, asyncScheduler  } from 'rxjs';
-import { startWith } from 'rxjs/operators';
-import { A, B, a, b, c, d, e, f, g, h } from '../helpers';
+import { of, asyncScheduler  } from 'rxjs.ts';
+import { startWith } from 'rxjs/operators.ts';
+import { A, B, a, b, c, d, e, f, g, h } from '../helpers.ts';
 
 it('should infer correctly with N values', () => {
   const r0 = of(a).pipe(startWith()); // $ExpectType Observable<A>

@@ -1,4 +1,4 @@
-import { iif, of } from 'rxjs';
+import { iif, of } from 'rxjs.ts';
 
 it('should accept function as first parameter', () => {
   const a = iif(() => false); // $ExpectType Observable<never>

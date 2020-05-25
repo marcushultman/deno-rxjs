@@ -1,6 +1,6 @@
-import { concat as concatStatic } from '../observable/concat';
-import { Observable } from '../Observable';
-import { ObservableInput, OperatorFunction, ObservedValueUnionFromArray } from '../types';
+import { concat as concatStatic } from '../observable/concat.ts';
+import { Observable } from '../Observable.ts';
+import { ObservableInput, OperatorFunction, ObservedValueUnionFromArray } from '../types.ts';
 
 export function concatWith<T>(): OperatorFunction<T, T>;
 export function concatWith<T, A extends ObservableInput<any>[]>(...otherSources: A): OperatorFunction<T, ObservedValueUnionFromArray<A> | T>;
@@ -17,8 +17,8 @@ export function concatWith<T, A extends ObservableInput<any>[]>(...otherSources:
  * Listen for one mouse click, then listen for all mouse moves.
  *
  * ```ts
- * import { fromEvent } from 'rxjs';
- * import { concatWith } from 'rxjs/operators';
+ * import { fromEvent } from 'rxjs.ts';
+ * import { concatWith } from 'rxjs/operators.ts';
  *
  * const clicks$ = fromEvent(document, 'click');
  * const moves$ = fromEvent(document, 'mousemove');

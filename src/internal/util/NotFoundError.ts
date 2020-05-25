@@ -9,7 +9,7 @@ const NotFoundErrorImpl = (() => {
   function NotFoundErrorImpl(this: Error, message: string) {
     Error.call(this);
     this.message = message;
-    this.name = 'NotFoundError';
+    this.name = 'NotFoundError.ts';
     return this;
   }
 

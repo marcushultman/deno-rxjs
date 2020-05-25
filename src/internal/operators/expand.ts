@@ -1,11 +1,11 @@
-import { Observable } from '../Observable';
-import { Operator } from '../Operator';
-import { Subscriber } from '../Subscriber';
-import { Subscription } from '../Subscription';
-import { OuterSubscriber } from '../OuterSubscriber';
-import { InnerSubscriber } from '../InnerSubscriber';
-import { subscribeToResult } from '../util/subscribeToResult';
-import { MonoTypeOperatorFunction, OperatorFunction, ObservableInput, SchedulerLike } from '../types';
+import { Observable } from '../Observable.ts';
+import { Operator } from '../Operator.ts';
+import { Subscriber } from '../Subscriber.ts';
+import { Subscription } from '../Subscription.ts';
+import { OuterSubscriber } from '../OuterSubscriber.ts';
+import { InnerSubscriber } from '../InnerSubscriber.ts';
+import { subscribeToResult } from '../util/subscribeToResult.ts';
+import { MonoTypeOperatorFunction, OperatorFunction, ObservableInput, SchedulerLike } from '../types.ts';
 
 /* tslint:disable:max-line-length */
 export function expand<T, R>(project: (value: T, index: number) => ObservableInput<R>, concurrent?: number, scheduler?: SchedulerLike): OperatorFunction<T, R>;
@@ -35,8 +35,8 @@ export function expand<T>(project: (value: T, index: number) => ObservableInput<
  * ## Example
  * Start emitting the powers of two on every click, at most 10 of them
  * ```ts
- * import { fromEvent, of } from 'rxjs';
- * import { expand, mapTo, delay, take } from 'rxjs/operators';
+ * import { fromEvent, of } from 'rxjs.ts';
+ * import { expand, mapTo, delay, take } from 'rxjs/operators.ts';
  *
  * const clicks = fromEvent(document, 'click');
  * const powersOfTwo = clicks.pipe(

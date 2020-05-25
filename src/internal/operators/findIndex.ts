@@ -1,6 +1,6 @@
-import { Observable } from '../Observable';
-import { FindValueOperator } from '../operators/find';
-import { OperatorFunction } from '../types';
+import { Observable } from '../Observable.ts';
+import { FindValueOperator } from '../operators/find.ts';
+import { OperatorFunction } from '../types.ts';
 /**
  * Emits only the index of the first value emitted by the source Observable that
  * meets some condition.
@@ -19,8 +19,8 @@ import { OperatorFunction } from '../types';
  * ## Example
  * Emit the index of first click that happens on a DIV element
  * ```ts
- * import { fromEvent } from 'rxjs';
- * import { findIndex } from 'rxjs/operators';
+ * import { fromEvent } from 'rxjs.ts';
+ * import { findIndex } from 'rxjs/operators.ts';
  *
  * const clicks = fromEvent(document, 'click');
  * const result = clicks.pipe(findIndex(ev => ev.target.tagName === 'DIV'));

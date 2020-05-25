@@ -1,5 +1,5 @@
-import { of } from 'rxjs';
-import { max } from 'rxjs/operators';
+import { of } from 'rxjs.ts';
+import { max } from 'rxjs/operators.ts';
 
 it('should infer correctly', () => {
     const a = of(1, 2, 3).pipe(max()); // $ExpectType Observable<number>

@@ -1,10 +1,10 @@
-import { Operator } from '../Operator';
-import { Subscriber } from '../Subscriber';
-import { Observable } from '../Observable';
-import { OuterSubscriber } from '../OuterSubscriber';
-import { InnerSubscriber } from '../InnerSubscriber';
-import { subscribeToResult } from '../util/subscribeToResult';
-import { OperatorFunction } from '../types';
+import { Operator } from '../Operator.ts';
+import { Subscriber } from '../Subscriber.ts';
+import { Observable } from '../Observable.ts';
+import { OuterSubscriber } from '../OuterSubscriber.ts';
+import { InnerSubscriber } from '../InnerSubscriber.ts';
+import { subscribeToResult } from '../util/subscribeToResult.ts';
+import { OperatorFunction } from '../types.ts';
 
 /**
  * Buffers the source Observable values until `closingNotifier` emits.
@@ -24,8 +24,8 @@ import { OperatorFunction } from '../types';
  * On every click, emit array of most recent interval events
  *
  * ```ts
- * import { fromEvent, interval } from 'rxjs';
- * import { buffer } from 'rxjs/operators';
+ * import { fromEvent, interval } from 'rxjs.ts';
+ * import { buffer } from 'rxjs/operators.ts';
  *
  * const clicks = fromEvent(document, 'click');
  * const intervalEvents = interval(1000);

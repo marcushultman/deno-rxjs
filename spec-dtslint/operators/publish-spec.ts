@@ -1,5 +1,5 @@
-import { of, Observable } from 'rxjs';
-import { publish } from 'rxjs/operators';
+import { of, Observable } from 'rxjs.ts';
+import { publish } from 'rxjs/operators.ts';
 
 it('should support empty parameter', () => {
   const a = of(1, 2, 3).pipe(publish()); // $ExpectType Observable<number>

@@ -1,5 +1,5 @@
-import { reduce } from './reduce';
-import { MonoTypeOperatorFunction } from '../types';
+import { reduce } from './reduce.ts';
+import { MonoTypeOperatorFunction } from '../types.ts';
 
 /**
  * The Max operator operates on an Observable that emits numbers (or items that can be compared with a provided function),
@@ -10,8 +10,8 @@ import { MonoTypeOperatorFunction } from '../types';
  * ## Examples
  * Get the maximal value of a series of numbers
  * ```ts
- * import { of } from 'rxjs';
- * import { max } from 'rxjs/operators';
+ * import { of } from 'rxjs.ts';
+ * import { max } from 'rxjs/operators.ts';
  *
  * of(5, 4, 7, 2, 8).pipe(
  *   max(),
@@ -21,8 +21,8 @@ import { MonoTypeOperatorFunction } from '../types';
  *
  * Use a comparer function to get the maximal item
  * ```typescript
- * import { of } from 'rxjs';
- * import { max } from 'rxjs/operators';
+ * import { of } from 'rxjs.ts';
+ * import { max } from 'rxjs/operators.ts';
  *
  * interface Person {
  *   age: number,

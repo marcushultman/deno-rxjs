@@ -1,9 +1,9 @@
-import { Operator } from '../Operator';
-import { Observable } from '../Observable';
-import { Subscriber } from '../Subscriber';
-import { Subscription } from '../Subscription';
-import { async } from '../scheduler/async';
-import { MonoTypeOperatorFunction, SchedulerLike, TeardownLogic } from '../types';
+import { Operator } from '../Operator.ts';
+import { Observable } from '../Observable.ts';
+import { Subscriber } from '../Subscriber.ts';
+import { Subscription } from '../Subscription.ts';
+import { async } from '../scheduler/async.ts';
+import { MonoTypeOperatorFunction, SchedulerLike, TeardownLogic } from '../types.ts';
 
 /**
  * Emits a notification from the source Observable only after a particular time span
@@ -35,8 +35,8 @@ import { MonoTypeOperatorFunction, SchedulerLike, TeardownLogic } from '../types
  * ## Example
  * Emit the most recent click after a burst of clicks
  * ```ts
- * import { fromEvent } from 'rxjs';
- * import { debounceTime } from 'rxjs/operators';
+ * import { fromEvent } from 'rxjs.ts';
+ * import { debounceTime } from 'rxjs/operators.ts';
  *
  * const clicks = fromEvent(document, 'click');
  * const result = clicks.pipe(debounceTime(1000));

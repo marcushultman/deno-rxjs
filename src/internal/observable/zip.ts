@@ -1,14 +1,14 @@
-import { Observable } from '../Observable';
-import { fromArray } from './fromArray';
-import { isArray } from '../util/isArray';
-import { Operator } from '../Operator';
-import { ObservableInput, PartialObserver, ObservedValueOf } from '../types';
-import { Subscriber } from '../Subscriber';
-import { Subscription } from '../Subscription';
-import { OuterSubscriber } from '../OuterSubscriber';
-import { InnerSubscriber } from '../InnerSubscriber';
-import { subscribeToResult } from '../util/subscribeToResult';
-import { iterator as Symbol_iterator } from '../../internal/symbol/iterator';
+import { Observable } from '../Observable.ts';
+import { fromArray } from './fromArray.ts';
+import { isArray } from '../util/isArray.ts';
+import { Operator } from '../Operator.ts';
+import { ObservableInput, PartialObserver, ObservedValueOf } from '../types.ts';
+import { Subscriber } from '../Subscriber.ts';
+import { Subscription } from '../Subscription.ts';
+import { OuterSubscriber } from '../OuterSubscriber.ts';
+import { InnerSubscriber } from '../InnerSubscriber.ts';
+import { subscribeToResult } from '../util/subscribeToResult.ts';
+import { iterator as Symbol_iterator } from '../../internal/symbol/iterator.ts';
 
 /* tslint:disable:max-line-length */
 /** @deprecated resultSelector is no longer supported, pipe to map instead */
@@ -54,8 +54,8 @@ export function zip<R>(...observables: Array<ObservableInput<any> | ((...values:
  * Combine age and name from different sources
  *
  * ```ts
- * import { zip, of } from 'rxjs';
- * import { map } from 'rxjs/operators';
+ * import { zip, of } from 'rxjs.ts';
+ * import { map } from 'rxjs/operators.ts';
  *
  * let age$ = of(27, 25, 29);
  * let name$ = of('Foo', 'Bar', 'Beer');

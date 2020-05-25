@@ -1,6 +1,6 @@
-import { OperatorFunction, ObservedValueOf } from '../../internal/types';
-import { mergeMap } from './mergeMap';
-import { ObservableInput } from '../types';
+import { OperatorFunction, ObservedValueOf } from '../../internal/types.ts';
+import { mergeMap } from './mergeMap.ts';
+import { ObservableInput } from '../types.ts';
 
 /* tslint:disable:max-line-length */
 export function mergeMapTo<O extends ObservableInput<any>>(innerObservable: O, concurrent?: number): OperatorFunction<any, ObservedValueOf<O>>;
@@ -24,8 +24,8 @@ export function mergeMapTo<T, R, O extends ObservableInput<any>>(innerObservable
  * ## Example
  * For each click event, start an interval Observable ticking every 1 second
  * ```ts
- * import { fromEvent, interval } from 'rxjs';
- * import { mergeMapTo } from 'rxjs/operators';
+ * import { fromEvent, interval } from 'rxjs.ts';
+ * import { mergeMapTo } from 'rxjs/operators.ts';
  *
  * const clicks = fromEvent(document, 'click');
  * const result = clicks.pipe(mergeMapTo(interval(1000)));

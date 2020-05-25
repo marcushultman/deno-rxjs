@@ -1,9 +1,9 @@
-import { Observable } from '../Observable';
-import { multicast } from './multicast';
-import { refCount } from './refCount';
-import { Subject } from '../Subject';
+import { Observable } from '../Observable.ts';
+import { multicast } from './multicast.ts';
+import { refCount } from './refCount.ts';
+import { Subject } from '../Subject.ts';
 
-import { MonoTypeOperatorFunction } from '../types';
+import { MonoTypeOperatorFunction } from '../types.ts';
 
 function shareSubjectFactory() {
   return new Subject<any>();
@@ -20,8 +20,8 @@ function shareSubjectFactory() {
  * ## Example
  * Generate new multicast Observable from the source Observable value
  * ```typescript
- * import { interval } from 'rxjs';
- * import { share, map } from 'rxjs/operators';
+ * import { interval } from 'rxjs.ts';
+ * import { share, map } from 'rxjs/operators.ts';
  *
  * const source = interval(1000)
  *   .pipe(

@@ -1,4 +1,4 @@
-import { of, concat, asyncScheduler } from 'rxjs';
+import { of, concat, asyncScheduler } from 'rxjs.ts';
 
 it('should accept 1 param', () => {
   const o = concat(of(1)); // $ExpectType Observable<number>

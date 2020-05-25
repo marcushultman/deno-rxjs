@@ -1,7 +1,7 @@
-import { Operator } from '../Operator';
-import { Subscriber } from '../Subscriber';
-import { Observable } from '../Observable';
-import { MonoTypeOperatorFunction, TeardownLogic } from '../types';
+import { Operator } from '../Operator.ts';
+import { Subscriber } from '../Subscriber.ts';
+import { Observable } from '../Observable.ts';
+import { MonoTypeOperatorFunction, TeardownLogic } from '../types.ts';
 
 /* tslint:disable:max-line-length */
 export function distinctUntilChanged<T>(compare?: (x: T, y: T) => boolean): MonoTypeOperatorFunction<T>;
@@ -19,8 +19,8 @@ export function distinctUntilChanged<T, K>(compare: (x: K, y: K) => boolean, key
  * ## Example
  * A simple example with numbers
  * ```ts
- * import { of } from 'rxjs';
- * import { distinctUntilChanged } from 'rxjs/operators';
+ * import { of } from 'rxjs.ts';
+ * import { distinctUntilChanged } from 'rxjs/operators.ts';
  *
  * of(1, 1, 2, 2, 2, 1, 1, 2, 3, 3, 4).pipe(
  *     distinctUntilChanged(),
@@ -30,8 +30,8 @@ export function distinctUntilChanged<T, K>(compare: (x: K, y: K) => boolean, key
  *
  * An example using a compare function
  * ```typescript
- * import { of } from 'rxjs';
- * import { distinctUntilChanged } from 'rxjs/operators';
+ * import { of } from 'rxjs.ts';
+ * import { distinctUntilChanged } from 'rxjs/operators.ts';
  *
  * interface Person {
  *    age: number,

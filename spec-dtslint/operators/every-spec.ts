@@ -1,5 +1,5 @@
-import { of, Observable } from 'rxjs';
-import { every } from 'rxjs/operators';
+import { of, Observable } from 'rxjs.ts';
+import { every } from 'rxjs/operators.ts';
 
 it('should infer correctly', () => {
   const a = of(1, 2, 3).pipe(every(val => val < 3)); // $ExpectType Observable<boolean>

@@ -1,7 +1,7 @@
-import { Observable } from '../Observable';
-import { SchedulerLike } from '../types';
-import { Subscription } from '../Subscription';
-import { iterator as Symbol_iterator } from '../symbol/iterator';
+import { Observable } from '../Observable.ts';
+import { SchedulerLike } from '../types.ts';
+import { Subscription } from '../Subscription.ts';
+import { iterator as Symbol_iterator } from '../symbol/iterator.ts';
 
 export function scheduleIterable<T>(input: Iterable<T>, scheduler: SchedulerLike) {
   if (!input) {

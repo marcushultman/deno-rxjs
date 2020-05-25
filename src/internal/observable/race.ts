@@ -1,14 +1,14 @@
-import { Observable } from '../Observable';
-import { isArray } from '../util/isArray';
-import { from } from './from';
-import { fromArray } from './fromArray';
-import { Operator } from '../Operator';
-import { Subscriber } from '../Subscriber';
-import { Subscription } from '../Subscription';
-import { TeardownLogic, ObservableInput, ObservedValueUnionFromArray } from '../types';
-import { OuterSubscriber } from '../OuterSubscriber';
-import { InnerSubscriber } from '../InnerSubscriber';
-import { subscribeToResult } from '../util/subscribeToResult';
+import { Observable } from '../Observable.ts';
+import { isArray } from '../util/isArray.ts';
+import { from } from './from.ts';
+import { fromArray } from './fromArray.ts';
+import { Operator } from '../Operator.ts';
+import { Subscriber } from '../Subscriber.ts';
+import { Subscription } from '../Subscription.ts';
+import { TeardownLogic, ObservableInput, ObservedValueUnionFromArray } from '../types.ts';
+import { OuterSubscriber } from '../OuterSubscriber.ts';
+import { InnerSubscriber } from '../InnerSubscriber.ts';
+import { subscribeToResult } from '../util/subscribeToResult.ts';
 
 export function race<A extends ObservableInput<any>[]>(observables: A): Observable<ObservedValueUnionFromArray<A>>;
 export function race<A extends ObservableInput<any>[]>(...observables: A): Observable<ObservedValueUnionFromArray<A>>;
@@ -35,8 +35,8 @@ export function race<A extends ObservableInput<any>[]>(...observables: A): Obser
  * ### Subscribes to the observable that was the first to start emitting.
  *
  * ```ts
- * import { race, interval } from 'rxjs';
- * import { mapTo } from 'rxjs/operators';
+ * import { race, interval } from 'rxjs.ts';
+ * import { mapTo } from 'rxjs/operators.ts';
  *
  * const obs1 = interval(1000).pipe(mapTo('fast one'));
  * const obs2 = interval(3000).pipe(mapTo('medium one'));

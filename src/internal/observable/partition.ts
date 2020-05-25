@@ -1,8 +1,8 @@
-import { not } from '../util/not';
-import { subscribeTo } from '../util/subscribeTo';
-import { filter } from '../operators/filter';
-import { ObservableInput } from '../types';
-import { Observable } from '../Observable';
+import { not } from '../util/not.ts';
+import { subscribeTo } from '../util/subscribeTo.ts';
+import { filter } from '../operators/filter.ts';
+import { ObservableInput } from '../types.ts';
+import { Observable } from '../Observable.ts';
 
 /**
  * Splits the source Observable into two, one with values that satisfy a
@@ -24,7 +24,7 @@ import { Observable } from '../Observable';
  * ## Example
  * Partition a set of numbers into odds and evens observables
  * ```ts
- * import { of, partition } from 'rxjs';
+ * import { of, partition } from 'rxjs.ts';
  *
  * const observableValues = of(1, 2, 3, 4, 5, 6);
  * const [evens$, odds$] = partition(observableValues, (value, index) => value % 2 === 0);

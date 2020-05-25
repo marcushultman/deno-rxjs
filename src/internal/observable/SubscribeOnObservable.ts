@@ -1,9 +1,9 @@
-import { SchedulerLike, SchedulerAction } from '../types';
-import { Subscriber } from '../Subscriber';
-import { Subscription } from '../Subscription';
-import { Observable } from '../Observable';
-import { asap } from '../scheduler/asap';
-import { isNumeric } from '../util/isNumeric';
+import { SchedulerLike, SchedulerAction } from '../types.ts';
+import { Subscriber } from '../Subscriber.ts';
+import { Subscription } from '../Subscription.ts';
+import { Observable } from '../Observable.ts';
+import { asap } from '../scheduler/asap.ts';
+import { isNumeric } from '../util/isNumeric.ts';
 
 export interface DispatchArg<T> {
   source: Observable<T>;

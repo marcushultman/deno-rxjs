@@ -1,5 +1,5 @@
-import { Observable } from './Observable';
-import { Subscription } from './Subscription';
+import { Observable } from './Observable.ts';
+import { Subscription } from './Subscription.ts';
 
 /** OPERATOR INTERFACES */
 

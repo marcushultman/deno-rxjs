@@ -1,8 +1,8 @@
-import { isArray } from './util/isArray';
-import { isObject } from './util/isObject';
-import { isFunction } from './util/isFunction';
-import { UnsubscriptionError } from './util/UnsubscriptionError';
-import { SubscriptionLike, TeardownLogic } from './types';
+import { isArray } from './util/isArray.ts';
+import { isObject } from './util/isObject.ts';
+import { isFunction } from './util/isFunction.ts';
+import { UnsubscriptionError } from './util/UnsubscriptionError.ts';
+import { SubscriptionLike, TeardownLogic } from './types.ts';
 
 /**
  * Represents a disposable resource, such as the execution of an Observable. A

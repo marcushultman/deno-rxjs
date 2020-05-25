@@ -1,9 +1,9 @@
-import { Operator } from '../Operator';
-import { Subscriber } from '../Subscriber';
-import { Observable } from '../Observable';
-import { MonoTypeOperatorFunction, PartialObserver, TeardownLogic } from '../types';
-import { noop } from '../util/noop';
-import { isFunction } from '../util/isFunction';
+import { Operator } from '../Operator.ts';
+import { Subscriber } from '../Subscriber.ts';
+import { Observable } from '../Observable.ts';
+import { MonoTypeOperatorFunction, PartialObserver, TeardownLogic } from '../types.ts';
+import { noop } from '../util/noop.ts';
+import { isFunction } from '../util/isFunction.ts';
 
 /* tslint:disable:max-line-length */
 /** @deprecated Use an observer instead of a complete callback */
@@ -42,8 +42,8 @@ export function tap<T>(observer: PartialObserver<T>): MonoTypeOperatorFunction<T
  * ## Example
  * Map every click to the clientX position of that click, while also logging the click event
  * ```ts
- * import { fromEvent } from 'rxjs';
- * import { tap, map } from 'rxjs/operators';
+ * import { fromEvent } from 'rxjs.ts';
+ * import { tap, map } from 'rxjs/operators.ts';
  *
  * const clicks = fromEvent(document, 'click');
  * const positions = clicks.pipe(

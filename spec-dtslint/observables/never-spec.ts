@@ -1,4 +1,4 @@
-import { never } from 'rxjs';
+import { never } from 'rxjs.ts';
 
 it('should not support any parameter', () => {
   const a = never(1); // $ExpectError

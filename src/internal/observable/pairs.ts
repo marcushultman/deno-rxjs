@@ -1,7 +1,7 @@
-import { Observable } from '../Observable';
-import { SchedulerAction, SchedulerLike } from '../types';
-import { Subscriber } from '../Subscriber';
-import { Subscription } from '../Subscription';
+import { Observable } from '../Observable.ts';
+import { SchedulerAction, SchedulerLike } from '../types.ts';
+import { Subscriber } from '../Subscriber.ts';
+import { Subscription } from '../Subscription.ts';
 
 /**
  * Convert an object into an Observable of `[key, value]` pairs.
@@ -23,7 +23,7 @@ import { Subscription } from '../Subscription';
  * ## Example
  * ### Converts an object to an Observable
  * ```ts
- * import { pairs } from 'rxjs';
+ * import { pairs } from 'rxjs.ts';
  *
  * const obj = {
  *   foo: 42,

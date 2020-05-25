@@ -1,8 +1,8 @@
-import { Scheduler } from '../Scheduler';
-import { Action } from './Action';
-import { AsyncAction } from './AsyncAction';
-import { SchedulerAction } from '../types';
-import { Subscription } from '../Subscription';
+import { Scheduler } from '../Scheduler.ts';
+import { Action } from './Action.ts';
+import { AsyncAction } from './AsyncAction.ts';
+import { SchedulerAction } from '../types.ts';
+import { Subscription } from '../Subscription.ts';
 
 export class AsyncScheduler extends Scheduler {
   public static delegate?: Scheduler;

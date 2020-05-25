@@ -1,5 +1,5 @@
-import { of } from 'rxjs';
-import { switchMap } from 'rxjs/operators';
+import { of } from 'rxjs.ts';
+import { switchMap } from 'rxjs/operators.ts';
 
 it('should infer correctly', () => {
   const o = of(1, 2, 3).pipe(switchMap(p => of(Boolean(p)))); // $ExpectType Observable<boolean>

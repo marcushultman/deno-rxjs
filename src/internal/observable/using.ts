@@ -1,7 +1,7 @@
-import { Observable } from '../Observable';
-import { Unsubscribable, ObservableInput } from '../types';
-import { from } from './from'; // from from from! LAWL
-import { EMPTY } from './empty';
+import { Observable } from '../Observable.ts';
+import { Unsubscribable, ObservableInput } from '../types.ts';
+import { from } from './from.ts'; // from from from! LAWL
+import { EMPTY } from './empty.ts';
 
 /**
  * Creates an Observable that uses a resource which will be disposed at the same time as the Observable.

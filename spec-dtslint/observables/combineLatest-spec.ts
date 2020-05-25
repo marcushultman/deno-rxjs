@@ -1,5 +1,5 @@
-import { combineLatest } from 'rxjs';
-import { a$,  b$,  c$,  d$,  e$,  f$,  g$, A, B, C, D, E, F } from '../helpers';
+import { combineLatest } from 'rxjs.ts';
+import { a$,  b$,  c$,  d$,  e$,  f$,  g$, A, B, C, D, E, F } from '../helpers.ts';
 
 
 it('should accept 1 param', () => {

@@ -1,12 +1,12 @@
-import { Operator } from '../Operator';
-import { Subscriber } from '../Subscriber';
-import { Observable } from '../Observable';
-import { Subject } from '../Subject';
-import { Subscription } from '../Subscription';
-import { OuterSubscriber } from '../OuterSubscriber';
-import { InnerSubscriber } from '../InnerSubscriber';
-import { subscribeToResult } from '../util/subscribeToResult';
-import { OperatorFunction } from '../types';
+import { Operator } from '../Operator.ts';
+import { Subscriber } from '../Subscriber.ts';
+import { Observable } from '../Observable.ts';
+import { Subject } from '../Subject.ts';
+import { Subscription } from '../Subscription.ts';
+import { OuterSubscriber } from '../OuterSubscriber.ts';
+import { InnerSubscriber } from '../InnerSubscriber.ts';
+import { subscribeToResult } from '../util/subscribeToResult.ts';
+import { OperatorFunction } from '../types.ts';
 
 /**
  * Branch out the source Observable values as a nested Observable starting from
@@ -27,8 +27,8 @@ import { OperatorFunction } from '../types';
  * ## Example
  * Every other second, emit the click events from the next 500ms
  * ```ts
- * import { fromEvent, interval, EMPTY } from 'rxjs';
- * import { windowToggle, mergeAll } from 'rxjs/operators';
+ * import { fromEvent, interval, EMPTY } from 'rxjs.ts';
+ * import { windowToggle, mergeAll } from 'rxjs/operators.ts';
  *
  * const clicks = fromEvent(document, 'click');
  * const openings = interval(1000);

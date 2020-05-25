@@ -1,5 +1,5 @@
-import { of, asyncScheduler } from 'rxjs';
-import { auditTime } from 'rxjs/operators';
+import { of, asyncScheduler } from 'rxjs.ts';
+import { auditTime } from 'rxjs/operators.ts';
 
 it('should infer correctly', () => {
   const o = of('a', 'b', 'c').pipe(auditTime(47)); // $ExpectType Observable<string>

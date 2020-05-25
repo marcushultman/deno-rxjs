@@ -1,7 +1,7 @@
-import { Observable } from '../Observable';
-import { subscribeTo } from '../util/subscribeTo';
-import { ObservableInput, SchedulerLike, ObservedValueOf } from '../types';
-import { scheduled } from '../scheduled/scheduled';
+import { Observable } from '../Observable.ts';
+import { subscribeTo } from '../util/subscribeTo.ts';
+import { ObservableInput, SchedulerLike, ObservedValueOf } from '../types.ts';
+import { scheduled } from '../scheduled/scheduled.ts';
 
 export function from<O extends ObservableInput<any>>(input: O): Observable<ObservedValueOf<O>>;
 /** @deprecated use {@link scheduled} instead. */
@@ -25,7 +25,7 @@ export function from<O extends ObservableInput<any>>(input: O, scheduler: Schedu
  * ### Converts an array to an Observable
  *
  * ```ts
- * import { from } from 'rxjs';
+ * import { from } from 'rxjs.ts';
  *
  * const array = [10, 20, 30];
  * const result = from(array);
@@ -43,8 +43,8 @@ export function from<O extends ObservableInput<any>>(input: O, scheduler: Schedu
  * ### Convert an infinite iterable (from a generator) to an Observable
  *
  * ```ts
- * import { from } from 'rxjs';
- * import { take } from 'rxjs/operators';
+ * import { from } from 'rxjs.ts';
+ * import { take } from 'rxjs/operators.ts';
  *
  * function* generateDoubles(seed) {
  *    let i = seed;
@@ -77,7 +77,7 @@ export function from<O extends ObservableInput<any>>(input: O, scheduler: Schedu
  * ### With async scheduler
  *
  * ```ts
- * import { from, asyncScheduler } from 'rxjs';
+ * import { from, asyncScheduler } from 'rxjs.ts';
  *
  * console.log('start');
  *

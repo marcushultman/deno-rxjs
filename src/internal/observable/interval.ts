@@ -1,8 +1,8 @@
-import { Observable } from '../Observable';
-import { async } from '../scheduler/async';
-import { SchedulerAction, SchedulerLike } from '../types';
-import { isNumeric } from '../util/isNumeric';
-import { Subscriber } from '../Subscriber';
+import { Observable } from '../Observable.ts';
+import { async } from '../scheduler/async.ts';
+import { SchedulerAction, SchedulerLike } from '../types.ts';
+import { isNumeric } from '../util/isNumeric.ts';
+import { Subscriber } from '../Subscriber.ts';
 
 /**
  * Creates an Observable that emits sequential numbers every specified
@@ -23,8 +23,8 @@ import { Subscriber } from '../Subscriber';
  * ## Example
  * Emits ascending numbers, one every second (1000ms) up to the number 3
  * ```ts
- * import { interval } from 'rxjs';
- * import { take } from 'rxjs/operators';
+ * import { interval } from 'rxjs.ts';
+ * import { take } from 'rxjs/operators.ts';
  *
  * const numbers = interval(1000);
  *

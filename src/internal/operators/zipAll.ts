@@ -1,6 +1,6 @@
-import { ZipOperator } from '../observable/zip';
-import { Observable } from '../Observable';
-import { OperatorFunction, ObservableInput } from '../types';
+import { ZipOperator } from '../observable/zip.ts';
+import { Observable } from '../Observable.ts';
+import { OperatorFunction, ObservableInput } from '../types.ts';
 
 export function zipAll<T>(): OperatorFunction<ObservableInput<T>, T[]>;
 export function zipAll<T>(): OperatorFunction<any, T[]>;

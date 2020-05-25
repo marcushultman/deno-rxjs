@@ -1,5 +1,5 @@
-import { of, Observable, EMPTY } from 'rxjs';
-import { catchError } from 'rxjs/operators';
+import { of, Observable, EMPTY } from 'rxjs.ts';
+import { catchError } from 'rxjs/operators.ts';
 
 it('should infer correctly', () => {
   const o = of(1, 2, 3).pipe(catchError((() => of(4, 5, 6)))); // $ExpectType Observable<number>

@@ -1,11 +1,11 @@
-import { Operator } from '../Operator';
-import { Subscriber } from '../Subscriber';
-import { Observable } from '../Observable';
-import { OuterSubscriber } from '../OuterSubscriber';
-import { InnerSubscriber } from '../InnerSubscriber';
-import { subscribeToResult } from '../util/subscribeToResult';
-import { MonoTypeOperatorFunction, TeardownLogic, ObservableInput } from '../types';
-import { Subscription } from '../Subscription';
+import { Operator } from '../Operator.ts';
+import { Subscriber } from '../Subscriber.ts';
+import { Observable } from '../Observable.ts';
+import { OuterSubscriber } from '../OuterSubscriber.ts';
+import { InnerSubscriber } from '../InnerSubscriber.ts';
+import { subscribeToResult } from '../util/subscribeToResult.ts';
+import { MonoTypeOperatorFunction, TeardownLogic, ObservableInput } from '../types.ts';
+import { Subscription } from '../Subscription.ts';
 
 /**
  * Returns an Observable that skips items emitted by the source Observable until a second Observable emits an item.
@@ -25,8 +25,8 @@ import { Subscription } from '../Subscription';
  * In the following example, all emitted values ​​of the interval observable are skipped until the user clicks anywhere within the page.
  *
  * ```ts
- * import { interval, fromEvent } from 'rxjs';
- * import { skipUntil } from 'rxjs/operators';
+ * import { interval, fromEvent } from 'rxjs.ts';
+ * import { skipUntil } from 'rxjs/operators.ts';
  *
  * const intervalObservable = interval(1000);
  * const click = fromEvent(document, 'click');

@@ -1,11 +1,11 @@
-import { async } from '../scheduler/async';
-import { isDate } from '../util/isDate';
-import { Operator } from '../Operator';
-import { Subscriber } from '../Subscriber';
-import { Subscription } from '../Subscription';
-import { Notification } from '../Notification';
-import { Observable } from '../Observable';
-import { MonoTypeOperatorFunction, PartialObserver, SchedulerAction, SchedulerLike, TeardownLogic } from '../types';
+import { async } from '../scheduler/async.ts';
+import { isDate } from '../util/isDate.ts';
+import { Operator } from '../Operator.ts';
+import { Subscriber } from '../Subscriber.ts';
+import { Subscription } from '../Subscription.ts';
+import { Notification } from '../Notification.ts';
+import { Observable } from '../Observable.ts';
+import { MonoTypeOperatorFunction, PartialObserver, SchedulerAction, SchedulerLike, TeardownLogic } from '../types.ts';
 
 /**
  * Delays the emission of items from the source Observable by a given timeout or
@@ -26,8 +26,8 @@ import { MonoTypeOperatorFunction, PartialObserver, SchedulerAction, SchedulerLi
  * ## Examples
  * Delay each click by one second
  * ```ts
- * import { fromEvent } from 'rxjs';
- * import { delay } from 'rxjs/operators';
+ * import { fromEvent } from 'rxjs.ts';
+ * import { delay } from 'rxjs/operators.ts';
  *
  * const clicks = fromEvent(document, 'click');
  * const delayedClicks = clicks.pipe(delay(1000)); // each click emitted after 1 second
@@ -36,8 +36,8 @@ import { MonoTypeOperatorFunction, PartialObserver, SchedulerAction, SchedulerLi
  *
  * Delay all clicks until a future date happens
  * ```ts
- * import { fromEvent } from 'rxjs';
- * import { delay } from 'rxjs/operators';
+ * import { fromEvent } from 'rxjs.ts';
+ * import { delay } from 'rxjs/operators.ts';
  *
  * const clicks = fromEvent(document, 'click');
  * const date = new Date('March 15, 2050 12:00:00'); // in the future

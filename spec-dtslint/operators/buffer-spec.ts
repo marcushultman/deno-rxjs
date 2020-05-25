@@ -1,5 +1,5 @@
-import { of } from 'rxjs';
-import { buffer } from 'rxjs/operators';
+import { of } from 'rxjs.ts';
+import { buffer } from 'rxjs/operators.ts';
 
 it('should infer correctly', () => {
   const o = of(1, 2, 3).pipe(buffer(of('foo'))); // $ExpectType Observable<number[]>

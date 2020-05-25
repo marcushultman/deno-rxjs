@@ -1,11 +1,11 @@
-import { Operator } from './Operator';
-import { Observable } from './Observable';
-import { Subscriber } from './Subscriber';
-import { Subscription } from './Subscription';
-import { Observer, SubscriptionLike, TeardownLogic } from './types';
-import { ObjectUnsubscribedError } from './util/ObjectUnsubscribedError';
-import { SubjectSubscription } from './SubjectSubscription';
-import { rxSubscriber as rxSubscriberSymbol } from '../internal/symbol/rxSubscriber';
+import { Operator } from './Operator.ts';
+import { Observable } from './Observable.ts';
+import { Subscriber } from './Subscriber.ts';
+import { Subscription } from './Subscription.ts';
+import { Observer, SubscriptionLike, TeardownLogic } from './types.ts';
+import { ObjectUnsubscribedError } from './util/ObjectUnsubscribedError.ts';
+import { SubjectSubscription } from './SubjectSubscription.ts';
+import { rxSubscriber as rxSubscriberSymbol } from '../internal/symbol/rxSubscriber.ts';
 
 /**
  * @class SubjectSubscriber<T>

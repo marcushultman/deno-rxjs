@@ -1,14 +1,14 @@
-import { Operator } from '../Operator';
-import { Subscriber } from '../Subscriber';
-import { Observable } from '../Observable';
-import { Subject } from '../Subject';
-import { Subscription } from '../Subscription';
+import { Operator } from '../Operator.ts';
+import { Subscriber } from '../Subscriber.ts';
+import { Observable } from '../Observable.ts';
+import { Subject } from '../Subject.ts';
+import { Subscription } from '../Subscription.ts';
 
-import { OuterSubscriber } from '../OuterSubscriber';
-import { InnerSubscriber } from '../InnerSubscriber';
-import { subscribeToResult } from '../util/subscribeToResult';
+import { OuterSubscriber } from '../OuterSubscriber.ts';
+import { InnerSubscriber } from '../InnerSubscriber.ts';
+import { subscribeToResult } from '../util/subscribeToResult.ts';
 
-import { MonoTypeOperatorFunction, TeardownLogic } from '../types';
+import { MonoTypeOperatorFunction, TeardownLogic } from '../types.ts';
 
 /**
  * Returns an Observable that mirrors the source Observable with the exception of an `error`. If the source Observable
@@ -22,8 +22,8 @@ import { MonoTypeOperatorFunction, TeardownLogic } from '../types';
  *
  * ## Example
  * ```ts
- * import { timer, interval } from 'rxjs';
- * import { map, tap, retryWhen, delayWhen } from 'rxjs/operators';
+ * import { timer, interval } from 'rxjs.ts';
+ * import { map, tap, retryWhen, delayWhen } from 'rxjs/operators.ts';
  *
  * const source = interval(1000);
  * const example = source.pipe(

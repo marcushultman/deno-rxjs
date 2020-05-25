@@ -1,5 +1,5 @@
-import { of } from 'rxjs';
-import { tap } from 'rxjs/operators';
+import { of } from 'rxjs.ts';
+import { tap } from 'rxjs/operators.ts';
 
 it('should infer correctly', () => {
   const a = of(1, 2, 3).pipe(tap()); // $ExpectType Observable<number>

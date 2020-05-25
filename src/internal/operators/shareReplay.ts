@@ -1,8 +1,8 @@
-import { Observable } from '../Observable';
-import { ReplaySubject } from '../ReplaySubject';
-import { Subscription } from '../Subscription';
-import { MonoTypeOperatorFunction, SchedulerLike } from '../types';
-import { Subscriber } from '../Subscriber';
+import { Observable } from '../Observable.ts';
+import { ReplaySubject } from '../ReplaySubject.ts';
+import { Subscription } from '../Subscription.ts';
+import { MonoTypeOperatorFunction, SchedulerLike } from '../types.ts';
+import { Subscriber } from '../Subscriber.ts';
 
 export interface ShareReplayConfig {
   bufferSize?: number;
@@ -42,8 +42,8 @@ export function shareReplay<T>(bufferSize?: number, windowTime?: number, schedul
  *
  * ## Example
  * ```ts
- * import { interval } from 'rxjs';
- * import { shareReplay, take } from 'rxjs/operators';
+ * import { interval } from 'rxjs.ts';
+ * import { shareReplay, take } from 'rxjs/operators.ts';
  *
  * const obs$ = interval(1000);
  * const shared$ = obs$.pipe(
@@ -59,8 +59,8 @@ export function shareReplay<T>(bufferSize?: number, windowTime?: number, schedul
  * ```ts
  * // Code take from https://blog.angularindepth.com/rxjs-whats-changed-with-sharereplay-65c098843e95
  * // and adapted to showcase the refCount property.
- * import { interval, Observable, defer } from 'rxjs';
- * import { shareReplay, take, tap, finalize } from 'rxjs/operators';
+ * import { interval, Observable, defer } from 'rxjs.ts';
+ * import { shareReplay, take, tap, finalize } from 'rxjs/operators.ts';
  *
  * const log = <T>(source: Observable<T>, name: string) => defer(() => {
  *   console.log(`${name}: subscribed`);

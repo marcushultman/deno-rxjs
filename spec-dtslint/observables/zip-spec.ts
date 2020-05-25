@@ -1,4 +1,4 @@
-import { Observable, of, zip } from 'rxjs';
+import { Observable, of, zip } from 'rxjs.ts';
 
 it('should support observables', () => {
   const a = of(1); // $ExpectType Observable<number>

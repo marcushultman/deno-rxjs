@@ -1,4 +1,4 @@
-import { Notification } from '../Notification';
+import { Notification } from '../Notification.ts';
 
 export interface TestMessage {
   frame: number;
