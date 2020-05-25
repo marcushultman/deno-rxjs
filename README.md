@@ -2,8 +2,8 @@
 
 # RxJS for Deno | RxJS para Deno
 
-*Extensões Reativas para Deno
-*Reactive Extensions for Deno
+_Extensões Reativas para Deno_
+_Reactive Extensions for Deno_
 
 Biblioteca de extensões reativas para JavaScript. Esta é uma reescrita de [RxJS](https://github.com/ReactiveX/rxjs) e é a versão mais recente pronta para produção do RxJS no Deno. Essa reescrita deve ter melhor desempenho, melhor modularidade, melhores pilhas de chamadas depuráveis, mantendo-se principalmente compatível com versões anteriores, com algumas alterações que reduzem a superfície da API.
 
