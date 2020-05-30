@@ -1,11 +1,11 @@
 export const RequestFrame = () => {
   let window = {
-    requestAnimationFrame: (callback: any, element: any) => {},
+    requestAnimationFrame: (callback: any) => {},
     cancelAnimationFrame: (id: any) => {},
   }
   var lastTime = 0;
 
-    window.requestAnimationFrame = function (callback: any, element: any) {
+    window.requestAnimationFrame = function (callback: any) {
       var currTime = new Date().getTime();
       var timeToCall = Math.max(0, 16 - (currTime - lastTime));
       var id = setTimeout(function () {
