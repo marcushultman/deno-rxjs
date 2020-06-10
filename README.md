@@ -1,6 +1,6 @@
 ![RxJS](https://github.com/ReactiveX/rxjs/raw/master/docs_app/assets/Rx_Logo_S.png)
 
-# RxJS for Deno | RxJS para Deno
+# RxJS for Deno | RxJS para Deno | https://denobr.com
 
 _Extensões Reativas para Deno_
 
