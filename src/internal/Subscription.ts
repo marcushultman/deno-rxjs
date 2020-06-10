@@ -25,9 +25,8 @@ export class Subscription implements SubscriptionLike {
 
   /**
    * A flag to indicate whether this Subscription has already been unsubscribed.
-   * @type {boolean}
    */
-  public closed: boolean = false;
+  public closed = false;
 
   /** @internal */
   protected _parentOrParents: Subscription | Subscription[] | null = null;
@@ -204,6 +203,12 @@ export class Subscription implements SubscriptionLike {
       }
     }
   }
+}
+
+export function isSubscription(value: any): value is Subscription {
+  return value &&
+    typeof value.add === 'function' &&
+    typeof value.unsubscribe === 'function';
 }
 
 function flattenUnsubscriptionErrors(errors: any[]) {

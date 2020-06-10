@@ -87,7 +87,7 @@ export function animationFrames(timestampProvider: TimestampProvider = Date) {
  * @param timestampProvider The timestamp provider to use to create the observable
  */
 function animationFramesFactory(timestampProvider: TimestampProvider) {
-  return new Observable<number>(subscriber => {
+  return new Observable<number>((subscriber: any) => {
     let id: number;
     const start = timestampProvider.now();
     const run = () => {

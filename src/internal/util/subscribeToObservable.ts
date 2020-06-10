@@ -1,6 +1,5 @@
 import { Subscriber } from '../Subscriber.ts';
 import { observable as Symbol_observable } from '../symbol/observable.ts';
-import { subscribeWith } from './subscribeWith.ts';
 
 /**
  * Subscribes to an object that implements Symbol.observable with the given
@@ -13,6 +12,6 @@ export const subscribeToObservable = <T>(obj: any) => (subscriber: Subscriber<T>
     // Should be caught by observable subscribe function error handling.
     throw new TypeError('Provided object does not correctly implement Symbol.observable');
   } else {
-    return subscribeWith(obs, subscriber);
+    return obs.subscribe(subscriber);
   }
 };

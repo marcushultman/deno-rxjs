@@ -2,7 +2,6 @@ import { Operator } from '../Operator.ts';
 import { Subscriber } from '../Subscriber.ts';
 import { Observable } from '../Observable.ts';
 import { MonoTypeOperatorFunction, TeardownLogic } from '../types.ts';
-import { subscribeWith } from '../util/subscribeWith.ts';
 
 /**
  * Returns an Observable that mirrors the source Observable, but will call a specified function when
@@ -68,7 +67,7 @@ class FinallyOperator<T> implements Operator<T, T> {
   }
 
   call(subscriber: Subscriber<T>, source: any): TeardownLogic {
-    const subscription = subscribeWith(source, subscriber);
+    const subscription = source.subscribe(subscriber);
     subscription.add(this.callback);
     return subscription;
   }

@@ -1,7 +1,7 @@
 import { isFunction } from './util/isFunction.ts';
 import { empty as emptyObserver } from './Observer.ts';
 import { Observer, PartialObserver } from './types.ts';
-import { Subscription } from './Subscription.ts';
+import { Subscription, isSubscription } from './Subscription.ts';
 import { rxSubscriber as rxSubscriberSymbol } from '../internal/symbol/rxSubscriber.ts';
 import { config } from './config.ts';
 import { hostReportError } from './util/hostReportError.ts';
@@ -187,8 +187,8 @@ export class SafeSubscriber<T> extends Subscriber<T> {
       complete = (<PartialObserver<T>> observerOrNext).complete;
       if (observerOrNext !== emptyObserver) {
         context = Object.create(observerOrNext);
-        if (isFunction(context.unsubscribe)) {
-          this.add(<() => void> context.unsubscribe.bind(context));
+        if (isSubscription(observerOrNext)) {
+          observerOrNext.add(this.unsubscribe.bind(this));
         }
         context.unsubscribe = this.unsubscribe.bind(this);
       }
