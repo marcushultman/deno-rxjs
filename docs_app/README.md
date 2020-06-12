@@ -1,4 +1,4 @@
-# RxJS documentation project for Deno
+# RxJS documentation project for deno
 
 Everything in this folder is part of the documentation project. This includes
 
