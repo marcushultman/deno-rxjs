@@ -8,4 +8,4 @@ This product may include a number of subcomponents with separate
 copyright notices and license terms. This product is a modified
 by DenoBR Comunitty for add support for Deno
 
-This file is created by DenoBR
+This file is created by DenoBR - denobr.com
