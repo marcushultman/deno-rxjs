@@ -1,2 +1,3 @@
 RewriteEngine on
-RewriteRule ^(.*) /build/$1
+RewriteCond %{REQUEST_URI} ^/$
+RewriteRule ^(.*)$ /build/$1 [L]
