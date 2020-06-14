@@ -11,7 +11,6 @@ node_modules/
 typings/
 
 # Generated
-dist/
 dist-compat/
 tmp/
 coverage/
