@@ -1,37 +1,46 @@
-# Editor-specific
-.idea/
-*.iml
-*.sublime-project
+# See http://help.github.com/ignore-files/ for more about ignoring files.
+
+# compiled output
+/dist
+/tmp
+/out-tsc
+# Only exists if Bazel was run
+/bazel-out
+
+# dependencies
+/node_modules
+
+# profiling files
+chrome-profiler-events*.json
+speed-measure-plugin*.json
+
+# IDEs and editors
+/.idea
+.project
+.classpath
+.c9/
+*.launch
+.settings/
 *.sublime-workspace
-.settings
-.vscode
 
-# Installed libs
-node_modules/
-typings/
+# IDE - VSCode
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+.history/*
 
-# Generated
-dist-compat/
-tmp/
-coverage/
-img/
-spec-js/
-spec-build/
-.out/
-.tmp/
-
-# Import location artifacts
-/ajax/
-/fetch/
-/operators/
-/testing/
-/webSocket/
-
-# Misc
+# misc
+/.sass-cache
+/connect.lock
+/coverage
+/libpeerconnection.log
 npm-debug.log
-.DS_STORE
-*.tgz
+yarn-error.log
+testem.log
+/typings
 
-# The check-side-effects package generates and deletes this file.
-# If the process is killed, it will be left behind.
-check-side-effects.tmp-input.js
+# System Files
+.DS_Store
+Thumbs.db

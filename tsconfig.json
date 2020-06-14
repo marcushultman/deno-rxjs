@@ -1,31 +1,23 @@
 {
+  "compileOnSave": false,
   "compilerOptions": {
-    "incremental": true,
-    "removeComments": true,
-    "preserveConstEnums": true,
+    "baseUrl": "./",
+    "outDir": "./dist/out-tsc",
     "sourceMap": true,
-    "strict": true,
-    "noImplicitReturns": true,
+    "declaration": false,
+    "downlevelIteration": true,
+    "experimentalDecorators": true,
+    "module": "esnext",
     "moduleResolution": "node",
-    "stripInternal": false,
-    "noEmit": true,
+    "importHelpers": true,
+    "target": "es2015",
     "lib": [
-      "esnext",
+      "es2018",
       "dom"
-    ],
-    "target": "esnext",
-    "baseUrl": ".",
-    "paths": {
-      "rxjs": ["./src/index"],
-      "rxjs/operators": ["./src/operators/index"],
-      "rxjs/testing": ["./src/testing/index"],
-      "rxjs/ajax": ["./src/ajax/index"],
-      "rxjs/webSocket": ["./src/webSocket/index"],
-      "rxjs/fetch": ["./src/fetch/index"],
-      "rxjs/internal/*": ["./src/internal/*"]
-    }
+    ]
   },
-  "bazelOptions": {
-    "suppressTsconfigOverrideWarnings": true
+  "angularCompilerOptions": {
+    "fullTemplateTypeCheck": true,
+    "strictInjectionParameters": true
   }
 }
