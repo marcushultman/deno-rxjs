@@ -1,4 +1,0 @@
-// RxJS for Deno, support commands for updates
-// Only run this in Git Bash
-
-'alias rxjs='git --git-dir=.github/.rxjs' && alias external='git --git-dir=.github/.external''

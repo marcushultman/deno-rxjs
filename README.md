@@ -1,18 +1,8 @@
-![RxJS](https://github.com/ReactiveX/rxjs/raw/master/docs_app/assets/Rx_Logo_S.png)
+# ![RxJS](https://github.com/ReactiveX/rxjs/raw/master/docs_app/assets/Rx_Logo_S.png) RxJS: Reactive Extensions for Deno | [DenoBR](https://denobr.com)
 
-# RxJS for Deno | RxJS para Deno | https://denobr.com
-
-_Extensões Reativas para Deno_
-
-_Reactive Extensions for Deno_
-
-Biblioteca de extensões reativas para JavaScript. Esta é uma reescrita de [RxJS](https://github.com/ReactiveX/rxjs) e é a versão mais recente pronta para produção do RxJS no Deno. Essa reescrita deve ter melhor desempenho, melhor modularidade, melhores pilhas de chamadas depuráveis, mantendo-se principalmente compatível com versões anteriores, com algumas alterações que reduzem a superfície da API.
-
-Reactive reactive library for JavaScript. This is a new version of [RxJS] (https://github.com/ReactiveX/rxjs) and is a newer version ready for RxJS production on Deno. This recording should have better performance, better modularity, better debugable call stacks, remain mainly compatible with previous versions, with some changes that show the API surface.
+Reactive reactive library for JavaScript. This is a new version of [RxJS](https://github.com/ReactiveX/rxjs) and is a newer version ready for RxJS use on Deno. This recording should have better performance, better modularity, better debugable call stacks, remain mainly compatible with previous versions, with some changes that show the API surface.
  
-## Documentation | Documentação
-Em breve, no momento você pode utilizar [a documentação do RxJS](https://rxjs.dev/) 
-
+## Documentation
 Coming soon, at moment your can use [the RxJS documentation](https://rxjs.dev/) 
 
 ## [Apache 2.0 License](LICENSE.txt)
@@ -22,11 +12,11 @@ Coming soon, at moment your can use [the RxJS documentation](https://rxjs.dev/)
 - [API Documentation - Coming Soon](#)
 - [NOTICE](NOTICE.txt)
 
-## Versões neste repositório | Versions on this repository
+## Versions on this repository
 
-- [master](https://github.com/ReactiveX/rxjs/commits/master)
+- [master](https://github.com/ReactiveX/rxjs/commits/master) - This is all of the current, unreleased work, which is against v7 of RxJS right now
 
-## Uso | Using
+## Using
 
 ```js
 import { Observable } from 'https://raw.githubusercontent.com/DenoBRComunitty/rxjs/master/mod.ts';

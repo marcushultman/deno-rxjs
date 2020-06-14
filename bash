@@ -1,0 +1,1 @@
+alias denobr='git --git-dir=.github/.rxjs' && alias reactivex='git --git-dir=.github/.external'
