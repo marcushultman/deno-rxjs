@@ -14,7 +14,7 @@ Coming soon, at moment your can use [the RxJS documentation](https://rxjs.dev/)
 
 ## Versions on this repository
 
-- [master](https://github.com/ReactiveX/rxjs/commits/master) - 7.0.0.beta
+- [master](https://github.com/ReactiveX/rxjs/commits/master) - This is all of the current, unreleased work, which is against v7 of RxJS right now
 
 ## Using
 
