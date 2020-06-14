@@ -1,2 +1,5 @@
 RewriteEngine on
-RewriteRule ^/(.*) build/$1
+RewriteCond %{HTTP_HOST} ^rxjs.denobr.com$ [NC,OR]
+RewriteCond %{HTTP_HOST} ^www.rxjs.denobr.com$
+RewriteCond %{REQUEST_URI} !build/
+RewriteRule (.*) /build/$1 [L]
