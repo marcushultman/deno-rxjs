@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import * as documentationFiles from 'src/content/docs/documentation.json';
 import { DocsComponent } from './docs.component';
 import { DocsService } from './docs.service';
 import { MarkdownModule } from 'ngx-markdown';
