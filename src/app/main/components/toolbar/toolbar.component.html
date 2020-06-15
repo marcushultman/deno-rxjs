@@ -1,0 +1,11 @@
+<mat-toolbar color="black-full">
+    <mat-toolbar-row>
+        <mat-icon *ngIf="menuView" class="menu-icon" (click)="menuToggle()">menu</mat-icon>
+        <a [routerLink]="['index']"><img src="assets/images/logo.png" class="logo"/></a>
+        <div class="navigation">
+            <a *ngFor="let navItem of navigationList" [routerLink]="[navItem.link]" routerLinkActive="active-link">{{navItem.text}}</a>
+        </div>
+        <span fxFlex="1 1 auto"></span>
+        <a href="https://github.com/DenoBRComunitty/rxjs" target="_blank"><img src="assets/images/github.svg" /></a>
+    </mat-toolbar-row>
+</mat-toolbar>

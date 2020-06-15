@@ -1,1 +1,13 @@
-Vispora
+<progress-bar></progress-bar>
+<rxjs-toolbar></rxjs-toolbar>
+
+<mat-drawer-container hasBackdrop="false">
+    <mat-drawer #sidebar mode="side">
+        <mat-nav-list>
+            <menu-item *ngFor="let item of sidebarItems" [item]="item"></menu-item>
+        </mat-nav-list>
+    </mat-drawer>
+    <mat-drawer-content>
+        <router-outlet></router-outlet>
+    </mat-drawer-content>
+</mat-drawer-container>

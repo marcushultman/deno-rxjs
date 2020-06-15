@@ -1,4 +1,19 @@
 /* You can add global styles to this file, and also import other style files */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap");
+@import "~ng-docx/assets/styles/ng-docx.scss";
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 300;
+  background-color: #fafafa;
+  color: rgba(0, 0, 0, 0.87);
+}
+
+.mat-black-full {
+  background-color: #000000;
+}
