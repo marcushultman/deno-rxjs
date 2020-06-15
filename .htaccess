@@ -9,3 +9,10 @@ RewriteRule (.*) /build/$1 [L]
 ErrorDocument 404 /build/index.html
 # DO NOT REMOVE THIS LINE AND THE LINES ABOVE Xymyta:ERRORPAGEID
 
+
+# DO NOT REMOVE THIS LINE AND THE LINES BELLOW SSL_REDIRECT:rxjs.denobr.com
+RewriteEngine on
+RewriteCond %{HTTPS} off
+RewriteCond %{HTTP_HOST} (www\.)?rxjs.denobr.com
+RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+# DO NOT REMOVE THIS LINE AND THE LINES BELLOW SSL_REDIRECT:rxjs.denobr.com
