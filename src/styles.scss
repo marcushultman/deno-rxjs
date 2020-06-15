@@ -5,6 +5,7 @@
 html,
 body {
   height: 100%;
+  overflow-x: hidden;
 }
 body {
   margin: 0;
@@ -16,4 +17,9 @@ body {
 
 .mat-black-full {
   background-color: #000000;
+}
+
+.rxjs-page {
+  width: 100%;
+  min-height: calc(100vh - 64px);
 }

@@ -31,6 +31,7 @@ export class DocsComponent implements OnInit, OnDestroy {
 
   ngOnInit(): void {
     this.sideBarService.show();
+    this.sideBarService.toggleSidebar(true);
     this.progressBar.show();
     this.activatedRoute.url.subscribe((segments: UrlSegment[]) => {
         const url = segments.join('/');
@@ -69,5 +70,6 @@ export class DocsComponent implements OnInit, OnDestroy {
 
   ngOnDestroy(): void {
       this.sideBarService.hide();
+      this.sideBarService.toggleSidebar(false);
   }
 }

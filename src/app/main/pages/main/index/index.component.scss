@@ -1,0 +1,80 @@
+.rxjs-page {
+    header {
+        height: 120vh;
+        color: #eee;
+        width: 100vw;
+        overflow: hidden;
+        position: relative;
+        display:block;
+        background-color: transparent;
+        margin-bottom: 0;
+        .bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: -999;
+            background-color: #0a1014;
+            background: #0a1014;
+            color: #fff;
+            min-height: 100%;
+            width: 100%;
+            overflow: hidden;
+            transform: skewY(8deg);
+            transform-origin: 100%;
+        }
+        .container {
+            margin-right: auto;
+            margin-left: auto;
+            padding-left: 15px;
+            padding-right: 15px;
+            position: relative;
+            height: 100%;
+            text-align: center;
+            min-height: 1px;
+            padding-left: 15px;
+            padding-right: 15px;
+            .hero-logo {
+                margin: 0 auto;
+                width: 350px;
+                height: 350px;
+                animation: logoAnimation 2s infinite;
+            }
+            .hero-headline {
+                line-height: 1.3em;
+                text-align: center;
+                font-size: 28px;
+                font-weight: 600;
+                padding: 30px 0;
+            }
+            .hero-button {
+                padding: 2px 34px 0;
+                font-size: 18px;
+                width: auto;
+                height: 66px;
+                font-size: 1.8rem;
+                font-weight: 600;
+                line-height: 40px;
+                line-height: 4rem;
+                background-color: #fff;
+                border-radius: 48px;
+                box-shadow: 0 2px 5px 0 rgba(0,0,0,.26);
+                color: #1976d2;
+                cursor: pointer;
+                display: inline-block;
+                text-decoration: none;
+                text-transform: uppercase;
+                overflow: hidden;
+                border: none;
+            }
+        }
+    }
+}
+
+@keyframes logoAnimation {
+    0%   {
+        transform: rotate(0);
+    }
+    25%  {transform: rotate(180deg);}
+    100% {transform: rotate(360deg)}
+}

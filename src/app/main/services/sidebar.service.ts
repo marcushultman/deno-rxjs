@@ -21,8 +21,8 @@ export class SidebarService {
     this.sidebarSource.next(false);
   }
 
-  public toggleSidebar(): void {
-    this.toggleValue = !this.toggleValue;
+  public toggleSidebar(value?: true | false): void {
+    this.toggleValue = ((value) ? value : !this.toggleValue);
     this.toggleSource.next(this.toggleValue);
   }
 }

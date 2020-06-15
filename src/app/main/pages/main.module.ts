@@ -5,6 +5,7 @@ import { ToolbarComponent } from '../components/toolbar/toolbar.component';
 import { ToolbarModule } from '../components/toolbar/toolbar.module';
 import { NotFoundComponent } from './main/not-found/not-found.component';
 import { FlexLayoutModule } from '@angular/flex-layout';
+import { FooterModule } from '../components/footer/footer.module';
 
 const routes: Routes = [
     {
@@ -29,7 +30,8 @@ const routes: Routes = [
     imports: [
         RouterModule.forChild(routes),
         FlexLayoutModule,
-        ToolbarModule
+        ToolbarModule,
+        FooterModule
     ]
 })
 export class MainModule {}
