@@ -7541,6 +7541,7 @@ function _createClass2(Constructor, protoProps, staticProps) { if (protoProps) _
           var _this7 = this;
 
           this.sideBarService.show();
+          this.sideBarService.toggleSidebar(true);
           this.progressBar.show();
           this.activatedRoute.url.subscribe(function (segments) {
             var url = segments.join('/');
@@ -7586,6 +7587,7 @@ function _createClass2(Constructor, protoProps, staticProps) { if (protoProps) _
         key: "ngOnDestroy",
         value: function ngOnDestroy() {
           this.sideBarService.hide();
+          this.sideBarService.toggleSidebar(false);
         }
       }]);
 

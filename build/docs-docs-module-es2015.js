@@ -6674,6 +6674,7 @@ class DocsComponent {
     }
     ngOnInit() {
         this.sideBarService.show();
+        this.sideBarService.toggleSidebar(true);
         this.progressBar.show();
         this.activatedRoute.url.subscribe((segments) => {
             const url = segments.join('/');
@@ -6712,6 +6713,7 @@ class DocsComponent {
     }
     ngOnDestroy() {
         this.sideBarService.hide();
+        this.sideBarService.toggleSidebar(false);
     }
 }
 DocsComponent.ɵfac = function DocsComponent_Factory(t) { return new (t || DocsComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_angular_material_snack_bar__WEBPACK_IMPORTED_MODULE_1__["MatSnackBar"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_docs_service__WEBPACK_IMPORTED_MODULE_2__["DocsService"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_components_progress_bar_progress_bar_service__WEBPACK_IMPORTED_MODULE_3__["ProgressBarService"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_angular_router__WEBPACK_IMPORTED_MODULE_4__["ActivatedRoute"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_angular_router__WEBPACK_IMPORTED_MODULE_4__["Router"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_services_sidebar_service__WEBPACK_IMPORTED_MODULE_5__["SidebarService"])); };
