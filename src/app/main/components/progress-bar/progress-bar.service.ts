@@ -1,19 +1,19 @@
-import { HttpClient } from '@angular/common/http';
-import { Observable, BehaviorSubject } from 'rxjs';
-import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http'
+import { Observable, BehaviorSubject } from 'rxjs'
+import { Injectable } from '@angular/core'
 
 @Injectable()
 export class ProgressBarService {
-  protected progressBarSource = new BehaviorSubject(false);
-  progressBar = this.progressBarSource.asObservable();
+    protected progressBarSource = new BehaviorSubject(false)
+    progressBar = this.progressBarSource.asObservable()
 
-  constructor() {}
+    constructor() {}
 
-  public show(): void {
-    this.progressBarSource.next(true);
-  }
+    public show(): void {
+        this.progressBarSource.next(true)
+    }
 
-  public hide(): void {
-    this.progressBarSource.next(false);
-  }
+    public hide(): void {
+        this.progressBarSource.next(false)
+    }
 }

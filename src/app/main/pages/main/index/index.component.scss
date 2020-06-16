@@ -20,10 +20,10 @@
         width: calc(100vw - 10px);
         overflow: hidden;
         position: relative;
-        display:block;
+        display: block;
         background-color: transparent;
         margin-bottom: 0;
-        
+
         .container {
             margin-right: auto;
             margin-left: auto;
@@ -54,7 +54,7 @@
                 line-height: 4rem;
                 background-color: #fff;
                 border-radius: 48px;
-                box-shadow: 0 2px 5px 0 rgba(0,0,0,.26);
+                box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
                 color: #1976d2;
                 cursor: pointer;
                 display: inline-block;
@@ -80,16 +80,20 @@
         mat-card {
             width: 400px;
             background-color: #fafafa;
-            color:#0a1014;
-            box-shadow: 0 2px 5px 0 rgba(0,0,0,.26);
+            color: #0a1014;
+            box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
         }
     }
 }
 
 @keyframes logoAnimation {
-    0%   {
+    0% {
         transform: rotate(0);
     }
-    25%  {transform: rotate(180deg);}
-    100% {transform: rotate(360deg)}
+    25% {
+        transform: rotate(180deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
 }

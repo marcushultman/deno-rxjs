@@ -3,8 +3,12 @@
 
 <mat-drawer-container hasBackdrop="false">
     <mat-drawer #sidebar mode="side">
+        <!-- <img src="assets/images/logo.svg" class="logo"/> -->
         <mat-nav-list>
-            <menu-item *ngFor="let item of sidebarItems" [item]="item"></menu-item>
+            <menu-item
+                *ngFor="let item of sidebarItems"
+                [item]="item"
+            ></menu-item>
         </mat-nav-list>
     </mat-drawer>
     <mat-drawer-content>

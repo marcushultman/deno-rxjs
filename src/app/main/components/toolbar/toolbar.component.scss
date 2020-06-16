@@ -1,69 +1,68 @@
 .mat-sub-black {
-  background-color: #0a1014;
+    background-color: #0a1014;
 }
 .mat-toolbar {
-  position: fixed;
-  top: 0;
-  right: 0;
-  left: 0;
-  z-index: 10;
-  font-family: "Montserrat", sans-serif;
-  text-transform: uppercase;
-  font-size: 16px;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 9999999;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    font-size: 16px;
 
-  .mat-toolbar-row {
-    padding: 0 16px 0 0;
+    .mat-toolbar-row {
+        padding: 0 16px 0 0;
 
-    .menu-icon {
-      -webkit-touch-callout: none; /* iOS Safari */
-      -webkit-user-select: none; /* Safari */
-      -khtml-user-select: none; /* Konqueror HTML */
-      -moz-user-select: none; /* Old versions of Firefox */
-      -ms-user-select: none; /* Internet Explorer/Edge */
-      user-select: none; /* Non-prefixed version, currently
+        .menu-icon {
+            -webkit-touch-callout: none; /* iOS Safari */
+            -webkit-user-select: none; /* Safari */
+            -khtml-user-select: none; /* Konqueror HTML */
+            -moz-user-select: none; /* Old versions of Firefox */
+            -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
                                           supported by Chrome, Edge, Opera and Firefox */
-      padding: 20px;
-      &:hover {
-        cursor: pointer;
-      }
-    }
-    a.icon {
-      svg {
-        vertical-align: sub;
-        padding-top: 5px;
-      }
-      img {
-        height: 31.5px;
-        width: 31.5px;
-        vertical-align: sub;
-        padding-top: 5px;
-      }
-    }
-    .logo {
-      padding-left: 10px;
-      vertical-align: sub;
-    }
-    .navigation {
-      padding: 0 0 3px 15px;
-      @media screen and (min-width: 801px) {
-        display: initial;
-      }
-      @media screen and (max-width: 800px) {
-        display: none;
-      }
-      a {
-        padding: 7.5px 16px;
-        color: white;
-        text-decoration: none;
-        border-radius: 5px;
-        transition: all 0.15s;
-
-        &:hover {
-          color: white;
-          text-decoration: none;
-          background-color: rgba(27, 27, 27, 1);
+            padding: 20px;
+            &:hover {
+                cursor: pointer;
+            }
         }
-      }
+        a.icon {
+            svg {
+                vertical-align: sub;
+                padding-top: 5px;
+            }
+            img {
+                height: 31.5px;
+                width: 31.5px;
+                vertical-align: sub;
+                padding-top: 5px;
+            }
+        }
+        .logo {
+            padding-left: 10px;
+            vertical-align: sub;
+        }
+        .navigation {
+            padding: 0 0 3px 15px;
+            @media screen and (min-width: 801px) {
+                display: initial;
+            }
+            @media screen and (max-width: 800px) {
+                display: none;
+            }
+            a {
+                padding: 7.5px 16px;
+                color: white;
+                text-decoration: none;
+                border-radius: 5px;
+                transition: all 0.15s;
+
+                &:hover {
+                    color: white;
+                    text-decoration: none;
+                    background-color: rgba(27, 27, 27, 1);
+                }
+            }
+        }
     }
-  }
 }
