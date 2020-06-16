@@ -11,7 +11,7 @@ export class DocsService {
 
   public getConfig(): Observable<any> {
     return new Observable((subscriber) => {
-      this.http.get(this.DOCS_PATH + 'documentation.json').subscribe({
+      this.http.get(this.DOCS_PATH + 'guide.json').subscribe({
         next: (data) => {
           subscriber.next(JSON.parse(JSON.stringify(data)));
         },

@@ -2,7 +2,7 @@ mat-drawer-content {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    max-width: 100vw;
+    max-width: 100%;
 }
 .mat-drawer-container {
     background-color: #fafafa;
@@ -10,6 +10,7 @@ mat-drawer-content {
     margin: 0 auto;
     width: 100%;
     overflow: hidden;
+    margin-top: 64px;
 }
 .mat-drawer {
     position: fixed;

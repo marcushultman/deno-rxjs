@@ -7,7 +7,7 @@
     ],
     "SideBar": [
         {
-          "url": "index",
+          "url": "/guide/index",
           "title": "Overview",
           "tooltip": "RxJS Overview"
         }

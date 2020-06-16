@@ -20,12 +20,12 @@ import { NavigationService } from './main/services/navigation.service';
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     RouterModule.forRoot([], {
       scrollPositionRestoration: 'enabled',
       anchorScrolling: 'enabled',
     }),
     MatSidenavModule,
-    BrowserAnimationsModule,
     ToolbarModule,
     ProgressBarModule,
     MatSnackBarModule,

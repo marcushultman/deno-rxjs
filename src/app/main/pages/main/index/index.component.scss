@@ -17,7 +17,7 @@
     header {
         height: 95vh;
         color: #eee;
-        width: 100vw;
+        width: calc(100vw - 10px);
         overflow: hidden;
         position: relative;
         display:block;
@@ -67,7 +67,7 @@
     }
     .main {
         height: 100%;
-        width: 100vw;
+        width: calc(100vw - 10px);
         padding: 0;
         margin: 0;
         display: -webkit-box;

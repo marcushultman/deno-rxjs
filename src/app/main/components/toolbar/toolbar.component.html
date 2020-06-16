@@ -1,6 +1,6 @@
 <mat-toolbar color="sub-black">
     <mat-toolbar-row>
-        <mat-icon *ngIf="menuView" class="menu-icon" (click)="menuToggle()">menu</mat-icon>
+        <mat-icon [@enterAnimation] *ngIf="menuView" class="menu-icon" (click)="menuToggle()">menu</mat-icon>
         <a (click)="go('/index')"><img src="assets/images/logo.png" class="logo"/></a>
         <div class="navigation">
             <a *ngFor="let navItem of navigationList" (click)="go(navItem.link)" routerLinkActive="active-link">{{navItem.text}}</a>
