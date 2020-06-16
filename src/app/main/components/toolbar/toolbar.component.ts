@@ -3,6 +3,7 @@ import { ToolbarService } from './toolbar.service';
 import { ProgressBarService } from '../progress-bar/progress-bar.service';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { SidebarService } from '../../services/sidebar.service';
+import { NavigationService } from '../../services/navigation.service';
 
 @Component({
   selector: 'rxjs-toolbar',
@@ -17,7 +18,8 @@ export class ToolbarComponent implements OnInit {
     private toolbarService: ToolbarService,
     private progressBar: ProgressBarService,
     private matStackBar: MatSnackBar,
-    private sideBarService: SidebarService
+    private sideBarService: SidebarService,
+    private navigationService: NavigationService
   ) { }
 
   ngOnInit(): void {
@@ -42,5 +44,10 @@ export class ToolbarComponent implements OnInit {
 
   menuToggle(): void {
     this.sideBarService.toggleSidebar();
+  }
+
+  go(routename: string): void {
+    this.sideBarService.toggleSidebar(false);
+    this.navigationService.navigate(routename);
   }
 }

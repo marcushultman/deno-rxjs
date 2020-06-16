@@ -12,6 +12,7 @@ import { SidebarService } from './main/services/sidebar.service';
 import { MatListModule } from '@angular/material/list';
 import { MenuItemModule } from './main/components/menu-item/menu-item.module';
 import { FlexLayoutModule } from '@angular/flex-layout';
+import { NavigationService } from './main/services/navigation.service';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,8 @@ import { FlexLayoutModule } from '@angular/flex-layout';
     FlexLayoutModule
   ],
   providers: [
-    SidebarService
+    SidebarService,
+    NavigationService
   ],
   bootstrap: [AppComponent],
   schemas: [CUSTOM_ELEMENTS_SCHEMA]

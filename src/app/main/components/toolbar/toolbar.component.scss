@@ -23,15 +23,21 @@
         cursor: pointer;
       }
     }
-    a {
-      img {
-        height: 24px;
+    a.icon {
+      svg {
         vertical-align: sub;
         padding-top: 5px;
-        &.logo {
-          height: 40px;
-        }
       }
+      img {
+        height: 31.5px;
+        width: 31.5px;
+        vertical-align: sub;
+        padding-top: 5px;
+      }
+    }
+    .logo {
+      padding-left: 10px;
+      vertical-align: sub;
     }
     .navigation {
       padding: 0 0 3px 15px;

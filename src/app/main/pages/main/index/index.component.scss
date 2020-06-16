@@ -1,6 +1,21 @@
 .rxjs-page {
+    .bg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: -999;
+        background-color: #0a1014;
+        background: #0a1014;
+        color: #fff;
+        height: 95vh;
+        width: 100%;
+        overflow: hidden;
+        transform: skewY(8deg);
+        transform-origin: 100%;
+    }
     header {
-        height: 120vh;
+        height: 95vh;
         color: #eee;
         width: 100vw;
         overflow: hidden;
@@ -8,32 +23,14 @@
         display:block;
         background-color: transparent;
         margin-bottom: 0;
-        .bg {
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            z-index: -999;
-            background-color: #0a1014;
-            background: #0a1014;
-            color: #fff;
-            min-height: 100%;
-            width: 100%;
-            overflow: hidden;
-            transform: skewY(8deg);
-            transform-origin: 100%;
-        }
+        
         .container {
             margin-right: auto;
             margin-left: auto;
-            padding-left: 15px;
-            padding-right: 15px;
-            position: relative;
             height: 100%;
             text-align: center;
             min-height: 1px;
-            padding-left: 15px;
-            padding-right: 15px;
+            overflow: hidden;
             .hero-logo {
                 margin: 0 auto;
                 width: 350px;
@@ -50,7 +47,6 @@
             .hero-button {
                 padding: 2px 34px 0;
                 font-size: 18px;
-                width: auto;
                 height: 66px;
                 font-size: 1.8rem;
                 font-weight: 600;
@@ -67,6 +63,25 @@
                 overflow: hidden;
                 border: none;
             }
+        }
+    }
+    .main {
+        height: 100%;
+        width: 100vw;
+        padding: 0;
+        margin: 0;
+        display: -webkit-box;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        mat-card {
+            width: 400px;
+            background-color: #fafafa;
+            color:#0a1014;
+            box-shadow: 0 2px 5px 0 rgba(0,0,0,.26);
         }
     }
 }

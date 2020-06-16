@@ -9,6 +9,7 @@ mat-drawer-content {
     color: rgba(0,0,0,.87);
     margin: 0 auto;
     width: 100%;
+    overflow: hidden;
 }
 .mat-drawer {
     position: fixed;

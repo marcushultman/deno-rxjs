@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Observable, BehaviorSubject } from 'rxjs';
-import { Injectable } from '@angular/core';
+import { Injectable, ɵConsole } from '@angular/core';
 
 @Injectable()
 export class SidebarService {
@@ -8,6 +8,7 @@ export class SidebarService {
   sidebar = this.sidebarSource.asObservable();
   
   protected toggleSource = new BehaviorSubject(false);
+  lastToggleValue = false;
   toggleValue = false;
   toggle = this.toggleSource.asObservable();
 
@@ -22,7 +23,10 @@ export class SidebarService {
   }
 
   public toggleSidebar(value?: true | false): void {
-    this.toggleValue = ((value) ? value : !this.toggleValue);
-    this.toggleSource.next(this.toggleValue);
+    const toggleValue = ((typeof value !== 'undefined') ? value : !this.toggleValue);
+    if (this.toggleValue !== toggleValue) {
+      this.toggleValue = toggleValue;
+      this.toggleSource.next(this.toggleValue);
+    }
   }
 }

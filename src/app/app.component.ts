@@ -36,7 +36,7 @@ export class AppComponent implements OnInit {
     this.sidebarService.toggle.subscribe({
       next: (value) => {
         if (this.sidebar) {
-          this.sidebar.toggle();
+          this.sidebar.toggle(value);
         }
       }
     });

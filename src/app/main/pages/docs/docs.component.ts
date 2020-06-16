@@ -50,7 +50,7 @@ export class DocsComponent implements OnInit, OnDestroy {
                         this.documentData = fileData;
                     },
                     error: (fileError) => {
-                        console.log(fileError);
+                        console.error(fileError);
                     },
                     complete: () => {
                         this.progressBar.hide();
@@ -70,6 +70,5 @@ export class DocsComponent implements OnInit, OnDestroy {
 
   ngOnDestroy(): void {
       this.sideBarService.hide();
-      this.sideBarService.toggleSidebar(false);
   }
 }
