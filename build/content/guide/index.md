@@ -18,29 +18,29 @@ The essential concepts in RxJS which solve async event management are:
 ## First examples -> Observable
 
 ```js
-import { Observable } from 'https://deno.land/x/rxjs/mod.ts'
+import { Observable } from 'https://deno.land/x/rxjs/mod.ts';
 
 const observable = new Observable((subscriber) => {
-    subscriber.next(1)
-    subscriber.next(2)
-    subscriber.next(3)
+    subscriber.next(1);
+    subscriber.next(2);
+    subscriber.next(3);
     setTimeout(() => {
-        subscriber.next(4)
-        subscriber.complete()
-    }, 1000)
-})
+        subscriber.next(4);
+        subscriber.complete();
+    }, 1000);
+});
 
-console.log('before subscribe')
+console.log('before subscribe');
 observable.subscribe({
     next: (x) => {
-        console.log('value ' + x)
+        console.log('value ' + x);
     },
     error: (err) => {
-        console.error('error: ' + err)
+        console.error('error: ' + err);
     },
     complete: () => {
-        console.log('complete')
+        console.log('complete');
     },
-})
-console.log('after subscribe')
+});
+console.log('after subscribe');
 ```
