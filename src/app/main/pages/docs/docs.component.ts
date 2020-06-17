@@ -54,39 +54,44 @@ export class DocsComponent implements OnInit, OnDestroy, AfterViewChecked {
             this.fragment = fragment;
         });
         this.activatedRoute.url.subscribe((segments: UrlSegment[]) => {
-            const url = segments.join('/');
-            this.docsService.getConfig().subscribe({
-                next: (data) => {
-                    let documentInfo = data.filter(
-                        (item) => item.key === url
-                    )[0];
-                    if (url === '') {
-                        documentInfo = {
-                            key: 'index',
-                            nome: 'Index',
-                        };
-                    }
-                    if (documentInfo !== undefined) {
-                        this.docsService.loadFile(documentInfo.key).subscribe({
-                            next: (fileData) => {
-                                this.documentData = fileData;
-                            },
-                            error: (fileError) => {
-                                console.error(fileError);
-                            },
-                            complete: () => {
-                                this.progressBar.hide();
-                            },
-                        });
-                    } else {
-                        console.error(`RxJS: File "${url}" not found`);
-                        this.router.navigate(['/404']);
-                    }
+            let url = segments.join('/');
+            // @deprecated
+            // this.docsService.getConfig().subscribe({
+            // next: (data) => {
+            // let documentInfo = data.filter(
+            // (item) => item.key === url
+            // )[0];
+            // @deprecated
+            if (url === '') {
+                url = 'index';
+            }
+            // @deprecated
+            // if (documentInfo !== undefined) {
+            // @deprecated
+            this.docsService.loadFile(url).subscribe({
+                next: (fileData) => {
+                    this.documentData = fileData;
                 },
-                error: (data) => {
-                    console.error(data);
+                error: (fileError) => {
+                    console.error(fileError);
+                    console.error(`RxJS: File "${url}" not found`);
+                    this.router.navigate(['/404']);
+                },
+                complete: () => {
+                    this.progressBar.hide();
                 },
             });
+            // @deprecated
+            // } else {
+            // console.error(`RxJS: File "${url}" not found`);
+            // this.router.navigate(['/404']);
+            // }
+            // },
+            // error: (data) => {
+            // console.error(data);
+            // ,
+            // });
+            // @deprecated
         });
     }
 

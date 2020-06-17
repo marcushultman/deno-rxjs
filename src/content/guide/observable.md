@@ -5,12 +5,12 @@ Observables are lazy Push collections of multiple values. They fill the missing 
 |          | Single                                                                                                    | Multiple                                                                                            |
 | -------- | --------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- |
 | **Pull** | [`Function`](https://developer.mozilla.org/en-US/docs/Glossary/Function)                                  | [`Iterator`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Iteration_protocols) |
-| **Push** | [`Promise`](https://developer.mozilla.org/en-US/docs/Mozilla/JavaScript_code_modules/Promise.jsm/Promise) | [`Observable`](/api/index/class/Observable)                                                         |
+| **Push** | [`Promise`](https://developer.mozilla.org/en-US/docs/Mozilla/JavaScript_code_modules/Promise.jsm/Promise) | `Observable`                                                                                        |
 
 **Example.** The following is an Observable that pushes the values `1`, `2`, `3` immediately (synchronously) when subscribed, and the value `4` after one second has passed since the subscribe call, then completes:
 
 ```ts
-import { Observable } from 'rxjs';
+import { Observable } from 'https://deno.land/x/rxjs/mod.ts';
 
 const observable = new Observable((subscriber) => {
     subscriber.next(1);
@@ -26,7 +26,7 @@ const observable = new Observable((subscriber) => {
 To invoke the Observable and see these values, we need to _subscribe_ to it:
 
 ```ts
-import { Observable } from 'rxjs';
+import { Observable } from 'https://deno.land/x/rxjs/mod.ts';
 
 const observable = new Observable((subscriber) => {
     subscriber.next(1);
@@ -123,7 +123,7 @@ We expect to see as output:
 You can write the same behavior above, but with Observables:
 
 ```ts
-import { Observable } from 'rxjs';
+import { Observable } from 'https://deno.land/x/rxjs/mod.ts';
 
 const foo = new Observable((subscriber) => {
     console.log('Hello');
@@ -204,7 +204,7 @@ function foo() {
 Functions can only return one value. Observables, however, can do this:
 
 ```ts
-import { Observable } from 'rxjs';
+import { Observable } from 'https://deno.land/x/rxjs/mod.ts';
 
 const foo = new Observable((subscriber) => {
     console.log('Hello');
@@ -234,7 +234,7 @@ With synchronous output:
 But you can also "return" values asynchronously:
 
 ```ts
-import { Observable } from 'rxjs';
+import { Observable } from 'https://deno.land/x/rxjs/mod.ts';
 
 const foo = new Observable((subscriber) => {
     console.log('Hello');
@@ -288,7 +288,7 @@ The `Observable` constructor takes one argument: the `subscribe` function.
 The following example creates an Observable to emit the string `'hi'` every second to a subscriber.
 
 ```ts
-import { Observable } from 'rxjs';
+import { Observable } from 'https://deno.land/x/rxjs/mod.ts';
 
 const observable = new Observable(function subscribe(subscriber) {
     const id = setInterval(() => {
@@ -342,7 +342,7 @@ next*(error|complete)?
 The following is an example of an Observable execution that delivers three Next notifications, then completes:
 
 ```ts
-import { Observable } from 'rxjs';
+import { Observable } from 'https://deno.land/x/rxjs/mod.ts';
 
 const observable = new Observable(function subscribe(subscriber) {
     subscriber.next(1);
@@ -355,7 +355,7 @@ const observable = new Observable(function subscribe(subscriber) {
 Observables strictly adhere to the Observable Contract, so the following code would not deliver the Next notification `4`:
 
 ```ts
-import { Observable } from 'rxjs';
+import { Observable } from 'https://deno.land/x/rxjs/mod.ts';
 
 const observable = new Observable(function subscribe(subscriber) {
     subscriber.next(1);
@@ -369,7 +369,7 @@ const observable = new Observable(function subscribe(subscriber) {
 It is a good idea to wrap any code in `subscribe` with `try`/`catch` block that will deliver an Error notification if it catches an exception:
 
 ```ts
-import { Observable } from 'rxjs';
+import { Observable } from 'https://deno.land/x/rxjs/mod.ts';
 
 const observable = new Observable(function subscribe(subscriber) {
     try {
