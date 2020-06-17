@@ -58,11 +58,9 @@ export class MenuItemComponent implements OnInit {
     }
 
     ngOnInit() {
-        console.log(this.url);
         this.activatedRoute.url.subscribe({
             next: (segments: UrlSegment[]) => {
                 const url = segments.join('/');
-                console.log(this.activatedRoute);
                 if (this.item.url) {
                     if (
                         (this.item.url.startsWith('/')
