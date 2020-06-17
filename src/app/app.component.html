@@ -1,17 +1,30 @@
+<!-- Progress Bar -->
 <progress-bar></progress-bar>
-<rxjs-toolbar></rxjs-toolbar>
 
+<!-- Sidenav Container -->
 <mat-drawer-container hasBackdrop="false">
+    <!-- Sidenav -->
     <mat-drawer #sidebar mode="side">
-        <!-- <img src="assets/images/logo.svg" class="logo"/> -->
+        <!-- Menu List -->
         <mat-nav-list>
+            <!-- Menu Item -->
             <menu-item
                 *ngFor="let item of sidebarItems"
                 [item]="item"
+                [url]="url"
             ></menu-item>
         </mat-nav-list>
     </mat-drawer>
+
+    <!-- Content out of sidenav -->
     <mat-drawer-content>
-        <router-outlet></router-outlet>
+        <!-- Toolbar -->
+        <rxjs-toolbar></rxjs-toolbar>
+
+        <!-- Site Content -->
+        <div class="rxjs-content">
+            <!-- Routing -->
+            <router-outlet></router-outlet>
+        </div>
     </mat-drawer-content>
 </mat-drawer-container>

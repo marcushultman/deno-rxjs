@@ -1,9 +1,9 @@
-import { NgModule } from '@angular/core'
-import { Routes, RouterModule } from '@angular/router'
-import { DocsComponent } from './docs.component'
-import { DocsService } from './docs.service'
-import { MarkdownModule } from 'ngx-markdown'
-import { UseMarkdownModule } from '@use-angular/markdown'
+import { NgModule } from '@angular/core';
+import { Routes, RouterModule } from '@angular/router';
+import { DocsComponent } from './docs.component';
+import { DocsService } from './docs.service';
+import { MarkdownModule } from 'ngx-markdown';
+import { UseMarkdownModule } from '@use-angular/markdown';
 
 const routes: Routes = [
     {
@@ -14,7 +14,7 @@ const routes: Routes = [
         path: '**',
         component: DocsComponent,
     },
-]
+];
 @NgModule({
     declarations: [DocsComponent],
     imports: [

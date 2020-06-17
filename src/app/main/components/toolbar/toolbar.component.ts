@@ -1,10 +1,16 @@
-import { Component, Input, OnInit } from '@angular/core'
-import { ToolbarService } from './toolbar.service'
-import { ProgressBarService } from '../progress-bar/progress-bar.service'
-import { MatSnackBar } from '@angular/material/snack-bar'
-import { SidebarService } from '../../services/sidebar.service'
-import { NavigationService } from '../../services/navigation.service'
-import { trigger, state, style, transition, animate } from '@angular/animations'
+import { Component, Input, OnInit } from '@angular/core';
+import { ToolbarService } from './toolbar.service';
+import { ProgressBarService } from '../progress-bar/progress-bar.service';
+import { MatSnackBar } from '@angular/material/snack-bar';
+import { SidebarService } from '../../services/sidebar.service';
+import { NavigationService } from '../../services/navigation.service';
+import {
+    trigger,
+    state,
+    style,
+    transition,
+    animate,
+} from '@angular/animations';
 
 @Component({
     selector: 'rxjs-toolbar',
@@ -38,8 +44,8 @@ import { trigger, state, style, transition, animate } from '@angular/animations'
     ],
 })
 export class ToolbarComponent implements OnInit {
-    menuView = false
-    navigationList = []
+    menuView = false;
+    navigationList = [];
 
     constructor(
         private toolbarService: ToolbarService,
@@ -50,31 +56,31 @@ export class ToolbarComponent implements OnInit {
     ) {}
 
     ngOnInit(): void {
-        this.progressBar.show()
+        this.progressBar.show();
         this.toolbarService.getNavigation().subscribe({
             next: (data) => {
-                this.navigationList = data.NavBar
+                this.navigationList = data.NavBar;
             },
             error: (data) => {
-                console.error(data)
+                console.error(data);
             },
             complete: () => {
-                this.progressBar.hide()
+                this.progressBar.hide();
             },
-        })
+        });
         this.sideBarService.sidebar.subscribe({
             next: (data) => {
-                this.menuView = data
+                this.menuView = data;
             },
-        })
+        });
     }
 
     menuToggle(): void {
-        this.sideBarService.toggleSidebar()
+        this.sideBarService.toggleSidebar();
     }
 
     go(routename: string): void {
-        this.sideBarService.toggleSidebar(false)
-        this.navigationService.navigate(routename)
+        this.sideBarService.toggleSidebar(false);
+        this.navigationService.navigate(routename);
     }
 }

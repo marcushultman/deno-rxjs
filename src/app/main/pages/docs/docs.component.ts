@@ -1,20 +1,17 @@
 import {
     Component,
-    Input,
     OnInit,
     ViewChild,
-    Renderer2,
     OnDestroy,
-    AfterContentChecked,
     AfterViewChecked,
-} from '@angular/core'
-import { MatSnackBar } from '@angular/material/snack-bar'
-import { DocsService } from './docs.service'
-import { ActivatedRoute, UrlSegment, Router } from '@angular/router'
-import { ProgressBarService } from '../../components/progress-bar/progress-bar.service'
-import { MarkdownComponent } from 'ngx-markdown'
-import { SidebarService } from '../../services/sidebar.service'
-import { UseMarkdownService } from '@use-angular/markdown'
+} from '@angular/core';
+import { MatSnackBar } from '@angular/material/snack-bar';
+import { DocsService } from './docs.service';
+import { ActivatedRoute, UrlSegment, Router } from '@angular/router';
+import { ProgressBarService } from '../../components/progress-bar/progress-bar.service';
+import { MarkdownComponent } from 'ngx-markdown';
+import { SidebarService } from '../../services/sidebar.service';
+import { UseMarkdownService } from '@use-angular/markdown';
 
 @Component({
     selector: 'docs-component',
@@ -22,11 +19,11 @@ import { UseMarkdownService } from '@use-angular/markdown'
     styleUrls: ['./docs.component.scss'],
 })
 export class DocsComponent implements OnInit, OnDestroy, AfterViewChecked {
-    documentData = ''
-    fragment = ''
-    private listenObj: any
+    documentData = '';
+    fragment = '';
+    private listenObj: any;
 
-    @ViewChild('docs', { static: false }) private docs: MarkdownComponent
+    @ViewChild('docs', { static: false }) private docs: MarkdownComponent;
 
     constructor(
         private matStackBar: MatSnackBar,
@@ -39,58 +36,58 @@ export class DocsComponent implements OnInit, OnDestroy, AfterViewChecked {
     ) {}
 
     ngOnInit(): void {
-        this.sideBarService.show()
-        this.sideBarService.toggleSidebar(true)
-        this.progressBar.show()
+        this.sideBarService.show();
+        this.sideBarService.toggleSidebar(true);
+        this.progressBar.show();
         this.markdownService.renderer.heading = (
             text: string,
             level: number
         ) => {
-            const escapedText = text.toLowerCase().replace(/[^\w]+/g, '-')
+            const escapedText = text.toLowerCase().replace(/[^\w]+/g, '-');
             return `<h${level}>
                <a id="${escapedText}" routerLink="." class="anchor" routerLink=".">
                  <span class="header-link">${text}</span>
                </a>
-             </h${level}>`
-        }
+             </h${level}>`;
+        };
         this.activatedRoute.fragment.subscribe((fragment) => {
-            this.fragment = fragment
-        })
+            this.fragment = fragment;
+        });
         this.activatedRoute.url.subscribe((segments: UrlSegment[]) => {
-            const url = segments.join('/')
+            const url = segments.join('/');
             this.docsService.getConfig().subscribe({
                 next: (data) => {
                     let documentInfo = data.filter(
                         (item) => item.key === url
-                    )[0]
+                    )[0];
                     if (url === '') {
                         documentInfo = {
                             key: 'index',
                             nome: 'Index',
-                        }
+                        };
                     }
                     if (documentInfo !== undefined) {
                         this.docsService.loadFile(documentInfo.key).subscribe({
                             next: (fileData) => {
-                                this.documentData = fileData
+                                this.documentData = fileData;
                             },
                             error: (fileError) => {
-                                console.error(fileError)
+                                console.error(fileError);
                             },
                             complete: () => {
-                                this.progressBar.hide()
+                                this.progressBar.hide();
                             },
-                        })
+                        });
                     } else {
-                        console.error(`RxJS: File "${url}" not found`)
-                        this.router.navigate(['/404'])
+                        console.error(`RxJS: File "${url}" not found`);
+                        this.router.navigate(['/404']);
                     }
                 },
                 error: (data) => {
-                    console.error(data)
+                    console.error(data);
                 },
-            })
-        })
+            });
+        });
     }
 
     ngAfterViewChecked(): void {
@@ -98,12 +95,12 @@ export class DocsComponent implements OnInit, OnDestroy, AfterViewChecked {
             if (this.fragment) {
                 document
                     .querySelector('#' + this.fragment)
-                    .scrollIntoView({ behavior: 'smooth' })
+                    .scrollIntoView({ behavior: 'smooth' });
             }
         } catch (e) {}
     }
 
     ngOnDestroy(): void {
-        this.sideBarService.hide()
+        this.sideBarService.hide();
     }
 }

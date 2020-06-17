@@ -1,5 +1,5 @@
-import { Component, Input, OnInit } from '@angular/core'
-import { ProgressBarService } from './progress-bar.service'
+import { Component, Input, OnInit } from '@angular/core';
+import { ProgressBarService } from './progress-bar.service';
 
 @Component({
     selector: 'progress-bar',
@@ -7,15 +7,15 @@ import { ProgressBarService } from './progress-bar.service'
     styleUrls: ['./progress-bar.component.scss'],
 })
 export class ProgressBarComponent implements OnInit {
-    progressBar = false
+    progressBar = false;
 
     constructor(private progressBarService: ProgressBarService) {}
 
     ngOnInit(): void {
         this.progressBarService.progressBar.subscribe({
             next: (data) => {
-                this.progressBar = data
+                this.progressBar = data;
             },
-        })
+        });
     }
 }

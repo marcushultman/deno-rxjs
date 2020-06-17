@@ -1,27 +1,12 @@
-/* You can add global styles to this file, and also import other style files */
+/**
+  * Import's
+  */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap');
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
 
-/* width */
-::-webkit-scrollbar {
-    width: 10px;
-    z-index: 9999999;
-}
-
-/* Track */
-::-webkit-scrollbar-track {
-    background: #f1f1f1;
-}
-
-/* Handle */
-::-webkit-scrollbar-thumb {
-    background: #888;
-}
-
-/* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
-    background: #555;
-}
-
+/**
+  * Default Styles
+  */
 html,
 body {
     height: 100%;
@@ -35,6 +20,34 @@ body {
     color: rgba(0, 0, 0, 0.87);
 }
 
+/**
+  * Scroller
+  */
+::-webkit-scrollbar {
+    width: 10px;
+    z-index: 9999999;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #888;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+/**
+  * Component's Styles
+  */
+
+/**
+  * Main Styles
+  */
+
 .mat-black-full {
     background-color: #000000;
 }
@@ -45,10 +58,25 @@ body {
 }
 
 /**
- * atom-dark theme for `prism.js`
- * Based on Atom's `atom-dark` theme: https://github.com/atom/atom-dark-syntax
- * @author Joe Gibson (@gibsjose)
- */
+  * Document code style
+  */
+pre[class*='language-'] {
+    padding: 1em;
+    margin: 0.5em 0;
+    overflow: auto;
+    border-radius: 0.3em;
+}
+
+:not(pre) > code[class*='language-'],
+pre[class*='language-'] {
+    background: #1d1f21;
+}
+
+/* Inline code */
+:not(pre) > code[class*='language-'] {
+    padding: 0.1em;
+    border-radius: 0.3em;
+}
 
 code[class*='language-'],
 pre[class*='language-'] {
@@ -71,120 +99,101 @@ pre[class*='language-'] {
     -moz-hyphens: none;
     -ms-hyphens: none;
     hyphens: none;
-}
 
-/* Code blocks */
-pre[class*='language-'] {
-    padding: 1em;
-    margin: 0.5em 0;
-    overflow: auto;
-    border-radius: 0.3em;
-}
+    .token.comment,
+    .token.prolog,
+    .token.doctype,
+    .token.cdata {
+        color: #7c7c7c;
+    }
 
-:not(pre) > code[class*='language-'],
-pre[class*='language-'] {
-    background: #1d1f21;
-}
+    .token.punctuation {
+        color: #c5c8c6;
+    }
 
-/* Inline code */
-:not(pre) > code[class*='language-'] {
-    padding: 0.1em;
-    border-radius: 0.3em;
-}
+    .namespace {
+        opacity: 0.7;
+    }
 
-.token.comment,
-.token.prolog,
-.token.doctype,
-.token.cdata {
-    color: #7c7c7c;
-}
+    .token.property,
+    .token.keyword,
+    .token.tag {
+        color: #96cbfe;
+    }
 
-.token.punctuation {
-    color: #c5c8c6;
-}
+    .token.class-name {
+        color: #ffffb6;
+        text-decoration: underline;
+    }
 
-.namespace {
-    opacity: 0.7;
-}
+    .token.boolean,
+    .token.constant {
+        color: #99cc99;
+    }
 
-.token.property,
-.token.keyword,
-.token.tag {
-    color: #96cbfe;
-}
+    .token.symbol,
+    .token.deleted {
+        color: #f92672;
+    }
 
-.token.class-name {
-    color: #ffffb6;
-    text-decoration: underline;
-}
+    .token.number {
+        color: #ff73fd;
+    }
 
-.token.boolean,
-.token.constant {
-    color: #99cc99;
-}
+    .token.selector,
+    .token.attr-name,
+    .token.string,
+    .token.char,
+    .token.builtin,
+    .token.inserted {
+        color: #a8ff60;
+    }
 
-.token.symbol,
-.token.deleted {
-    color: #f92672;
-}
+    .token.variable {
+        color: #c6c5fe;
+    }
 
-.token.number {
-    color: #ff73fd;
-}
+    .token.operator {
+        color: #ededed;
+    }
 
-.token.selector,
-.token.attr-name,
-.token.string,
-.token.char,
-.token.builtin,
-.token.inserted {
-    color: #a8ff60;
-}
+    .token.entity {
+        color: #ffffb6;
+        cursor: help;
+    }
 
-.token.variable {
-    color: #c6c5fe;
-}
+    .token.url {
+        color: #96cbfe;
+    }
 
-.token.operator {
-    color: #ededed;
-}
+    .language-css .token.string,
+    .style .token.string {
+        color: #87c38a;
+    }
 
-.token.entity {
-    color: #ffffb6;
-    cursor: help;
-}
+    .token.atrule,
+    .token.attr-value {
+        color: #f9ee98;
+    }
 
-.token.url {
-    color: #96cbfe;
-}
+    .token.function {
+        color: #dad085;
+    }
 
-.language-css .token.string,
-.style .token.string {
-    color: #87c38a;
-}
+    .token.regex {
+        color: #e9c062;
+    }
 
-.token.atrule,
-.token.attr-value {
-    color: #f9ee98;
-}
+    .token.important {
+        color: #fd971f;
+    }
 
-.token.function {
-    color: #dad085;
-}
+    .token.important,
+    .token.bold {
+        font-weight: bold;
+    }
 
-.token.regex {
-    color: #e9c062;
-}
-
-.token.important {
-    color: #fd971f;
-}
-
-.token.important,
-.token.bold {
-    font-weight: bold;
-}
-
-.token.italic {
-    font-style: italic;
+    .token.italic {
+        font-style: italic;
+    }
 }

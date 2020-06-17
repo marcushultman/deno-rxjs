@@ -27,6 +27,7 @@
             }
         }
         a.icon {
+            padding-left: 10px;
             svg {
                 vertical-align: sub;
                 padding-top: 5px;
@@ -44,12 +45,12 @@
         }
         .navigation {
             padding: 0 0 3px 15px;
-            @media screen and (min-width: 801px) {
-                display: initial;
-            }
-            @media screen and (max-width: 800px) {
-                display: none;
-            }
+            // @media screen and (min-width: 801px) {
+            //     display: initial;
+            // }
+            // @media screen and (max-width: 800px) {
+            //     display: none;
+            // }
             a {
                 padding: 7.5px 16px;
                 color: white;

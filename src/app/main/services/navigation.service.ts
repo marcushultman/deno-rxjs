@@ -1,7 +1,7 @@
-import { Injectable } from '@angular/core'
-import { SidebarService } from './sidebar.service'
-import { Route, Router } from '@angular/router'
-import { Location } from '@angular/common'
+import { Injectable } from '@angular/core';
+import { SidebarService } from './sidebar.service';
+import { Route, Router } from '@angular/router';
+import { Location } from '@angular/common';
 
 @Injectable()
 export class NavigationService {
@@ -12,7 +12,7 @@ export class NavigationService {
     ) {}
 
     public navigate(route): void {
-        this.router.navigate(['/' + route])
-        this.sidebarService.toggleSidebar(false)
+        this.router.navigate(['/' + route]);
+        this.sidebarService.toggleSidebar(false);
     }
 }
