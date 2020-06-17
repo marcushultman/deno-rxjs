@@ -8,35 +8,31 @@
     "SideBar": [
         {
             "url": "guide/index",
-            "title": "Overview",
-            "tooltip": "RxJS Overview",
-            "children": [
-                {
-                    "url": "guide/observable",
-                    "title": "Observable",
-                    "tooltip": "RxJS Overview"
-                },
-                {
-                    "url": "guide/observer",
-                    "title": "Observer"
-                },
-                {
-                    "url": "guide/operators",
-                    "title": "Operators"
-                },
-                {
-                    "url": "guide/subscription",
-                    "title": "Subscription"
-                },
-                {
-                    "url": "guide/subject",
-                    "title": "Subjects"
-                },
-                {
-                    "url": "guide/scheduler",
-                    "title": "Scheduler"
-                }
-            ]
+            "title": "Overview"
+        },
+        {
+            "url": "guide/observable",
+            "title": "Observable"
+        },
+        {
+            "url": "guide/observer",
+            "title": "Observer"
+        },
+        {
+            "url": "guide/operators",
+            "title": "Operators"
+        },
+        {
+            "url": "guide/subscription",
+            "title": "Subscription"
+        },
+        {
+            "url": "guide/subject",
+            "title": "Subjects"
+        },
+        {
+            "url": "guide/scheduler",
+            "title": "Scheduler"
         }
     ]
 }
